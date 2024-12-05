@@ -1,2 +1,3 @@
 jsxRuntime: automatic
 filenameCase: kebab
+titleProp: true
