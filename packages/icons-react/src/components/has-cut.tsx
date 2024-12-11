@@ -8,7 +8,14 @@ const SvgHasCut = ({
   titleId,
   ...props
 }: SVGProps<SVGSVGElement> & SVGRProps) => (
-  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby={titleId} {...props}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={24}
+    height={24}
+    aria-labelledby={titleId}
+    {...props}
+  >
     {title ? <title id={titleId}>{title}</title> : null}
     <g fill="#8AB0E6">
       <path d="M1.5 4v12c0 1.379 1.124 2.5 2.51 2.5h39.98c1.388 0 2.51-1.12 2.51-2.5V4c0-1.379-1.124-2.5-2.51-2.5H4.01A2.504 2.504 0 0 0 1.5 4M0 4c0-2.21 1.794-4 4.01-4h39.98A4.006 4.006 0 0 1 48 4v12c0 2.21-1.794 4-4.01 4H4.01A4.006 4.006 0 0 1 0 16z" />

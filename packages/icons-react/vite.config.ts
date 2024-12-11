@@ -15,8 +15,6 @@ export default defineConfig({
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
       output: {
-        entryFileNames: '[name].js',
-        preserveModules: true,
         globals: {
           react: 'React',
           'react-dom': 'React-dom',
