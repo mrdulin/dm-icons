@@ -1,6 +1,6 @@
 {
   "name": "@d-matrix/icons-react",
-  "version": "0.0.0-beta.1",
+  "version": "0.0.1",
   "type": "module",
   "files": [
     "dist",
@@ -21,13 +21,14 @@
     }
   },
   "types": "./dist/index.d.ts",
-"scripts": {
-  "build": "tsc -b && vite build",
-  "lint": "eslint .",
-  "generate": "svgr --out-dir ./src/components --typescript -- ./src/assets",
-  "postgenerate": "npm run build",
-  "prepublishOnly": "npm run build"
-},
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "generate": "svgr --out-dir ./src/components --typescript -- ./src/assets",
+    "publish": "npm --proxy http://127.0.0.1:7890 publish",
+    "postgenerate": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
   "keywords": [
     "react",
     "icons",
