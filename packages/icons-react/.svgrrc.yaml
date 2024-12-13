@@ -1,7 +1,10 @@
 jsxRuntime: automatic
 filenameCase: kebab
 titleProp: true
-svgProps:
-  viewBox: 0 0 24 24
-  width: 24
-  height: 24
+svgoConfig:
+    plugins:
+      -
+        name: preset-default
+        params:
+          overrides:
+            removeViewBox: false

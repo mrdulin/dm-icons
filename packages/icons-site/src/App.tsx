@@ -1,11 +1,24 @@
 import * as icons from '@d-matrix/icons-react';
-import './App.css';
+
+const typedIcons: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = icons;
 
 function App() {
-
   return (
-    <div>
-      <icons.Search />
+    <div style={{ display: 'flex' }}>
+      {Object.keys(icons).map((iconName) => {
+        const IconComponent = typedIcons[iconName];
+        return (
+          <div
+            key={iconName}
+            style={{ width: 50, height: 50, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
+          >
+            <div style={{ height: 30 }}>
+              <IconComponent />
+            </div>
+            <div style={{ fontSize: 12 }}>{iconName}</div>
+          </div>
+        );
+      })}
     </div>
   );
 }
