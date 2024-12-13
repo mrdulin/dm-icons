@@ -20,7 +20,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    // https://github.com/qmhc/vite-plugin-dts/issues/395
+    // "noUncheckedSideEffectImports": true
   },
   "include": ["src"]
 }

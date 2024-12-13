@@ -27,7 +27,10 @@
     "generate": "svgr --out-dir ./src/components --typescript -- ./src/assets",
     "publish": "npm --proxy http://127.0.0.1:7890 publish",
     "postgenerate": "npm run build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "wait3s": "node -e \"setTimeout(() => process.exit(0), 3000)\"",
+    "cnpm:sync": "cnpm sync %npm_package_name%",
+    "postpublish": "echo \"wait for 3 seconds, then sync cnpm\" && npm run wait3s && npm run cnpm:sync"
   },
   "keywords": [
     "react",
@@ -41,20 +44,21 @@
     "react-dom": ">=16.0.0"
   },
   "devDependencies": {
-    "vite-plugin-dts": "^4.3.0",
     "@eslint/js": "^9.15.0",
     "@svgr/cli": "^8.1.0",
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "cnpm": "^9.4.0",
     "eslint": "^9.15.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.12.0",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.15.0",
-    "vite": "^6.0.1"
+    "vite": "^6.0.1",
+    "vite-plugin-dts": "^4.3.0"
   },
   "publishConfig": {
     "access": "public",
