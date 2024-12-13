@@ -44,7 +44,11 @@
     "react-dom": ">=16.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-transform-object-rest-spread": "^7.25.9",
     "@eslint/js": "^9.15.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.3.0",
     "@svgr/cli": "^8.1.0",
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
