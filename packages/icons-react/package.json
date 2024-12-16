@@ -1,6 +1,6 @@
 {
   "name": "@d-matrix/icons-react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "files": [
     "dist",
@@ -25,7 +25,6 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "generate": "svgr --out-dir ./src/components --typescript -- ./src/assets",
-    "publish": "npm --proxy http://127.0.0.1:7890 publish",
     "postgenerate": "npm run build",
     "prepublishOnly": "npm run build",
     "wait3s": "node -e \"setTimeout(() => process.exit(0), 3000)\"",
