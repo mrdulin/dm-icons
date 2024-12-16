@@ -3,7 +3,7 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgFlag = ({
+const SvgThumbsUp = ({
   title,
   titleId,
   ...props
@@ -16,15 +16,7 @@ const SvgFlag = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <g fill="none">
-      <path d="M0 0h16v16H0z" />
-      <path fill="#B8CAE6" d="M2.333 2h1v11a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1" />
-      <path
-        fill="#B8CAE6"
-        d="M4.667 2h8.503a.667.667 0 0 1 .495 1.113l-1.998 2.22 1.998 2.221a.667.667 0 0 1-.495 1.113H4.667z"
-        opacity={0.3}
-      />
-    </g>
+    <path d="M13.28 6c.799 0 1.597.3 2.096 1 .5.5.699 1.3.6 2.1l-.8 4.6C14.978 15 13.88 16 12.583 16H4V8C4.1 8 6.395.5 6.395.5c0-.3.3-.5.599-.5C8.19 0 8.99.5 8.99 2v4zM0 8h2v8H0z" />
   </svg>
 );
-export default SvgFlag;
+export default SvgThumbsUp;

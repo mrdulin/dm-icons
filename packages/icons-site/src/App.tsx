@@ -10,7 +10,7 @@ function App() {
         return (
           <div
             key={iconName}
-            style={{ width: 50, height: 50, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
+            style={{ width: 80, height: 80, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
           >
             <div style={{ height: 30 }}>
               <IconComponent />
