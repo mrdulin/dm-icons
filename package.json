@@ -7,7 +7,6 @@
   "scripts": {
     "generate": "npm run generate --workspace=@d-matrix/icons-react",
     "dev": "npm run dev --workspace=@d-matrix/icons-site",
-    "postinstall": "npm i ./packages/icons-react -w @d-matrix/icons-site",
-    "publish": "npm run publish --workspace=@d-matrix/icons-react"
+    "postinstall": "npm i ./packages/icons-react -w @d-matrix/icons-site"
   }
 }

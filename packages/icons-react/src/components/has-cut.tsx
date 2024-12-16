@@ -12,6 +12,7 @@ const SvgHasCut = ({
     xmlns="http://www.w3.org/2000/svg"
     width={48}
     height={24}
+    viewBox="0 0 48 24"
     aria-labelledby={titleId}
     {...props}
   >
