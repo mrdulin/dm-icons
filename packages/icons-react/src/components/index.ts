@@ -1,4 +1,5 @@
 export { default as Excel } from "./excel";
+export { default as Expand } from "./expand";
 export { default as Flag } from "./flag";
 export { default as HasCut } from "./has-cut";
 export { default as Hot } from "./hot";
@@ -7,6 +8,7 @@ export { default as Pdf } from "./pdf";
 export { default as Pixels } from "./pixels";
 export { default as Search } from "./search";
 export { default as Server } from "./server";
+export { default as Shrink } from "./shrink";
 export { default as Target } from "./target";
 export { default as ThumbsDown } from "./thumbs-down";
 export { default as ThumbsUp } from "./thumbs-up";
