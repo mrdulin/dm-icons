@@ -12,6 +12,7 @@
     "predev": "npm run generate && npm run ref",
     "dev": "npm run dev --workspace=@d-matrix/icons-site",
     "ref": "npm i @d-matrix/icons-react -w @d-matrix/icons-site",
-    "build:site": "npm run build --workspace=@d-matrix/icons-site"
+    "build:site": "npm run build --workspace=@d-matrix/icons-site",
+    "build:icons": "npm run build --workspace=@d-matrix/icons-react"
   }
 }
