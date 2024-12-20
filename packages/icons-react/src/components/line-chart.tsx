@@ -3,7 +3,7 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgThumbsDown = ({
+const SvgLineChart = ({
   title,
   titleId,
   ...props
@@ -18,7 +18,7 @@ const SvgThumbsDown = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <path d="M2.72 10C1.92 10 1.122 9.7.623 9c-.5-.5-.699-1.3-.6-2.1l.8-4.6C1.022 1 2.12 0 3.417 0H12v8c-.1 0-2.395 7.5-2.395 7.5 0 .3-.3.5-.599.5-1.197 0-1.996-.5-1.996-2v-4zM16 8h-2V0h2z" />
+    <path d="M1.778 14.222H15.11a.889.889 0 1 1 0 1.778H.89A.89.89 0 0 1 0 15.111V.89a.889.889 0 1 1 1.778 0zm3.315-3.836A.889.889 0 1 1 3.796 9.17l3.333-3.556a.89.89 0 0 1 1.226-.068l2.63 2.245 3.428-4.342a.889.889 0 0 1 1.396 1.102l-4 5.066a.89.89 0 0 1-1.275.126L7.846 7.449z" />
   </svg>
 );
-export default SvgThumbsDown;
+export default SvgLineChart;

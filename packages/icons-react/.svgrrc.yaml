@@ -1,6 +1,8 @@
 jsxRuntime: automatic
 filenameCase: kebab
 titleProp: true
+svgProps:
+  fill: currentColor
 svgoConfig:
     plugins:
       -

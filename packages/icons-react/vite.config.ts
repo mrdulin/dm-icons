@@ -13,6 +13,10 @@ export default defineConfig({
     emptyOutDir: true,
     lib: {
       entry: path.resolve(__dirname, 'src/components/index.ts'),
+      fileName: (format, fileName) => {
+        const extension = format === 'cjs' ? 'js' : 'mjs';
+        return `${fileName}.${extension}`;
+    },
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
@@ -23,6 +27,8 @@ export default defineConfig({
           'react-dom': 'React-dom',
           'react/jsx-runtime': 'react/jsx-runtime',
         },
+
+        preserveModules: true,
       },
       plugins: [
         resolve(),

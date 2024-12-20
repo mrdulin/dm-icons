@@ -3,7 +3,7 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgThumbsDown = ({
+const SvgRollback = ({
   title,
   titleId,
   ...props
@@ -18,7 +18,7 @@ const SvgThumbsDown = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <path d="M2.72 10C1.92 10 1.122 9.7.623 9c-.5-.5-.699-1.3-.6-2.1l.8-4.6C1.022 1 2.12 0 3.417 0H12v8c-.1 0-2.395 7.5-2.395 7.5 0 .3-.3.5-.599.5-1.197 0-1.996-.5-1.996-2v-4zM16 8h-2V0h2z" />
+    <path d="M7.452 12.063c.358.358.36.938.002 1.295a.916.916 0 0 1-1.295-.002L.26 7.455A.916.916 0 0 1 .255 6.16L6.137.278a.916.916 0 0 1 1.295.003c.359.358.36.938.003 1.295L3.109 5.9h6.643c3.39 0 6.127 2.863 6.244 6.414l.004.237v2.532c0 .506-.41.917-.914.917a.916.916 0 0 1-.915-.917V12.55c0-2.673-1.993-4.816-4.419-4.816H3.124Z" />
   </svg>
 );
-export default SvgThumbsDown;
+export default SvgRollback;

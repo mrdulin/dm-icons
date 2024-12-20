@@ -13,6 +13,7 @@ const SvgHasCut = ({
     width={48}
     height={24}
     viewBox="0 0 48 24"
+    fill="currentColor"
     aria-labelledby={titleId}
     {...props}
   >
