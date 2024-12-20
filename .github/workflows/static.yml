@@ -35,11 +35,14 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-      - name: build icons
-        run: npm run build:icons --verbose
+
       - name: Install dependencies
         run: npm ci
-      - name: Build
+      - name: Build icons
+        run: npm run build:icons --verbose
+      - name: Reference icons
+        run: npm run ref
+      - name: Build site
         run: npm run build:site --verbose
       - name: Setup Pages
         uses: actions/configure-pages@v4
