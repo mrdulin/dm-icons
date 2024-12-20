@@ -21,7 +21,7 @@ function App() {
 
           <div style={{ display: 'flex' }}>
             {Colors.map((c) => (
-              <div>
+              <div key={c}>
                 <input type="radio" value={c} checked={c === color} onChange={() => setColor(c)} />
                 <label htmlFor={c}>{c}</label>
               </div>
