@@ -10,10 +10,12 @@ const SvgHasCut = ({
 }: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={48}
-    height={24}
+    width="1em"
+    height="1em"
     viewBox="0 0 48 24"
     fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
     aria-labelledby={titleId}
     {...props}
   >

@@ -45,7 +45,7 @@ function App() {
             const IconComponent = typedIcons[iconName];
             return (
               <div key={iconName} className="icon-box">
-                <div style={{ color, height: 30 }}>
+                <div style={{ color, height: 30, fontSize: 20 }}>
                   <IconComponent />
                 </div>
                 <div style={{ fontSize: 14 }}>{iconName}</div>
