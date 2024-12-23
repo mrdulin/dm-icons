@@ -10,10 +10,12 @@ const SvgSearch = ({
 }: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={16}
+    width="1em"
+    height="1em"
     viewBox="4 4 16 16"
     fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
     aria-labelledby={titleId}
     {...props}
   >
