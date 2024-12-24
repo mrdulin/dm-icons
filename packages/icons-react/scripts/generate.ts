@@ -40,7 +40,7 @@ async function generateIcons() {
       import React from 'react';
       import { DMIcon, DMIconProps } from '../dm-icon';
 
-      const <%= svgIdentifier %> = (props: DMIconProps) => {
+      const <%= svgIdentifier %> = (props: Omit<DMIconProps, 'icon'>) => {
         return <DMIcon {...props} icon={
           // @ts-expect-error TODO improve TS type
           <%= iconDef %>
