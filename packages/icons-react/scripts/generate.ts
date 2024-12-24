@@ -61,7 +61,7 @@ async function generateIcons() {
     .join('\n');
 
   await promisify(fs.appendFile)(
-    path.resolve(__dirname, '../src/icons/index.tsx'),
+    path.resolve(__dirname, '../src/icons/index.ts'),
     `
       // GENERATE BY ./scripts/generate.ts
       // DON NOT EDIT IT MANUALLY
