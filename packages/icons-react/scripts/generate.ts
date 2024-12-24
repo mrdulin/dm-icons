@@ -34,6 +34,9 @@ async function generateIcons() {
 
   const render = _.template(
     `
+    // GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
       import React from 'react';
       import { DMIcon, DMIconProps } from '../dm-icon';
 
@@ -51,6 +54,20 @@ async function generateIcons() {
   await walk(async (item) => {
     await writeFile(path.resolve(__dirname, `../src/icons/${item.svgIdentifier}.tsx`), render(item));
   });
+
+  const entryText = Object.keys(iconDefs)
+    .sort()
+    .map((svgIdentifier) => `export { default as ${svgIdentifier} } from './${svgIdentifier}';`)
+    .join('\n');
+
+  await promisify(fs.appendFile)(
+    path.resolve(__dirname, '../src/icons/index.tsx'),
+    `
+      // GENERATE BY ./scripts/generate.ts
+      // DON NOT EDIT IT MANUALLY
+      ${entryText}
+    `.trim(),
+  );
 }
 
 generateIcons();
