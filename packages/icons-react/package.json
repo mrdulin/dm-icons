@@ -7,17 +7,17 @@
     "readme.md"
   ],
   "sideEffects": false,
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "main": "./dist/icons/index.js",
+  "module": "./dist/icons/index.mjs",
   "exports": {
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.mjs"
+        "default": "./dist/icons/index.mjs"
       },
       "require": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "default": "./dist/icons/index.js"
       }
     }
   },
@@ -28,7 +28,8 @@
     "lint": "eslint .",
     "pregenerate": "npm run clean",
     "generate:step2": "rimraf ./src/icons && cross-env TS_NODE_PROJECT=scripts/tsconfig.json node --experimental-specifier-resolution=node --loader ts-node/esm scripts/generate.ts",
-    "generate": "svgr --out-dir ./src/components --typescript -- ./src/assets",
+    "generate:step1": "svgr --out-dir ./src/components --typescript -- ./src/assets",
+    "generate": "npm run generate:step1 && npm run generate:step2",
     "postgenerate": "npm run build",
     "prepublishOnly": "npm run build",
     "wait3s": "node -e \"setTimeout(() => process.exit(0), 3000)\"",
@@ -43,8 +44,8 @@
   "author": "Lin Du",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">=16.0.0",
-    "react-dom": ">=16.0.0"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -63,6 +64,7 @@
     "eslint": "^9.15.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "glob": "^11.0.0",
     "globals": "^15.12.0",
     "lodash": "^4.17.21",
     "rimraf": "^5.0.10",
@@ -75,5 +77,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "rc-util": "^5.44.3"
   }
 }
