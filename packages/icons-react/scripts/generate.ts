@@ -2,9 +2,12 @@ import * as path from 'path';
 import * as iconDefs from '../src/components';
 import * as fs from 'fs';
 import { promisify } from 'util';
-import { template } from 'lodash';
+import * as url from 'url';
+import _ from 'lodash';
 
 const writeFile = promisify(fs.writeFile);
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 type IconDefinitionWithIdentifier = {
   svgIdentifier: string;
@@ -29,7 +32,7 @@ async function generateIcons() {
     await promisify(fs.mkdir)(iconsDir);
   }
 
-  const render = template(
+  const render = _.template(
     `
       import React from 'react';
       import { DMIcon, DMIconProps } from '../dm-icon';
