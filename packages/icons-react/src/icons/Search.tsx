@@ -4,7 +4,7 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../dm-icon';
 
-      const Search = (props: DMIconProps) => {
+      const Search = (props: Omit<DMIconProps, 'icon'>) => {
         return <DMIcon {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "4 4 16 16", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
