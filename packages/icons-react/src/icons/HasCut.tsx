@@ -1,4 +1,7 @@
-import React from 'react';
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
       import { DMIcon, DMIconProps } from '../dm-icon';
 
       const HasCut = (props: DMIconProps) => {
