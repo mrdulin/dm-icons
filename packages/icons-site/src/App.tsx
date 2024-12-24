@@ -53,6 +53,13 @@ function App() {
             );
           })}
         </div>
+
+        <h2>Icon与文字垂直居中</h2>
+        <div>
+          <button>
+            按钮 <icons.Rollback style={{ fontSize: 14 }} />
+          </button>
+        </div>
       </div>
     </div>
   );
