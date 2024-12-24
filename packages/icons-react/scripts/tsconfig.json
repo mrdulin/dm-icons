@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
-    "jsx": "preserve",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
   },
+  "ts-node": {
+    "transpileOnly": true
+  }
 }
