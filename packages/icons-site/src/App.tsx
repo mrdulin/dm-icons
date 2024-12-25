@@ -2,7 +2,7 @@ import * as icons from '@d-matrix/icons-react';
 import { useState } from 'react';
 import './styles.css';
 
-const typedIcons: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = icons;
+const typedIcons: Record<string, React.ComponentType<React.SVGProps<HTMLSpanElement>>> = icons;
 const iconNames = Object.keys(typedIcons);
 
 const Colors = ['initial', '#b8cae6', '#000000'];
