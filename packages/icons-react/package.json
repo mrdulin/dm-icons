@@ -1,6 +1,6 @@
 {
   "name": "@d-matrix/icons-react",
-  "version": "0.0.6",
+  "version": "0.0.7-beta.1",
   "type": "module",
   "files": [
     "dist",
@@ -27,7 +27,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "pregenerate": "npm run clean",
-    "generate:step2": "rimraf ./src/icons && cross-env TS_NODE_PROJECT=scripts/tsconfig.json node --experimental-specifier-resolution=node --loader ts-node/esm scripts/generate.ts",
+    "generate:step2": "rimraf ./src/icons && cross-env TS_NODE_PROJECT=scripts/tsconfig.json node --loader ts-node/esm scripts/generate.ts",
     "generate:step1": "svgr --out-dir ./src/components --typescript -- ./src/assets",
     "generate": "npm run generate:step1 && npm run generate:step2",
     "postgenerate": "npm run build",
