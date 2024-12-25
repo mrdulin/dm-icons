@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
+import classNames from 'classnames';
 
 export type DMIconProps = React.HTMLProps<HTMLSpanElement> & {
   icon: React.ComponentType;
@@ -21,7 +22,7 @@ const iconStyles = `
   -moz-osx-font-smoothing: grayscale;
 }
   `;
-export const DMIcon = ({ icon: Icon, ...restProps }: DMIconProps) => {
+export const DMIcon = ({ icon: Icon, className, ...restProps }: DMIconProps) => {
   const eleRef = useRef<HTMLSpanElement>(null);
   useEffect(() => {
     const ele = eleRef.current;
@@ -34,8 +35,10 @@ export const DMIcon = ({ icon: Icon, ...restProps }: DMIconProps) => {
     });
   }, []);
 
+  const classString = classNames('dmicon', className);
+
   return (
-    <span ref={eleRef} role="img" className="dmicon" {...restProps}>
+    <span ref={eleRef} role="img" className={classString} {...restProps}>
       <Icon />
     </span>
   );

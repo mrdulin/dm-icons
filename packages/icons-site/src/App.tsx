@@ -56,8 +56,8 @@ function App() {
 
         <h2>Icon与文字垂直居中</h2>
         <div>
-          <button>
-            按钮 <icons.Rollback style={{ fontSize: 14 }} />
+          <button style={{ fontSize: 14 }}>
+            按钮 <icons.Rollback className='classname-will-be-merged' />
           </button>
         </div>
       </div>
