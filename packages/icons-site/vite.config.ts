@@ -8,10 +8,10 @@ export default defineConfig({
   resolve: {
     preserveSymlinks: true,
   },
-  optimizeDeps: { include: ['@d-matrix/icons-react'] },
-  build: {
-    commonjsOptions: {
-      include: ['@d-matrix/icons-react'],
-    },
-  },
+  optimizeDeps: { exclude: ['@d-matrix/icons-react'] },
+  // build: {
+  //   commonjsOptions: {
+  //     include: ['@d-matrix/icons-react'],
+  //   },
+  // },
 });
