@@ -3,7 +3,7 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgHotColored = ({
+const SvgFireColored = ({
   title,
   titleId,
   ...props
@@ -29,4 +29,4 @@ const SvgHotColored = ({
     </g>
   </svg>
 );
-export default SvgHotColored;
+export default SvgFireColored;

@@ -5,8 +5,10 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/dm-icons/',
-  resolve: {
-    preserveSymlinks: true,
+  optimizeDeps: { include: ['@d-matrix/icons-react'] },
+  build: {
+    commonjsOptions: {
+      include: ['@d-matrix/icons-react'],
+    },
   },
-  optimizeDeps: { exclude: ['@d-matrix/icons-react'] },
 });

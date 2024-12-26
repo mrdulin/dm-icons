@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './styles.css';
 
 const typedIcons: Record<string, React.ComponentType<React.SVGProps<HTMLSpanElement>>> = icons;
+console.log('🚀 ~ typedIcons:', typedIcons);
 const iconNames = Object.keys(typedIcons);
 
 const Colors = ['initial', '#b8cae6', '#000000'];
@@ -11,7 +12,9 @@ function App() {
   const [color, setColor] = useState<(typeof Colors)[number]>();
   const [searchKeyword, setSearchKeyword] = useState<string>();
 
-  const iconsNamesByKeyword = searchKeyword ? iconNames.filter((iconName) => iconName.includes(searchKeyword)) : iconNames;
+  const iconsNamesByKeyword = searchKeyword
+    ? iconNames.filter((iconName) => iconName.toLowerCase().includes(searchKeyword.toLowerCase()))
+    : iconNames;
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
