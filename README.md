@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-添加svg文件到`packages/icons-react/src/assets`文件夹中, 生成React组件
+添加svg文件到`packages/icons-react/src/assets`文件夹中, 调整`svg`元素的`viewBox`属性，生成React组件
 
 ```sh
 npm run generate

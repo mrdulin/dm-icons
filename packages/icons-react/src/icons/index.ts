@@ -3,7 +3,7 @@
       export { default as AppstoreOutlined } from './AppstoreOutlined';
 export { default as AreaChartOutlined } from './AreaChartOutlined';
 export { default as ArrowDownOutlined } from './ArrowDownOutlined';
-export { default as ArrowUpOutline } from './ArrowUpOutline';
+export { default as ArrowUpOutlined } from './ArrowUpOutlined';
 export { default as BarChartOutlined } from './BarChartOutlined';
 export { default as BellFilled } from './BellFilled';
 export { default as BranchesOutlined } from './BranchesOutlined';
@@ -62,7 +62,7 @@ export { default as PhoneOutlined } from './PhoneOutlined';
 export { default as PieChartFilled } from './PieChartFilled';
 export { default as PixelsColored } from './PixelsColored';
 export { default as PlusFilled } from './PlusFilled';
-export { default as PlusOutline } from './PlusOutline';
+export { default as PlusOutlined } from './PlusOutlined';
 export { default as PlusSquareOutlined } from './PlusSquareOutlined';
 export { default as ProvideOutlined } from './ProvideOutlined';
 export { default as QqOutlined } from './QqOutlined';

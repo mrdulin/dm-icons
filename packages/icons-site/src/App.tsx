@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './styles.css';
 
 const typedIcons: Record<string, React.ComponentType<React.SVGProps<HTMLSpanElement>>> = icons;
-console.log('🚀 ~ typedIcons:', typedIcons);
+
 const iconNames = Object.keys(typedIcons);
 
 const Colors = ['initial', '#b8cae6', '#000000'];
@@ -11,6 +11,7 @@ const Colors = ['initial', '#b8cae6', '#000000'];
 function App() {
   const [color, setColor] = useState<(typeof Colors)[number]>();
   const [searchKeyword, setSearchKeyword] = useState<string>();
+  const [copiedIconName, setCopiedIconName] = useState<string>();
 
   const iconsNamesByKeyword = searchKeyword
     ? iconNames.filter((iconName) => iconName.toLowerCase().includes(searchKeyword.toLowerCase()))
@@ -46,8 +47,21 @@ function App() {
         <div style={{ display: 'grid', gridGap: 8, gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))' }}>
           {iconsNamesByKeyword.map((iconName) => {
             const IconComponent = typedIcons[iconName];
+            const className = ['icon-box'];
+            if (copiedIconName === iconName) {
+              className.push('copied');
+            }
             return (
-              <div key={iconName} className="icon-box">
+              <div
+                key={iconName}
+                className={className.join(' ')}
+                onClick={() => {
+                  navigator.clipboard.writeText(`<icons.${iconName} />`).then(() => {
+                    setCopiedIconName(iconName);
+                    setTimeout(() => setCopiedIconName(undefined), 2000);
+                  });
+                }}
+              >
                 <div style={{ color, height: 30, fontSize: 20 }}>
                   <IconComponent />
                 </div>
@@ -57,13 +71,32 @@ function App() {
           })}
         </div>
 
-        <h2>Icon与文字垂直居中</h2>
+        <h2>图标与文字垂直居中</h2>
         <div>
           <button style={{ fontSize: 14 }}>
             按钮 <icons.RollbackOutlined className="classname-will-be-merged" />
           </button>
         </div>
       </div>
+
+      <a href="https://github.com/mrdulin/dm-icons" style={{ position: 'fixed', top: 0, right: 0 }}>
+        <img
+          decoding="async"
+          width="149"
+          height="149"
+          src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png"
+          className="attachment-full size-full"
+          alt="Fork me on GitHub"
+          loading="lazy"
+        />
+      </a>
+
+      <button
+        style={{ position: 'fixed', bottom: 40, right: 40, width: 60, height: 60, background: '#fff', fontSize: 30, cursor: 'pointer' }}
+        onClick={() => window.scrollTo(0, 0)}
+      >
+        <icons.VerticalAlignTopOutlined />
+      </button>
     </div>
   );
 }
