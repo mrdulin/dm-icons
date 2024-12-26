@@ -40,7 +40,7 @@ function App() {
           />
         </div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div style={{ display: 'grid', gridGap: 8, gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))' }}>
           {iconsNamesByKeyword.map((iconName) => {
             const IconComponent = typedIcons[iconName];
             return (
@@ -48,7 +48,7 @@ function App() {
                 <div style={{ color, height: 30, fontSize: 20 }}>
                   <IconComponent />
                 </div>
-                <div style={{ fontSize: 14 }}>{iconName}</div>
+                <div style={{ fontSize: 12 }}>{iconName}</div>
               </div>
             );
           })}
@@ -57,7 +57,7 @@ function App() {
         <h2>Icon与文字垂直居中</h2>
         <div>
           <button style={{ fontSize: 14 }}>
-            按钮 <icons.Rollback className='classname-will-be-merged' />
+            按钮 <icons.RollbackOutlined className="classname-will-be-merged" />
           </button>
         </div>
       </div>
