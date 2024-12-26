@@ -8,6 +8,8 @@ const iconNames = Object.keys(typedIcons);
 
 const Colors = ['initial', '#b8cae6', '#000000'];
 
+let CopyTimer: ReturnType<typeof setTimeout> | undefined;
+
 function App() {
   const [color, setColor] = useState<(typeof Colors)[number]>();
   const [searchKeyword, setSearchKeyword] = useState<string>();
@@ -56,9 +58,13 @@ function App() {
                 key={iconName}
                 className={className.join(' ')}
                 onClick={() => {
+                  if (CopyTimer) {
+                    clearTimeout(CopyTimer);
+                    CopyTimer = undefined;
+                  }
                   navigator.clipboard.writeText(`<icons.${iconName} />`).then(() => {
                     setCopiedIconName(iconName);
-                    setTimeout(() => setCopiedIconName(undefined), 2000);
+                    CopyTimer = setTimeout(() => setCopiedIconName(undefined), 2000);
                   });
                 }}
               >
