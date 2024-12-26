@@ -4,7 +4,7 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../dm-icon';
 
-      const ArrowUpOutline = (props: Omit<DMIconProps, 'icon'>) => {
+      const ArrowUpOutlined = (props: Omit<DMIconProps, 'icon'>) => {
         return <DMIcon {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 7 12", width: "1em", height: "1em", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
@@ -13,4 +13,4 @@
         } />;
       }
 
-      export default ArrowUpOutline;
+      export default ArrowUpOutlined;
