@@ -14,4 +14,7 @@ export default defineConfig({
   //     include: ['@d-matrix/icons-react'],
   //   },
   // },
+  server: {
+    open: true,
+  },
 });
