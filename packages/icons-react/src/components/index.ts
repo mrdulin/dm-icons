@@ -1,3 +1,4 @@
+export { default as AlertColored } from "./alert-colored";
 export { default as AppstoreOutlined } from "./appstore-outlined";
 export { default as AreaChartOutlined } from "./area-chart-outlined";
 export { default as ArrowDownOutlined } from "./arrow-down-outlined";

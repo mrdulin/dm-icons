@@ -1,6 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
       // DON NOT EDIT IT MANUALLY
-      export { default as AppstoreOutlined } from './AppstoreOutlined';
+      export { default as AlertColored } from './AlertColored';
+export { default as AppstoreOutlined } from './AppstoreOutlined';
 export { default as AreaChartOutlined } from './AreaChartOutlined';
 export { default as ArrowDownOutlined } from './ArrowDownOutlined';
 export { default as ArrowUpOutlined } from './ArrowUpOutlined';
