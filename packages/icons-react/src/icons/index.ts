@@ -70,6 +70,7 @@ export { default as PlusFilled } from './PlusFilled';
 export { default as PlusOutlined } from './PlusOutlined';
 export { default as PlusSquareOutlined } from './PlusSquareOutlined';
 export { default as ProvideOutlined } from './ProvideOutlined';
+export { default as PushPinFilled } from './PushPinFilled';
 export { default as QqOutlined } from './QqOutlined';
 export { default as QuestionCircleFilled } from './QuestionCircleFilled';
 export { default as RadarOutlined } from './RadarOutlined';
