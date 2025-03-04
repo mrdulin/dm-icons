@@ -68,6 +68,7 @@ export { default as PlusFilled } from "./plus-filled";
 export { default as PlusOutlined } from "./plus-outlined";
 export { default as PlusSquareOutlined } from "./plus-square-outlined";
 export { default as ProvideOutlined } from "./provide-outlined";
+export { default as PushPinFilled } from "./push-pin-filled";
 export { default as QqOutlined } from "./qq-outlined";
 export { default as QuestionCircleFilled } from "./question-circle-filled";
 export { default as RadarOutlined } from "./radar-outlined";
