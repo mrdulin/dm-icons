@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <div style={{ width: 960 }}>
+      <div style={{ width: 1024 }}>
         <fieldset>
           <legend>选择容器CSS color:</legend>
 
@@ -68,7 +68,7 @@ function App() {
                   });
                 }}
               >
-                <div style={{ color, height: 30, fontSize: 20 }}>
+                <div style={{ color, height: 50, fontSize: 36 }}>
                   <IconComponent />
                 </div>
                 <div style={{ fontSize: 12 }}>{iconName}</div>

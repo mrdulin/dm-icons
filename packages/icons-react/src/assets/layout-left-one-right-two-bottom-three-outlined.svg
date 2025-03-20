@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+  <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+    <g transform="translate(-132, -128)" fill="currentColor">
+      <g transform="translate(141, 137) rotate(-90) translate(-141, -137) translate(132, 128)">
+        <rect x="1.36424205e-12" y="13" width="4.5" height="5" rx="1"></rect>
+        <rect transform="translate(2.25, 2.25) rotate(-270) translate(-2.25, -2.25)" x="0"
+          y="7.40536679e-13" width="4.5" height="4.5" rx="1"></rect>
+        <rect transform="translate(2.25, 8.75) rotate(-270) translate(-2.25, -8.75)" x="3.18323146e-12"
+          y="6.5" width="4.5" height="4.5" rx="1"></rect>
+        <rect x="13.5" y="13" width="4.5" height="5" rx="1"></rect>
+        <rect x="6.75" y="13" width="4.5" height="5" rx="1"></rect>
+        <rect x="6.75" y="5.8002334e-14" width="11.25" height="11" rx="1"></rect>
+      </g>
+    </g>
+  </g>
+</svg>
