@@ -3,7 +3,7 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgPlusFilled = ({
+const SvgCalculatorOutlined2 = ({
   title,
   titleId,
   ...props
@@ -20,7 +20,7 @@ const SvgPlusFilled = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M7 7H4a1 1 0 1 0 0 2h3v3a1 1 0 0 0 2 0V9h3a1 1 0 0 0 0-2H9V4a1 1 0 1 0-2 0z" />
+    <path d="M14 0H2c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h12c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1m-2 7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1M4.25 9.5a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m4 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m0 4a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m-4 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5M13 5H3V2h10z" />
   </svg>
 );
-export default SvgPlusFilled;
+export default SvgCalculatorOutlined2;
