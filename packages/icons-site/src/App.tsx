@@ -35,7 +35,10 @@ function App() {
           </div>
         </fieldset>
 
-        <h2>图标列表</h2>
+        <h2>
+          图标列表
+          {/* <i>version: {pkg.version}</i> */}
+        </h2>
         <div style={{ padding: 10 }}>
           <input
             style={{ width: '100%', height: 36, padding: '0 10px' }}

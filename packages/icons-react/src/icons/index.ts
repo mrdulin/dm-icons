@@ -131,6 +131,7 @@ export { default as LogoutOutlined } from './LogoutOutlined';
 export { default as MailOutlined } from './MailOutlined';
 export { default as MapOutlined } from './MapOutlined';
 export { default as MedalFilled } from './MedalFilled';
+export { default as MinusCircleFilled } from './MinusCircleFilled';
 export { default as MinusOutlined } from './MinusOutlined';
 export { default as MinusSquareFilled } from './MinusSquareFilled';
 export { default as MoreOutlined } from './MoreOutlined';

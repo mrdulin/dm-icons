@@ -4,7 +4,8 @@
   "type": "module",
   "files": [
     "dist",
-    "readme.md"
+    "readme.md",
+    "package.json"
   ],
   "sideEffects": false,
   "main": "./dist/icons/index.js",

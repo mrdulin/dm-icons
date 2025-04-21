@@ -129,6 +129,7 @@ export { default as LogoutOutlined } from "./logout-outlined";
 export { default as MailOutlined } from "./mail-outlined";
 export { default as MapOutlined } from "./map-outlined";
 export { default as MedalFilled } from "./medal-filled";
+export { default as MinusCircleFilled } from "./minus-circle-filled";
 export { default as MinusOutlined } from "./minus-outlined";
 export { default as MinusSquareFilled } from "./minus-square-filled";
 export { default as MoreOutlined } from "./more-outlined";
