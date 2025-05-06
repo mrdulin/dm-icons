@@ -92,6 +92,7 @@ export { default as InformationFilled } from "./information-filled";
 export { default as InsuranceFilled } from "./insurance-filled";
 export { default as ItemColored } from "./item-colored";
 export { default as LawsuitOutlined } from "./lawsuit-outlined";
+export { default as LayoutFourColumnOutlined } from "./layout-four-column-outlined";
 export { default as LayoutFourOutlined } from "./layout-four-outlined";
 export { default as LayoutLeftFourRightOneOutlined } from "./layout-left-four-right-one-outlined";
 export { default as LayoutLeftFourRightTwoOutlined } from "./layout-left-four-right-two-outlined";
@@ -117,6 +118,7 @@ export { default as LayoutTopThreeBottomOneOutlined } from "./layout-top-three-b
 export { default as LayoutTopThreeBottomTwoOutlined } from "./layout-top-three-bottom-two-outlined";
 export { default as LayoutTopTwoBottomFourOutlined } from "./layout-top-two-bottom-four-outlined";
 export { default as LayoutTopTwoBottomOneOutlined } from "./layout-top-two-bottom-one-outlined";
+export { default as LayoutTwoRowFourColumnOutlined } from "./layout-two-row-four-column-outlined";
 export { default as LeafOutlined } from "./leaf-outlined";
 export { default as LeftOutlined } from "./left-outlined";
 export { default as LightningFilled } from "./lightning-filled";
