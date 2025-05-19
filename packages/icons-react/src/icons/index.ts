@@ -159,6 +159,7 @@ export { default as PushPinFilled } from './PushPinFilled';
 export { default as QqOutlined } from './QqOutlined';
 export { default as QuestionCircleFilled } from './QuestionCircleFilled';
 export { default as RadarOutlined } from './RadarOutlined';
+export { default as RecommendLabelColored } from './RecommendLabelColored';
 export { default as RegionalPanoramaOutlined } from './RegionalPanoramaOutlined';
 export { default as ReloadOutlined } from './ReloadOutlined';
 export { default as ReportOutlined } from './ReportOutlined';
