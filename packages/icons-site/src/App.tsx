@@ -6,7 +6,7 @@ const typedIcons: Record<string, React.ComponentType<React.SVGProps<HTMLSpanElem
 
 const iconNames = Object.keys(typedIcons);
 
-const Colors = ['initial', '#b8cae6', '#000000'];
+const Colors = ['initial', '#b8cae6', '#F0BB0E', '#D93838', '#000000'];
 
 let CopyTimer: ReturnType<typeof setTimeout> | undefined;
 
