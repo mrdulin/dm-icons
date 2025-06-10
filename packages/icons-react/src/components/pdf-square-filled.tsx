@@ -3,7 +3,7 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgPdfSquareColored = ({
+const SvgPdfSquareFilled = ({
   title,
   titleId,
   ...props
@@ -31,4 +31,4 @@ const SvgPdfSquareColored = ({
     </g>
   </svg>
 );
-export default SvgPdfSquareColored;
+export default SvgPdfSquareFilled;
