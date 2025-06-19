@@ -20,7 +20,8 @@
         "types": "./dist/index.d.ts",
         "default": "./dist/icons/index.js"
       }
-    }
+    },
+    "./package.json": "./package.json"
   },
   "types": "./dist/index.d.ts",
   "repository": {
