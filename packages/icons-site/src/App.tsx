@@ -37,6 +37,9 @@ function App() {
 
         <h2>
           图标列表
+          <span>
+            (数量：<i>{iconNames.length}</i>)
+          </span>
           {/* <i>version: {pkg.version}</i> */}
         </h2>
         <div style={{ padding: 10 }}>
