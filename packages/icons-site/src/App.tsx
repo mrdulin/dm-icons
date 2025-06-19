@@ -11,7 +11,7 @@ const Colors = ['initial', '#b8cae6', '#F0BB0E', '#D93838', '#000000'];
 let CopyTimer: ReturnType<typeof setTimeout> | undefined;
 
 function App() {
-  const [color, setColor] = useState<(typeof Colors)[number]>();
+  const [color, setColor] = useState<(typeof Colors)[number]>(Colors[0]);
   const [searchKeyword, setSearchKeyword] = useState<string>();
   const [copiedIconName, setCopiedIconName] = useState<string>();
 
@@ -37,7 +37,7 @@ function App() {
 
         <h2>
           图标列表
-          <span>
+          <span style={{ fontSize: '14px', fontWeight: 'normal' }}>
             (数量：<i>{iconNames.length}</i>)
           </span>
           {/* <i>version: {pkg.version}</i> */}
