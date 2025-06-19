@@ -10,8 +10,6 @@ const Colors = ['initial', '#b8cae6', '#F0BB0E', '#D93838', '#000000'];
 
 let CopyTimer: ReturnType<typeof setTimeout> | undefined;
 
-console.log('import.meta.env: ', import.meta.env)
-
 function App() {
   const [color, setColor] = useState<(typeof Colors)[number]>(Colors[0]);
   const [searchKeyword, setSearchKeyword] = useState<string>();
@@ -40,9 +38,8 @@ function App() {
         <h2>
           图标列表
           <span style={{ fontSize: '14px', fontWeight: 'normal' }}>
-            (version: <i>{import.meta.env.VITE_ICONS_REACT_PACKAGE_VERSION}</i>, 数量：<i>{iconNames.length}</i>)
+            (version: <i>{VITE_ICONS_REACT_PACKAGE_VERSION}</i>, 数量：<i>{iconNames.length}</i>)
           </span>
-          {/* <i>version: {pkg.version}</i> */}
         </h2>
         <div style={{ padding: 10 }}>
           <input
