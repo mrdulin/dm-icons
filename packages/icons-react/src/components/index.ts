@@ -1,3 +1,4 @@
+export { default as AdobeReaderColored } from "./adobe-reader-colored";
 export { default as AlertColored } from "./alert-colored";
 export { default as AnnouncementFilled } from "./announcement-filled";
 export { default as AppstoreOutlined } from "./appstore-outlined";
@@ -42,6 +43,7 @@ export { default as CopyFilled } from "./copy-filled";
 export { default as CopyOutlined } from "./copy-outlined";
 export { default as CustomerServiceOutlined } from "./customer-service-outlined";
 export { default as DecreaseDecimalPlaceOutlined } from "./decrease-decimal-place-outlined";
+export { default as DeepLabelColored } from "./deep-label-colored";
 export { default as DeleteFilled } from "./delete-filled";
 export { default as DotsMenuOutlined } from "./dots-menu-outlined";
 export { default as DotsSpinnerOutlined } from "./dots-spinner-outlined";
@@ -220,6 +222,7 @@ export { default as ValuationSquareOutlined } from "./valuation-square-outlined"
 export { default as VerticalAlignBottomOutlined } from "./vertical-align-bottom-outlined";
 export { default as VerticalAlignTopFilled } from "./vertical-align-top-filled";
 export { default as VerticalAlignTopOutlined } from "./vertical-align-top-outlined";
+export { default as ViewpointColored } from "./viewpoint-colored";
 export { default as WarningFilled } from "./warning-filled";
 export { default as WholeOutlined } from "./whole-outlined";
 export { default as YieldSpreadOutlined } from "./yield-spread-outlined";

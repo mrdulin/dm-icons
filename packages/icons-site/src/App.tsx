@@ -38,7 +38,18 @@ function App() {
         <h2>
           图标列表
           <span style={{ fontSize: '14px', fontWeight: 'normal' }}>
-            (version: <i>{VITE_ICONS_REACT_PACKAGE_VERSION}</i>, 数量：<i>{iconNames.length}</i>)
+            (
+            <span>
+              version：<i>{VITE_ICONS_REACT_PACKAGE_VERSION}</i>；
+            </span>
+            <span>
+              数量：<i>{iconNames.length}</i>；
+            </span>
+            <span>
+              更新时间：
+              <i>{new Date(+BUILD_TIMESTAMP).toLocaleString()}</i>
+            </span>
+            )
           </span>
         </h2>
         <div style={{ padding: 10 }}>

@@ -1,6 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
       // DON NOT EDIT IT MANUALLY
-      export { default as AlertColored } from './AlertColored';
+      export { default as AdobeReaderColored } from './AdobeReaderColored';
+export { default as AlertColored } from './AlertColored';
 export { default as AnnouncementFilled } from './AnnouncementFilled';
 export { default as AppstoreOutlined } from './AppstoreOutlined';
 export { default as AreaChartOutlined } from './AreaChartOutlined';
@@ -44,6 +45,7 @@ export { default as CopyFilled } from './CopyFilled';
 export { default as CopyOutlined } from './CopyOutlined';
 export { default as CustomerServiceOutlined } from './CustomerServiceOutlined';
 export { default as DecreaseDecimalPlaceOutlined } from './DecreaseDecimalPlaceOutlined';
+export { default as DeepLabelColored } from './DeepLabelColored';
 export { default as DeleteFilled } from './DeleteFilled';
 export { default as DotsMenuOutlined } from './DotsMenuOutlined';
 export { default as DotsSpinnerOutlined } from './DotsSpinnerOutlined';
@@ -222,6 +224,7 @@ export { default as ValuationSquareOutlined } from './ValuationSquareOutlined';
 export { default as VerticalAlignBottomOutlined } from './VerticalAlignBottomOutlined';
 export { default as VerticalAlignTopFilled } from './VerticalAlignTopFilled';
 export { default as VerticalAlignTopOutlined } from './VerticalAlignTopOutlined';
+export { default as ViewpointColored } from './ViewpointColored';
 export { default as WarningFilled } from './WarningFilled';
 export { default as WholeOutlined } from './WholeOutlined';
 export { default as YieldSpreadOutlined } from './YieldSpreadOutlined';
