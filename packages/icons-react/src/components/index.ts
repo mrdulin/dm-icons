@@ -138,6 +138,7 @@ export { default as LayoutTopTwoBottomOneOutlined } from "./layout-top-two-botto
 export { default as LayoutTwoRowFourColumnOutlined } from "./layout-two-row-four-column-outlined";
 export { default as LeafOutlined } from "./leaf-outlined";
 export { default as LeftOutlined } from "./left-outlined";
+export { default as LightbulbOutlined } from "./lightbulb-outlined";
 export { default as LightningFilled } from "./lightning-filled";
 export { default as LineChartFilled } from "./line-chart-filled";
 export { default as LineChartOutlined } from "./line-chart-outlined";
@@ -177,6 +178,7 @@ export { default as ProvideOutlined } from "./provide-outlined";
 export { default as PushPinFilled } from "./push-pin-filled";
 export { default as QqOutlined } from "./qq-outlined";
 export { default as QuestionCircleFilled } from "./question-circle-filled";
+export { default as QuickFillOutlined } from "./quick-fill-outlined";
 export { default as RadarOutlined } from "./radar-outlined";
 export { default as RatingReportOutlined } from "./rating-report-outlined";
 export { default as RecommendLabelColored } from "./recommend-label-colored";
