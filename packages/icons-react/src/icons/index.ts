@@ -140,6 +140,7 @@ export { default as LayoutTopTwoBottomOneOutlined } from './LayoutTopTwoBottomOn
 export { default as LayoutTwoRowFourColumnOutlined } from './LayoutTwoRowFourColumnOutlined';
 export { default as LeafOutlined } from './LeafOutlined';
 export { default as LeftOutlined } from './LeftOutlined';
+export { default as LightbulbOutlined } from './LightbulbOutlined';
 export { default as LightningFilled } from './LightningFilled';
 export { default as LineChartFilled } from './LineChartFilled';
 export { default as LineChartOutlined } from './LineChartOutlined';
@@ -179,6 +180,7 @@ export { default as ProvideOutlined } from './ProvideOutlined';
 export { default as PushPinFilled } from './PushPinFilled';
 export { default as QqOutlined } from './QqOutlined';
 export { default as QuestionCircleFilled } from './QuestionCircleFilled';
+export { default as QuickFillOutlined } from './QuickFillOutlined';
 export { default as RadarOutlined } from './RadarOutlined';
 export { default as RatingReportOutlined } from './RatingReportOutlined';
 export { default as RecommendLabelColored } from './RecommendLabelColored';
