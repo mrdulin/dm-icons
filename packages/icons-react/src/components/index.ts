@@ -107,6 +107,7 @@ export { default as InfoTriangleFilled } from "./info-triangle-filled";
 export { default as InformationFilled } from "./information-filled";
 export { default as InsuranceFilled } from "./insurance-filled";
 export { default as ItemColored } from "./item-colored";
+export { default as ItemSettingOutlined } from "./item-setting-outlined";
 export { default as JoinConversationFilled } from "./join-conversation-filled";
 export { default as LawsuitOutlined } from "./lawsuit-outlined";
 export { default as LayoutFourColumnOutlined } from "./layout-four-column-outlined";
