@@ -26,6 +26,7 @@ export { default as CaretDownOutlined } from "./caret-down-outlined";
 export { default as CaretRightOutlined } from "./caret-right-outlined";
 export { default as CaretUpOutlined } from "./caret-up-outlined";
 export { default as CategoryOutlined } from "./category-outlined";
+export { default as ChartBellOutlined } from "./chart-bell-outlined";
 export { default as CheckCircleFilled } from "./check-circle-filled";
 export { default as CheckOutlined } from "./check-outlined";
 export { default as ChineseLanguageCodeOutlined } from "./chinese-language-code-outlined";
