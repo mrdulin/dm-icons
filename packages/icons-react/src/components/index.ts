@@ -6,6 +6,7 @@ export { default as AreaChartOutlined } from "./area-chart-outlined";
 export { default as ArrowDownOutlined } from "./arrow-down-outlined";
 export { default as ArrowUpOutlined } from "./arrow-up-outlined";
 export { default as BarChartOutlined } from "./bar-chart-outlined";
+export { default as BellFilled2 } from "./bell-filled-2";
 export { default as BellFilled } from "./bell-filled";
 export { default as BellSettingFilled } from "./bell-setting-filled";
 export { default as BestSellerOutlined } from "./best-seller-outlined";
