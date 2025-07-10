@@ -9,6 +9,7 @@ export { default as ArrowDownOutlined } from './ArrowDownOutlined';
 export { default as ArrowUpOutlined } from './ArrowUpOutlined';
 export { default as BarChartOutlined } from './BarChartOutlined';
 export { default as BellFilled } from './BellFilled';
+export { default as BellFilled2 } from './BellFilled2';
 export { default as BellSettingFilled } from './BellSettingFilled';
 export { default as BestSellerOutlined } from './BestSellerOutlined';
 export { default as BidOutlined } from './BidOutlined';
