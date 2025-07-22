@@ -51,6 +51,7 @@ export { default as DeepLabelColored } from './DeepLabelColored';
 export { default as DeleteFilled } from './DeleteFilled';
 export { default as DotsMenuOutlined } from './DotsMenuOutlined';
 export { default as DotsSpinnerOutlined } from './DotsSpinnerOutlined';
+export { default as DoubleDownOutlined } from './DoubleDownOutlined';
 export { default as DoubleLeftOutlined } from './DoubleLeftOutlined';
 export { default as DoubleRightOutlined } from './DoubleRightOutlined';
 export { default as DownOutlined } from './DownOutlined';

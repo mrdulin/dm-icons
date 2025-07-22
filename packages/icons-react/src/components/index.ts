@@ -49,6 +49,7 @@ export { default as DeepLabelColored } from "./deep-label-colored";
 export { default as DeleteFilled } from "./delete-filled";
 export { default as DotsMenuOutlined } from "./dots-menu-outlined";
 export { default as DotsSpinnerOutlined } from "./dots-spinner-outlined";
+export { default as DoubleDownOutlined } from "./double-down-outlined";
 export { default as DoubleLeftOutlined } from "./double-left-outlined";
 export { default as DoubleRightOutlined } from "./double-right-outlined";
 export { default as DownOutlined } from "./down-outlined";
