@@ -54,6 +54,7 @@ export { default as DotsSpinnerOutlined } from './DotsSpinnerOutlined';
 export { default as DoubleDownOutlined } from './DoubleDownOutlined';
 export { default as DoubleLeftOutlined } from './DoubleLeftOutlined';
 export { default as DoubleRightOutlined } from './DoubleRightOutlined';
+export { default as DoubleUpOutlined } from './DoubleUpOutlined';
 export { default as DownOutlined } from './DownOutlined';
 export { default as DragHandleHorizontalDoubleLineOutlined } from './DragHandleHorizontalDoubleLineOutlined';
 export { default as DragHandleOutlined } from './DragHandleOutlined';
