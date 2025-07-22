@@ -37,7 +37,7 @@
     "generate:step1": "svgr --out-dir ./src/components --typescript -- ./src/assets",
     "generate": "npm run generate:step1 && npm run generate:step2",
     "postgenerate": "npm run build",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run generate && npm run build",
     "wait3s": "node -e \"setTimeout(() => process.exit(0), 3000)\"",
     "cnpm:sync": "cnpm sync %npm_package_name%",
     "postpublish": "echo \"wait for 3 seconds, then sync cnpm\" && npm run wait3s && npm run cnpm:sync"
