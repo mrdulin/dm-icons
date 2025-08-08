@@ -164,6 +164,7 @@ export { default as MoreOutlined } from './MoreOutlined';
 export { default as MultiplicationOutlined } from './MultiplicationOutlined';
 export { default as NewCircleOutlined } from './NewCircleOutlined';
 export { default as NewConversationOutlined } from './NewConversationOutlined';
+export { default as NothingDoneColored } from './NothingDoneColored';
 export { default as NoticeOutlined } from './NoticeOutlined';
 export { default as OcoOutlined } from './OcoOutlined';
 export { default as OfrOutlined } from './OfrOutlined';
