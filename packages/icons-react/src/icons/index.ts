@@ -218,6 +218,7 @@ export { default as SyncOutlined } from './SyncOutlined';
 export { default as TagOutlined } from './TagOutlined';
 export { default as TalkFilled } from './TalkFilled';
 export { default as TargetColored } from './TargetColored';
+export { default as TaxExemptOutlined } from './TaxExemptOutlined';
 export { default as ThumbsDownFilled } from './ThumbsDownFilled';
 export { default as ThumbsUpFilled } from './ThumbsUpFilled';
 export { default as TrdOutlined } from './TrdOutlined';
