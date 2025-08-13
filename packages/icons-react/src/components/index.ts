@@ -217,6 +217,7 @@ export { default as TagOutlined } from "./tag-outlined";
 export { default as TalkFilled } from "./talk-filled";
 export { default as TargetColored } from "./target-colored";
 export { default as TaxExemptOutlined } from "./tax-exempt-outlined";
+export { default as TaxExemptSquareOutlined } from "./tax-exempt-square-outlined";
 export { default as ThumbsDownFilled } from "./thumbs-down-filled";
 export { default as ThumbsUpFilled } from "./thumbs-up-filled";
 export { default as TrdOutlined } from "./trd-outlined";
