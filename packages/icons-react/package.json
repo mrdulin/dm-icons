@@ -29,7 +29,7 @@
     "url": "https://github.com/mrdulin/dm-icons.git"
   },
   "scripts": {
-    "clean": "rimraf ./src/components",
+    "clean": "rimraf ./src/components ./dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "pregenerate": "npm run clean",

@@ -237,4 +237,5 @@ export { default as VerticalAlignTopOutlined } from './VerticalAlignTopOutlined'
 export { default as ViewpointColored } from './ViewpointColored';
 export { default as WarningFilled } from './WarningFilled';
 export { default as WholeOutlined } from './WholeOutlined';
+export { default as WorkdaySquareOutlined } from './WorkdaySquareOutlined';
 export { default as YieldSpreadOutlined } from './YieldSpreadOutlined';
