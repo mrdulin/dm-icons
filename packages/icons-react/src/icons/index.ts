@@ -218,6 +218,7 @@ export { default as SaveFilled } from './SaveFilled';
 export { default as SciTechInnovationOutlined } from './SciTechInnovationOutlined';
 export { default as SearchOutlined } from './SearchOutlined';
 export { default as SecondarySquareOutlined } from './SecondarySquareOutlined';
+export { default as SecurityFilled } from './SecurityFilled';
 export { default as SendOutlined } from './SendOutlined';
 export { default as ServerColored } from './ServerColored';
 export { default as SettingOutlined } from './SettingOutlined';
