@@ -1,0 +1,18 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../dm-icon';
+
+      const IssueFilled = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 32 16", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M8.316 3.144a27 27 0 0 1-.483 2.441h5.037v1H7.568c-.11.364-.23.705-.34 1.035h4.4v.88c-.286.902-.826 1.716-1.64 2.442.836.462 1.849.892 3.026 1.287l-.54.99c-1.33-.483-2.453-1.023-3.355-1.595q-1.303.908-3.2 1.65l-.55-.99c1.099-.396 2.045-.836 2.826-1.308-.715-.572-1.253-1.188-1.605-1.837-.792 1.628-1.793 2.925-2.992 3.893l-.54-.967q2.278-2.014 3.4-5.48H3.773l.87-3.211 1.045.177-.573 2.034h1.628a25 25 0 0 0 .507-2.573zM7.35 8.566q.545.977 1.715 1.804c.693-.56 1.2-1.166 1.507-1.804z", clipRule: "evenodd" }),
+    React.createElement("path", { fill: "currentColor", d: "M17.854 6.092a8.3 8.3 0 0 1-1.123 1.682v5.434H15.71V8.797c-.396.34-.814.671-1.276.99l-.308-1.034c1.254-.88 2.188-1.914 2.782-3.102zM24.102 7.444h-1.716v4.664c0 .704-.396 1.056-1.177 1.056h-1.596l-.23-1.022a17 17 0 0 0 1.463.065c.319 0 .483-.12.483-.352v-4.41h-3.344V6.42h6.117zM26.467 10.502c.23 0 .429.067.583.22a.73.73 0 0 1 .23.561.77.77 0 0 1-.23.572.87.87 0 0 1-.583.22.76.76 0 0 1-.562-.23.74.74 0 0 1-.242-.562c0-.23.078-.417.242-.56a.76.76 0 0 1 .562-.221M26.906 9.854h-.869l-.253-5.632h1.375zM17.348 3.572c-.594 1.21-1.585 2.288-2.992 3.256l-.32-1.045c1.067-.759 1.849-1.638 2.355-2.65zM10.165 3.022a13 13 0 0 1 1.913 1.739l-.747.748c-.44-.572-1.056-1.166-1.87-1.793zM23.629 4.694H18.26V3.671h5.368z" }),
+    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M30 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2l-.204-.01A2 2 0 0 1 0 14V2A2 2 0 0 1 1.796.01L2 0zM2 1.2a.8.8 0 0 0-.8.8v12a.8.8 0 0 0 .8.8h28a.8.8 0 0 0 .8-.8V2a.8.8 0 0 0-.8-.8z", clipRule: "evenodd" })))
+        } />;
+      }
+
+      export default IssueFilled;
