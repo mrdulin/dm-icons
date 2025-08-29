@@ -58,6 +58,7 @@ export { default as DoubleLeftOutlined } from "./double-left-outlined";
 export { default as DoubleRightOutlined } from "./double-right-outlined";
 export { default as DoubleUpOutlined } from "./double-up-outlined";
 export { default as DownOutlined } from "./down-outlined";
+export { default as DownloadOutlined } from "./download-outlined";
 export { default as DragHandleHorizontalDoubleLineOutlined } from "./drag-handle-horizontal-double-line-outlined";
 export { default as DragHandleOutlined } from "./drag-handle-outlined";
 export { default as EarthOutlined } from "./earth-outlined";

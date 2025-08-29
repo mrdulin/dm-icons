@@ -60,6 +60,7 @@ export { default as DoubleLeftOutlined } from './DoubleLeftOutlined';
 export { default as DoubleRightOutlined } from './DoubleRightOutlined';
 export { default as DoubleUpOutlined } from './DoubleUpOutlined';
 export { default as DownOutlined } from './DownOutlined';
+export { default as DownloadOutlined } from './DownloadOutlined';
 export { default as DragHandleHorizontalDoubleLineOutlined } from './DragHandleHorizontalDoubleLineOutlined';
 export { default as DragHandleOutlined } from './DragHandleOutlined';
 export { default as EarthOutlined } from './EarthOutlined';
