@@ -92,6 +92,7 @@ export { default as FireColored } from "./fire-colored";
 export { default as FireFilled } from "./fire-filled";
 export { default as FlagColored } from "./flag-colored";
 export { default as FlagFilled } from "./flag-filled";
+export { default as FlexScreenOutlined } from "./flex-screen-outlined";
 export { default as FloatOutlined } from "./float-outlined";
 export { default as FloatRateSquareOutlined } from "./float-rate-square-outlined";
 export { default as FolderOpenOutlined } from "./folder-open-outlined";
