@@ -7,10 +7,10 @@
       const SpecialSquareOutlined = (props: Omit<DMIconProps, 'icon'>) => {
         return <DMIcon {...props} icon={
           // @ts-expect-error TODO improve TS type
-          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16", width: "1em", height: "1em", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 17 16", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
-    React.createElement("path", { fill: "currentColor", d: "M7.917 3.044c-.077.407-.154.804-.22 1.178h4.598V5.2H7.488c-.088.385-.176.76-.264 1.112h5.72v1H6.95c-.132.44-.253.847-.385 1.232h5.093v.902c-.506.748-1.287 1.496-2.343 2.255q.891.33 1.716.694l-.572.9a28.5 28.5 0 0 0-5.038-1.824l.55-.815c.77.198 1.507.408 2.21.65.936-.594 1.674-1.189 2.213-1.805H5.068c.264-.704.506-1.43.737-2.188H3V6.312h3.09c.089-.374.188-.738.276-1.112H3.748v-.978h2.838c.088-.418.165-.848.253-1.266z" }),
-    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM2 1.2a.8.8 0 0 0-.8.8v12a.8.8 0 0 0 .8.8h12a.8.8 0 0 0 .8-.8V2a.8.8 0 0 0-.8-.8z", clipRule: "evenodd" })))
+    React.createElement("path", { fill: "currentColor", fillOpacity: 0.5, d: "M14.5 15v1h-12v-1zm1-1V2a1 1 0 0 0-1-1h-12a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1v1a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1" }),
+    React.createElement("path", { fill: "currentColor", d: "M8.302 2.923c-.088.44-.165.87-.253 1.266h4.74v.736H7.885c-.11.484-.22.936-.33 1.365h5.885v.77H7.345c-.154.516-.32 1-.473 1.451h5.236v.683c-.528.814-1.354 1.639-2.486 2.453.66.242 1.298.517 1.903.803l-.44.692a28 28 0 0 0-5.104-1.925l.418-.616c.825.22 1.617.473 2.376.737 1.012-.66 1.815-1.363 2.398-2.09H5.74c.264-.703.517-1.43.748-2.189H3.56v-.77h3.146q.178-.673.341-1.364H4.31V4.19h2.904c.1-.45.187-.891.275-1.331z" })))
         } />;
       }
 
