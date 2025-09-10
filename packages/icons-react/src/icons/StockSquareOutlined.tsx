@@ -14,7 +14,7 @@
     React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M23.067 10.535h-3.42v.485h3.64v.67h-3.64v.517h4.444v.792h-9.9v-.792h4.421v-.517h-3.596v-.67h3.596v-.485h-3.377v-2.86h7.832zm-6.841-.616h2.386v-.527h-2.386zm3.42 0h2.431v-.527h-2.43zm-3.42-1.1h2.386v-.528h-2.386zm3.42 0h2.431v-.528h-2.43z", clipRule: "evenodd" }),
     React.createElement("path", { fill: "currentColor", d: "M26.467 10.502c.23 0 .429.067.583.22a.73.73 0 0 1 .23.561.77.77 0 0 1-.23.572.87.87 0 0 1-.583.22.76.76 0 0 1-.562-.23.74.74 0 0 1-.242-.562c0-.23.078-.417.242-.56a.76.76 0 0 1 .562-.221M26.906 9.854h-.869l-.253-5.632h1.375zM24.09 7.225h-9.9v-.748h9.9z" }),
     React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M22.837 6.015h-7.36V3.22h7.36zm-6.358-.595h5.357v-.506h-5.357zm0-1.1h5.357v-.495h-5.357z", clipRule: "evenodd" }),
-    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M30 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2l-.204-.01A2 2 0 0 1 0 14V2A2 2 0 0 1 1.796.01L2 0zM2 1.2a.8.8 0 0 0-.8.8v12a.8.8 0 0 0 .8.8h28a.8.8 0 0 0 .8-.8V2a.8.8 0 0 0-.8-.8z", clipRule: "evenodd" })))
+    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M30 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2l-.204-.01A2 2 0 0 1 0 14V2A2 2 0 0 1 1.796.01L2 0zM2 .8A1.2 1.2 0 0 0 .8 2v12A1.2 1.2 0 0 0 2 15.2h28a1.2 1.2 0 0 0 1.2-1.2V2A1.2 1.2 0 0 0 30 .8z", clipRule: "evenodd" })))
         } />;
       }
 
