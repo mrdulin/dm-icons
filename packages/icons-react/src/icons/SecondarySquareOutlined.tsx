@@ -7,11 +7,11 @@
       const SecondarySquareOutlined = (props: Omit<DMIconProps, 'icon'>) => {
         return <DMIcon {...props} icon={
           // @ts-expect-error TODO improve TS type
-          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16", width: "1em", height: "1em", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 16 16", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
-    React.createElement("path", { fill: "currentColor", d: "M9.81 6.3c0 .573-.034 1.1-.09 1.606.628 1.903 1.76 3.41 3.41 4.522l-.692.802c-1.32-1.011-2.332-2.243-3.025-3.717-.044.165-.1.33-.154.495-.451 1.308-1.518 2.386-3.2 3.244l-.683-.836c1.452-.726 2.42-1.617 2.882-2.673.34-.89.517-2.034.539-3.442zM5.76 8.566a36 36 0 0 1-1.957 4.312l-.968-.44a34 34 0 0 0 2.002-4.223z" }),
-    React.createElement("path", { fill: "currentColor", d: "M8.435 3.165a22 22 0 0 1-.287 1.475h4.576v.681c-.231.924-.528 1.848-.902 2.761L10.8 7.796c.319-.616.584-1.342.803-2.155H7.873c-.34 1.034-.781 1.848-1.32 2.463l-.868-.616Q7.006 5.871 7.389 3zM3.792 3.474Q5.03 4.76 5.706 5.75l-.825.572c-.484-.704-1.122-1.474-1.936-2.321z" }),
-    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM2 .8A1.2 1.2 0 0 0 .8 2v12A1.2 1.2 0 0 0 2 15.2h12a1.2 1.2 0 0 0 1.2-1.2V2A1.2 1.2 0 0 0 14 .8z", clipRule: "evenodd" })))
+    React.createElement("path", { fill: "currentColor", fillOpacity: 0.5, d: "M14 15v1H2v-1zm1-1V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1v1a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1" }),
+    React.createElement("path", { fill: "currentColor", d: "M9.688 5.934c0 .594-.032 1.144-.087 1.65.66 1.957 1.814 3.509 3.475 4.653l-.516.605c-1.43-1.078-2.487-2.398-3.19-3.982a7 7 0 0 1-.232.77c-.473 1.32-1.55 2.398-3.244 3.234l-.518-.627c1.496-.726 2.486-1.65 2.981-2.75.352-.935.539-2.123.561-3.553zM5.695 8.21a36 36 0 0 1-2.057 4.28l-.737-.33a33.4 33.4 0 0 0 2.101-4.213z" }),
+    React.createElement("path", { fill: "currentColor", d: "M8.313 2.843c-.088.572-.187 1.1-.308 1.584h4.62v.517c-.231.935-.528 1.86-.902 2.772l-.78-.22c.34-.682.615-1.452.835-2.31H7.785c-.34 1.023-.792 1.86-1.353 2.497l-.66-.462c.902-1.078 1.485-2.585 1.75-4.499zM3.66 3.228q1.287 1.287 1.98 2.244l-.616.44C4.53 5.23 3.858 4.46 3.022 3.624z" })))
         } />;
       }
 

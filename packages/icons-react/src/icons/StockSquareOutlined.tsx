@@ -7,14 +7,14 @@
       const StockSquareOutlined = (props: Omit<DMIconProps, 'icon'>) => {
         return <DMIcon {...props} icon={
           // @ts-expect-error TODO improve TS type
-          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 32 16", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 31 17", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
-    React.createElement("path", { fill: "currentColor", d: "M7.8 3.11c-.088.32-.187.639-.286.947h5.489v1.022H7.106A13 13 0 0 1 5.61 7.664v5.556H4.588V8.886c-.286.308-.584.593-.892.868l-.648-.836C4.302 7.807 5.28 6.531 5.974 5.079H3.499V4.057h2.903c.132-.363.242-.716.341-1.068z" }),
-    React.createElement("path", { fill: "currentColor", d: "M12.441 7.18a16 16 0 0 1-1.958 1.573v.474h2.662v1.011h-2.662v1.793c0 .76-.374 1.145-1.122 1.145H7.998l-.275-.99q.56.032 1.22.033c.33 0 .506-.177.506-.518v-1.463H6.348V9.227h3.101v-.892q.875-.495 1.684-1.154h-3.95v-.957h5.258z" }),
-    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M23.067 10.535h-3.42v.485h3.64v.67h-3.64v.517h4.444v.792h-9.9v-.792h4.421v-.517h-3.596v-.67h3.596v-.485h-3.377v-2.86h7.832zm-6.841-.616h2.386v-.527h-2.386zm3.42 0h2.431v-.527h-2.43zm-3.42-1.1h2.386v-.528h-2.386zm3.42 0h2.431v-.528h-2.43z", clipRule: "evenodd" }),
-    React.createElement("path", { fill: "currentColor", d: "M26.467 10.502c.23 0 .429.067.583.22a.73.73 0 0 1 .23.561.77.77 0 0 1-.23.572.87.87 0 0 1-.583.22.76.76 0 0 1-.562-.23.74.74 0 0 1-.242-.562c0-.23.078-.417.242-.56a.76.76 0 0 1 .562-.221M26.906 9.854h-.869l-.253-5.632h1.375zM24.09 7.225h-9.9v-.748h9.9z" }),
-    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M22.837 6.015h-7.36V3.22h7.36zm-6.358-.595h5.357v-.506h-5.357zm0-1.1h5.357v-.495h-5.357z", clipRule: "evenodd" }),
-    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M30 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2l-.204-.01A2 2 0 0 1 0 14V2A2 2 0 0 1 1.796.01L2 0zM2 .8A1.2 1.2 0 0 0 .8 2v12A1.2 1.2 0 0 0 2 15.2h28a1.2 1.2 0 0 0 1.2-1.2V2A1.2 1.2 0 0 0 30 .8z", clipRule: "evenodd" })))
+    React.createElement("path", { fill: "currentColor", d: "M7.168 3.477c-.11.363-.22.715-.342 1.066h5.633v.771h-5.93A12.7 12.7 0 0 1 5.022 7.92v5.6h-.77V8.867c-.373.407-.759.792-1.177 1.166l-.494-.627a12.2 12.2 0 0 0 3.08-4.092H2.986v-.77H5.98c.143-.385.275-.77.385-1.167z" }),
+    React.createElement("path", { fill: "currentColor", d: "M11.876 7.393a16 16 0 0 1-2.014 1.573v.693h2.75v.758h-2.75v2.08c0 .649-.33.979-.978.98H7.509l-.21-.749c.397.011.815.021 1.265.021.33 0 .506-.175.506-.505v-1.826H5.88v-.76h3.19V8.637c.627-.352 1.221-.759 1.793-1.243H6.728v-.737h5.148z" }),
+    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M22.48 10.835h-3.455v.617h3.73v.528h-3.73v.648h4.533v.617h-9.834v-.617h4.51v-.648h-3.685v-.528h3.684v-.617h-3.41V8.031h7.657zm-6.897-.494h2.65V9.67h-2.65zm3.442 0h2.696V9.67h-2.696zm-3.442-1.133h2.65v-.682h-2.65zm3.442 0h2.696v-.682h-2.696z", clipRule: "evenodd" }),
+    React.createElement("path", { fill: "currentColor", d: "M25.967 11.1a.64.64 0 0 1 .67.649.64.64 0 0 1-.187.473.7.7 0 0 1-.483.187.63.63 0 0 1-.462-.187.64.64 0 0 1-.198-.473.6.6 0 0 1 .198-.462.59.59 0 0 1 .462-.187M26.318 10.296h-.681l-.176-5.74h1.022zM23.568 7.481h-9.855v-.594h9.855z" }),
+    React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M22.249 6.315h-7.184V3.598h7.184zm-6.413-.473h5.643v-.65h-5.643zm0-1.122h5.643v-.638h-5.643z", clipRule: "evenodd" }),
+    React.createElement("path", { fill: "currentColor", fillOpacity: 0.5, d: "M28.5 15.334v1h-26v-1zm1-1v-12a1 1 0 0 0-1-1h-26a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1v1l-.204-.011A2 2 0 0 1 .5 14.333v-12a2 2 0 0 1 2-2h26a2 2 0 0 1 2 2v12a2 2 0 0 1-1.796 1.99l-.204.01v-1a1 1 0 0 0 1-1" })))
         } />;
       }
 
