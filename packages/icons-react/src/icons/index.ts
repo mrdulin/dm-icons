@@ -124,7 +124,7 @@ export { default as InfoCircleFilled } from './InfoCircleFilled';
 export { default as InfoTriangleFilled } from './InfoTriangleFilled';
 export { default as InformationFilled } from './InformationFilled';
 export { default as InsuranceFilled } from './InsuranceFilled';
-export { default as IssueFilled } from './IssueFilled';
+export { default as IssueSquareOutlined } from './IssueSquareOutlined';
 export { default as ItemColored } from './ItemColored';
 export { default as ItemSettingOutlined } from './ItemSettingOutlined';
 export { default as JoinConversationFilled } from './JoinConversationFilled';
