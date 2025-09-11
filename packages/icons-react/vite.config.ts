@@ -10,7 +10,14 @@ import url from 'url';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), dts({ tsconfigPath: './tsconfig.app.json', rollupTypes: true })],
+  plugins: [
+    react(),
+    dts({
+      tsconfigPath: './tsconfig.app.json',
+      insertTypesEntry: true,
+      exclude: ['node_modules/**', path.resolve(__dirname, 'src/components/**')],
+    }),
+  ],
   build: {
     emptyOutDir: true,
     lib: {
@@ -23,12 +30,15 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
-      input: Object.fromEntries(
-        globSync('src/icons/**/*.{ts,tsx}').map((file) => [
-          path.relative('src', file.slice(0, file.length - path.extname(file).length)),
-          url.fileURLToPath(new URL(file, import.meta.url)),
-        ]),
-      ),
+      input: {
+        ...Object.fromEntries(
+          globSync('src/icons/**/*.{ts,tsx}').map((file) => [
+            path.relative('src', file.slice(0, file.length - path.extname(file).length)),
+            url.fileURLToPath(new URL(file, import.meta.url)),
+          ]),
+        ),
+        utils: path.resolve(__dirname, 'src/utils.ts'),
+      },
       output: {
         globals: {
           react: 'React',
