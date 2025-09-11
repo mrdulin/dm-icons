@@ -122,7 +122,7 @@ export { default as InfoCircleFilled } from "./info-circle-filled";
 export { default as InfoTriangleFilled } from "./info-triangle-filled";
 export { default as InformationFilled } from "./information-filled";
 export { default as InsuranceFilled } from "./insurance-filled";
-export { default as IssueFilled } from "./issue-filled";
+export { default as IssueSquareOutlined } from "./issue-square-outlined";
 export { default as ItemColored } from "./item-colored";
 export { default as ItemSettingOutlined } from "./item-setting-outlined";
 export { default as JoinConversationFilled } from "./join-conversation-filled";
