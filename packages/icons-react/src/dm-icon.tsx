@@ -4,7 +4,8 @@ import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
 import classNames from 'classnames';
 
 export type DMIconProps = React.HTMLProps<HTMLSpanElement> & {
-  icon: React.ComponentType;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  svgProps?: React.SVGProps<SVGSVGElement>;
 };
 
 const iconStyles = `
@@ -22,7 +23,7 @@ const iconStyles = `
   -moz-osx-font-smoothing: grayscale;
 }
   `;
-export const DMIcon = ({ icon: Icon, className, ...restProps }: DMIconProps) => {
+export const DMIcon = ({ icon: Icon, className, svgProps, ...restProps }: DMIconProps) => {
   const eleRef = useRef<HTMLSpanElement>(null);
   useEffect(() => {
     const ele = eleRef.current;
@@ -39,7 +40,7 @@ export const DMIcon = ({ icon: Icon, className, ...restProps }: DMIconProps) => 
 
   return (
     <span ref={eleRef} role="img" className={classString} {...restProps}>
-      <Icon />
+      <Icon {...svgProps} />
     </span>
   );
 };

@@ -1,6 +1,7 @@
 import * as icons from '@d-matrix/icons-react';
 import { useState } from 'react';
 import './styles.css';
+import { getEMSizeProps } from '@d-matrix/icons-react/utils';
 
 const typedIcons: Record<string, React.ComponentType<React.SVGProps<HTMLSpanElement>>> = icons;
 
@@ -98,6 +99,15 @@ function App() {
           <button style={{ fontSize: 14 }}>
             按钮 <icons.RollbackOutlined className="classname-will-be-merged" />
           </button>
+        </div>
+
+        <h2>覆盖svg元素属性</h2>
+        <div>
+          <icons.TechnologyInnovationSquareOutlined style={{ fontSize: 28 }} />
+          <icons.TaxExemptSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} />
+          <icons.SpecialSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} />
+          <icons.TlacSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} svgProps={{ width: '2em', height: '1em' }} />
+          <icons.MarketMakingSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} svgProps={getEMSizeProps({ width: 27, height: 16 })} />
         </div>
       </div>
 
