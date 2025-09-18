@@ -107,6 +107,7 @@ export { default as FrequencyOutlined } from './FrequencyOutlined';
 export { default as FundOutlined } from './FundOutlined';
 export { default as GeneralSquareOutlined } from './GeneralSquareOutlined';
 export { default as GlobalOutlined } from './GlobalOutlined';
+export { default as HardDiskStorageFilled } from './HardDiskStorageFilled';
 export { default as HasCutOutlined } from './HasCutOutlined';
 export { default as HeadPhoneOutlined } from './HeadPhoneOutlined';
 export { default as HeartBeatOutlined } from './HeartBeatOutlined';
