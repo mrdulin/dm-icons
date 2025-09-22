@@ -54,6 +54,7 @@ export { default as DefaultSquareOutlined } from "./default-square-outlined";
 export { default as DeleteFilled } from "./delete-filled";
 export { default as DeviationFilled } from "./deviation-filled";
 export { default as DoneCircleFilled } from "./done-circle-filled";
+export { default as DoneShieldFilled } from "./done-shield-filled";
 export { default as DotsMenuOutlined } from "./dots-menu-outlined";
 export { default as DotsSpinnerOutlined } from "./dots-spinner-outlined";
 export { default as DoubleDownOutlined } from "./double-down-outlined";
@@ -267,6 +268,7 @@ export { default as VerticalAlignTopOutlined } from "./vertical-align-top-outlin
 export { default as ViewpointColored } from "./viewpoint-colored";
 export { default as WarningCircleFilled } from "./warning-circle-filled";
 export { default as WarningFilled } from "./warning-filled";
+export { default as WarningShieldFilled } from "./warning-shield-filled";
 export { default as WholeOutlined } from "./whole-outlined";
 export { default as WorkdaySquareOutlined } from "./workday-square-outlined";
 export { default as YieldSpreadOutlined } from "./yield-spread-outlined";
