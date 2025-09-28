@@ -264,6 +264,7 @@ export { default as UnorderedListOutlined } from './UnorderedListOutlined';
 export { default as UpOutlined } from './UpOutlined';
 export { default as UserCircleOutlined } from './UserCircleOutlined';
 export { default as ValuationSquareOutlined } from './ValuationSquareOutlined';
+export { default as VersusOutlined } from './VersusOutlined';
 export { default as VerticalAlignBottomOutlined } from './VerticalAlignBottomOutlined';
 export { default as VerticalAlignTopFilled } from './VerticalAlignTopFilled';
 export { default as VerticalAlignTopOutlined } from './VerticalAlignTopOutlined';

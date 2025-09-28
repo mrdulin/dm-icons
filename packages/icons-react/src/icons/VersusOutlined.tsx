@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../dm-icon';
+
+      const VersusOutlined = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", fill: "currentColor", viewBox: "0 0 23 16", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { fill: "currentColor", d: "M8.563 14.936a75 75 0 0 1 .935-2.408l2.88-6.952q.941-2.265 1.927-4.512-1.36.02-1.82.02h-.219q-.687-.002-1.726-.02-.225.71-.475 1.412L7.152 10.24l-.384 1.17a95 95 0 0 0-.45-1.962L5.09 4.64a195 195 0 0 1-.568-2.206 89 89 0 0 1-.3-1.371q-.851.017-1.702.02h-.364A129 129 0 0 1 .5 1.063L2.102 6.55l2.036 7.145.31 1.24q1.242-.017 1.848-.02h.407q.612.001 1.86.02zm9.048.264q.874 0 1.664-.214a3.9 3.9 0 0 0 1.447-.746 3.5 3.5 0 0 0 1.02-1.362q.359-.828.358-1.742a3.3 3.3 0 0 0-.238-1.28 4.4 4.4 0 0 0-.346-.673 7 7 0 0 0-.534-.741 9 9 0 0 0-.576-.64l-.6-.58q-.482-.45-.945-.919a5 5 0 0 1-.483-.569 1.9 1.9 0 0 1-.251-.452 1.2 1.2 0 0 1-.066-.396q0-.438.43-.732.429-.295 1.08-.295.46 0 1.094.147.634.148 1.401.524a85 85 0 0 1-.158-2.048 60 60 0 0 1-.059-1.286Q20.19.8 18.777.8q-.716 0-1.392.137a3.7 3.7 0 0 0-1.27.513c-.374.231-.697.535-.951.894-.237.341-.418.717-.538 1.114q-.18.594-.18 1.214 0 .518.113.98.113.465.36.91.245.447.688.965.216.255.768.823l1.568 1.667q.217.234.335.432.116.198.158.355.041.159.041.332a.84.84 0 0 1-.43.766q-.429.26-1.155.26a5 5 0 0 1-1.282-.198q-.73-.199-1.664-.707.142 1.3.25 3.465 2.062.477 3.414.478" })))
+        } />;
+      }
+
+      export default VersusOutlined;
