@@ -5,6 +5,7 @@ export { default as AppstoreOutlined } from "./appstore-outlined";
 export { default as AreaChartOutlined } from "./area-chart-outlined";
 export { default as ArrowDownOutlined } from "./arrow-down-outlined";
 export { default as ArrowUpOutlined } from "./arrow-up-outlined";
+export { default as AvatarMaleColored } from "./avatar-male-colored";
 export { default as BarChartOutlined } from "./bar-chart-outlined";
 export { default as BellFilled2 } from "./bell-filled-2";
 export { default as BellFilled } from "./bell-filled";
@@ -160,6 +161,7 @@ export { default as LayoutTopTwoBottomOneOutlined } from "./layout-top-two-botto
 export { default as LayoutTwoRowFourColumnOutlined } from "./layout-two-row-four-column-outlined";
 export { default as LeafOutlined } from "./leaf-outlined";
 export { default as LeftOutlined } from "./left-outlined";
+export { default as LetterSOutlined } from "./letter-s-outlined";
 export { default as LightbulbOutlined } from "./lightbulb-outlined";
 export { default as LightningFilled } from "./lightning-filled";
 export { default as LineChartFilled } from "./line-chart-filled";
