@@ -20,7 +20,7 @@ const SvgNothingDoneColored = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <g fill="currentColor" clipPath="url(#a)">
+    <g fill="currentColor" clipPath="url(#clip0_738_170909)">
       <path d="M12.97 10.383q.409 0 .715.298a.96.96 0 0 1 .308.716q0 .28-.145.515a1.1 1.1 0 0 1-.37.371 1 1 0 0 1-.508.136 1 1 0 0 1-.725-.298 1 1 0 0 1-.297-.725q0-.418.297-.715a1 1 0 0 1 .725-.298M9.104 9.07h.078V3.581h1.837v8.728H9.425L5.629 6.815h-.066v5.494H3.72V3.58h1.618z" />
       <path
         fillRule="evenodd"
@@ -34,7 +34,7 @@ const SvgNothingDoneColored = ({
       />
     </g>
     <defs>
-      <clipPath id="a">
+      <clipPath id="clip0_738_170909">
         <path fill="#fff" d="M0 0h26v16H0z" />
       </clipPath>
     </defs>

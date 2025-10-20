@@ -20,7 +20,7 @@ const SvgAvatarMaleColored = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <g clipPath="url(#a)">
+    <g clipPath="url(#clip0_8331_20268)">
       <path
         fill="#DEEDFF"
         fillOpacity={0.35}
@@ -56,7 +56,7 @@ const SvgAvatarMaleColored = ({
       />
     </g>
     <defs>
-      <clipPath id="a">
+      <clipPath id="clip0_8331_20268">
         <path fill="#fff" d="M0 0h22v22H0z" />
       </clipPath>
     </defs>

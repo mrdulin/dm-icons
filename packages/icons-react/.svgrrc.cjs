@@ -16,6 +16,7 @@ module.exports = {
         params: {
           overrides: {
             removeViewBox: false,
+            cleanupIds: false,
           },
         },
       },
