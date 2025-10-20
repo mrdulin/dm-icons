@@ -20,11 +20,11 @@ const SvgEmojiFaceCryColored = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <circle cx={25.578} cy={25} r={19} fill="url(#a)" />
-    <circle cx={25.578} cy={25} r={19} fill="url(#b)" />
-    <circle cx={25.578} cy={25} r={17} fill="url(#c)" />
+    <circle cx={25.578} cy={25} r={19} fill="url(#paint0_radial_8338_30551)" />
+    <circle cx={25.578} cy={25} r={19} fill="url(#paint1_radial_8338_30551)" />
+    <circle cx={25.578} cy={25} r={17} fill="url(#paint2_linear_8338_30551)" />
     <mask
-      id="d"
+      id="mask0_8338_30551"
       width={39}
       height={38}
       x={6}
@@ -36,9 +36,9 @@ const SvgEmojiFaceCryColored = ({
     >
       <circle cx={25.578} cy={25} r={19} fill="#D9D9D9" />
     </mask>
-    <g mask="url(#d)">
-      <path fill="url(#e)" d="M12.578 19h7v25h-7z" />
-      <path fill="url(#f)" d="M30.578 19h7v25h-7z" />
+    <g mask="url(#mask0_8338_30551)">
+      <path fill="url(#paint3_linear_8338_30551)" d="M12.578 19h7v25h-7z" />
+      <path fill="url(#paint4_linear_8338_30551)" d="M30.578 19h7v25h-7z" />
       <path
         fill="#6C4325"
         d="M25.078 22.15c2.142 0 4.15 1.518 4.15 3.7a1 1 0 0 1-2 0c0-.8-.812-1.7-2.15-1.7s-2.15.9-2.15 1.7a1 1 0 0 1-2 0c0-2.182 2.008-3.7 4.15-3.7M19.578 17a1 1 0 1 1 0 2h-8a1 1 0 1 1 0-2zM38.578 17a1 1 0 1 1 0 2h-8a1 1 0 1 1 0-2z"
@@ -46,7 +46,7 @@ const SvgEmojiFaceCryColored = ({
     </g>
     <defs>
       <linearGradient
-        id="c"
+        id="paint2_linear_8338_30551"
         x1={25.578}
         x2={25.578}
         y1={8}
@@ -57,7 +57,7 @@ const SvgEmojiFaceCryColored = ({
         <stop offset={1} stopColor="#FEE2AD" stopOpacity={0} />
       </linearGradient>
       <linearGradient
-        id="e"
+        id="paint3_linear_8338_30551"
         x1={16.078}
         x2={16.078}
         y1={19}
@@ -68,7 +68,7 @@ const SvgEmojiFaceCryColored = ({
         <stop offset={1} stopColor="#479CFE" />
       </linearGradient>
       <linearGradient
-        id="f"
+        id="paint4_linear_8338_30551"
         x1={34.078}
         x2={34.078}
         y1={19}
@@ -79,7 +79,7 @@ const SvgEmojiFaceCryColored = ({
         <stop offset={1} stopColor="#479CFE" />
       </linearGradient>
       <radialGradient
-        id="a"
+        id="paint0_radial_8338_30551"
         cx={0}
         cy={0}
         r={1}
@@ -93,7 +93,7 @@ const SvgEmojiFaceCryColored = ({
         <stop offset={1} stopColor="#FFB422" />
       </radialGradient>
       <radialGradient
-        id="b"
+        id="paint1_radial_8338_30551"
         cx={0}
         cy={0}
         r={1}
