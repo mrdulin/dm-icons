@@ -1,6 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
       // DON NOT EDIT IT MANUALLY
-      export { default as AdobeReaderColored } from './AdobeReaderColored';
+      export { default as AccumulateSquareOutlined } from './AccumulateSquareOutlined';
+export { default as AdobeReaderColored } from './AdobeReaderColored';
 export { default as AlertColored } from './AlertColored';
 export { default as AnnouncementFilled } from './AnnouncementFilled';
 export { default as AppstoreOutlined } from './AppstoreOutlined';
@@ -57,6 +58,7 @@ export { default as DeepLabelColored } from './DeepLabelColored';
 export { default as DefaultSquareOutlined } from './DefaultSquareOutlined';
 export { default as DeleteFilled } from './DeleteFilled';
 export { default as DeviationFilled } from './DeviationFilled';
+export { default as DiscountSquareOutlined } from './DiscountSquareOutlined';
 export { default as DoneCircleFilled } from './DoneCircleFilled';
 export { default as DoneShieldFilled } from './DoneShieldFilled';
 export { default as DotsMenuOutlined } from './DotsMenuOutlined';
@@ -103,6 +105,7 @@ export { default as FilterFilled } from './FilterFilled';
 export { default as FilterOutlined } from './FilterOutlined';
 export { default as FireColored } from './FireColored';
 export { default as FireFilled } from './FireFilled';
+export { default as FixedSquareOutlined } from './FixedSquareOutlined';
 export { default as FlagColored } from './FlagColored';
 export { default as FlagFilled } from './FlagFilled';
 export { default as FlexScreenOutlined } from './FlexScreenOutlined';
@@ -285,3 +288,4 @@ export { default as WarningShieldFilled } from './WarningShieldFilled';
 export { default as WholeOutlined } from './WholeOutlined';
 export { default as WorkdaySquareOutlined } from './WorkdaySquareOutlined';
 export { default as YieldSpreadOutlined } from './YieldSpreadOutlined';
+export { default as ZeroSquareOutlined } from './ZeroSquareOutlined';
