@@ -58,6 +58,7 @@ export { default as DeepLabelColored } from './DeepLabelColored';
 export { default as DefaultSquareOutlined } from './DefaultSquareOutlined';
 export { default as DeleteFilled } from './DeleteFilled';
 export { default as DeviationFilled } from './DeviationFilled';
+export { default as DigitalBondOutlined } from './DigitalBondOutlined';
 export { default as DiscountSquareOutlined } from './DiscountSquareOutlined';
 export { default as DoneCircleFilled } from './DoneCircleFilled';
 export { default as DoneShieldFilled } from './DoneShieldFilled';
