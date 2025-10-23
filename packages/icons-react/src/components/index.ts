@@ -55,6 +55,7 @@ export { default as DecreaseDecimalPlaceOutlined } from "./decrease-decimal-plac
 export { default as DeepLabelColored } from "./deep-label-colored";
 export { default as DefaultSquareOutlined } from "./default-square-outlined";
 export { default as DeleteFilled } from "./delete-filled";
+export { default as DeleteOutlined } from "./delete-outlined";
 export { default as DeviationFilled } from "./deviation-filled";
 export { default as DigitalBondOutlined } from "./digital-bond-outlined";
 export { default as DiscountSquareOutlined } from "./discount-square-outlined";
@@ -72,6 +73,7 @@ export { default as DragHandleHorizontalDoubleLineOutlined } from "./drag-handle
 export { default as DragHandleOutlined } from "./drag-handle-outlined";
 export { default as EarthOutlined } from "./earth-outlined";
 export { default as EditOutlined2 } from "./edit-outlined-2";
+export { default as EditOutlined3 } from "./edit-outlined-3";
 export { default as EditOutlined } from "./edit-outlined";
 export { default as EmailFilled } from "./email-filled";
 export { default as EmojiFaceCelebrationColored } from "./emoji-face-celebration-colored";
@@ -271,6 +273,7 @@ export { default as TwoDashOutlined } from "./two-dash-outlined";
 export { default as UndoOutlined } from "./undo-outlined";
 export { default as UnlockOutlined } from "./unlock-outlined";
 export { default as UnorderedListOutlined } from "./unordered-list-outlined";
+export { default as UnorderedListSquareOutlined } from "./unordered-list-square-outlined";
 export { default as UpOutlined } from "./up-outlined";
 export { default as UserCircleOutlined } from "./user-circle-outlined";
 export { default as UserOutlined } from "./user-outlined";
