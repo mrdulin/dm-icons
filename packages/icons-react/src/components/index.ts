@@ -127,6 +127,7 @@ export { default as HeartBeatOutlined } from "./heart-beat-outlined";
 export { default as HeartFilled } from "./heart-filled";
 export { default as HeartOutlined } from "./heart-outlined";
 export { default as HistoryOutlined } from "./history-outlined";
+export { default as HistoryOutlined2 } from "./history-outlined2";
 export { default as HolidayOutlined } from "./holiday-outlined";
 export { default as IdCardFilled } from "./id-card-filled";
 export { default as IdeaFilled } from "./idea-filled";
