@@ -39,6 +39,7 @@ export { default as ChineseOneOutlined } from './ChineseOneOutlined';
 export { default as ChineseOneSquareOutlined } from './ChineseOneSquareOutlined';
 export { default as CircleFilled } from './CircleFilled';
 export { default as ClearOutlined } from './ClearOutlined';
+export { default as ClearOutlined2 } from './ClearOutlined2';
 export { default as ClockCircleFilled } from './ClockCircleFilled';
 export { default as ClockCircleOutlined } from './ClockCircleOutlined';
 export { default as CloseCircleFilled } from './CloseCircleFilled';
