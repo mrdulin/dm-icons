@@ -259,6 +259,7 @@ export { default as StockSquareOutlined } from "./stock-square-outlined";
 export { default as StopRecordColored } from "./stop-record-colored";
 export { default as SwapOutlined } from "./swap-outlined";
 export { default as SyncOutlined } from "./sync-outlined";
+export { default as SystemStorageOutlined } from "./system-storage-outlined";
 export { default as TagOutlined } from "./tag-outlined";
 export { default as TalkFilled } from "./talk-filled";
 export { default as TargetColored } from "./target-colored";
