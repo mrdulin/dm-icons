@@ -261,6 +261,7 @@ export { default as StockSquareOutlined } from './StockSquareOutlined';
 export { default as StopRecordColored } from './StopRecordColored';
 export { default as SwapOutlined } from './SwapOutlined';
 export { default as SyncOutlined } from './SyncOutlined';
+export { default as SystemStorageOutlined } from './SystemStorageOutlined';
 export { default as TagOutlined } from './TagOutlined';
 export { default as TalkFilled } from './TalkFilled';
 export { default as TargetColored } from './TargetColored';
