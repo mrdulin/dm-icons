@@ -38,6 +38,13 @@
     "type": "git",
     "url": "https://github.com/mrdulin/dm-icons.git"
   },
+  "typesVersions": {
+    "*": {
+      "utils": [
+        "./dist/utils.d.ts"
+      ]
+    }
+  },
   "scripts": {
     "clean": "rimraf ./src/components ./dist",
     "build": "tsc -b && vite build",
