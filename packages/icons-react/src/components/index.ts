@@ -295,6 +295,7 @@ export { default as WaitCircleOutlined } from "./wait-circle-outlined";
 export { default as WarningCircleFilled } from "./warning-circle-filled";
 export { default as WarningCircleFilled2 } from "./warning-circle-filled2";
 export { default as WarningFilled } from "./warning-filled";
+export { default as WarningShieldColored } from "./warning-shield-colored";
 export { default as WarningShieldFilled } from "./warning-shield-filled";
 export { default as WholeOutlined } from "./whole-outlined";
 export { default as WorkdaySquareOutlined } from "./workday-square-outlined";
