@@ -109,6 +109,13 @@ function App() {
           <icons.TlacSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} svgProps={{ width: '2em', height: '1em' }} />
           <icons.MarketMakingSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} svgProps={getEMSizeProps({ width: 27, height: 16 })} />
         </div>
+        <pre>
+          <code>{`
+          import { getEMSizeProps } from '@d-matrix/icons-react/utils';
+
+          <icons.MarketMakingSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} svgProps={getEMSizeProps({ width: 27, height: 16 })} />
+          `}</code>
+        </pre>
       </div>
 
       <a href="https://github.com/mrdulin/dm-icons" style={{ position: 'fixed', top: 0, right: 0 }}>
