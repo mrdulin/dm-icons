@@ -2,6 +2,7 @@
       // DON NOT EDIT IT MANUALLY
       export { default as AccumulateSquareOutlined } from './AccumulateSquareOutlined';
 export { default as AdobeReaderColored } from './AdobeReaderColored';
+export { default as AhfgHkOutlined } from './AhfgHkOutlined';
 export { default as AlertColored } from './AlertColored';
 export { default as AlignLeftOutlined } from './AlignLeftOutlined';
 export { default as AnnouncementFilled } from './AnnouncementFilled';
@@ -225,8 +226,10 @@ export { default as PixelsColored } from './PixelsColored';
 export { default as PledgeOutlined } from './PledgeOutlined';
 export { default as PledgeSquareOutlined } from './PledgeSquareOutlined';
 export { default as PlusCircleFilled } from './PlusCircleFilled';
+export { default as PlusOneSupOutlined } from './PlusOneSupOutlined';
 export { default as PlusOutlined } from './PlusOutlined';
 export { default as PlusSquareOutlined } from './PlusSquareOutlined';
+export { default as PlusZeroSupOutlined } from './PlusZeroSupOutlined';
 export { default as PrepaymentFilled } from './PrepaymentFilled';
 export { default as PrepaymentOutlined } from './PrepaymentOutlined';
 export { default as PrivateSquareOutlined } from './PrivateSquareOutlined';
@@ -303,7 +306,9 @@ export { default as WarningCircleFilled2 } from './WarningCircleFilled2';
 export { default as WarningFilled } from './WarningFilled';
 export { default as WarningShieldColored } from './WarningShieldColored';
 export { default as WarningShieldFilled } from './WarningShieldFilled';
+export { default as WaterDropOutlined } from './WaterDropOutlined';
 export { default as WholeOutlined } from './WholeOutlined';
 export { default as WorkdaySquareOutlined } from './WorkdaySquareOutlined';
+export { default as XlsxSquareFilled } from './XlsxSquareFilled';
 export { default as YieldSpreadOutlined } from './YieldSpreadOutlined';
 export { default as ZeroSquareOutlined } from './ZeroSquareOutlined';
