@@ -94,6 +94,7 @@ export { default as ExpandOutlined } from "./expand-outlined";
 export { default as ExportOutlined2 } from "./export-outlined-2";
 export { default as ExportOutlined } from "./export-outlined";
 export { default as ExtensionSquareOutlined } from "./extension-square-outlined";
+export { default as EyeOutlined2 } from "./eye-outlined-2";
 export { default as EyeOutlined } from "./eye-outlined";
 export { default as FileDoneOutlined } from "./file-done-outlined";
 export { default as FileDownloadOutlined } from "./file-download-outlined";
