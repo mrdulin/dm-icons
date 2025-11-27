@@ -3,7 +3,7 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgCaretRightOutlined = ({
+const SvgCaretLeftOutlined = ({
   title,
   titleId,
   ...props
@@ -20,7 +20,7 @@ const SvgCaretRightOutlined = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <path d="M4 2.574c.005-.274.116-.546.323-.754a1.073 1.073 0 0 1 1.528 0l6.024 4.923c.967.774.967 1.903 0 2.567L5.85 14.18a1.073 1.073 0 0 1-1.528 0 1.13 1.13 0 0 1-.316-.797c.002-.276-.01-10.524-.006-10.81" />
+    <path d="M12.6 13.426a1.1 1.1 0 0 1-.323.754 1.073 1.073 0 0 1-1.528 0L4.725 9.257c-.967-.774-.967-1.903 0-2.567l6.024-4.87a1.073 1.073 0 0 1 1.528 0c.214.215.319.514.316.797-.002.276.01 10.524.006 10.81" />
   </svg>
 );
-export default SvgCaretRightOutlined;
+export default SvgCaretLeftOutlined;
