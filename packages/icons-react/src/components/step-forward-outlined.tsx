@@ -3,14 +3,14 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgCaretRightOutlined = ({
+const SvgStepForwardOutlined = ({
   title,
   titleId,
   ...props
 }: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 16 16"
+    viewBox="0 0 24 24"
     width="1em"
     height="1em"
     fill="currentColor"
@@ -20,7 +20,8 @@ const SvgCaretRightOutlined = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <path d="M4 2.574c.005-.274.116-.546.323-.754a1.073 1.073 0 0 1 1.528 0l6.024 4.923c.967.774.967 1.903 0 2.567L5.85 14.18a1.073 1.073 0 0 1-1.528 0 1.13 1.13 0 0 1-.316-.797c.002-.276-.01-10.524-.006-10.81" />
+    <path d="m6 18 8.5-6L6 6zM16 6v12h2V6z" />
+    <path fill="none" d="M0 0h24v24H0z" />
   </svg>
 );
-export default SvgCaretRightOutlined;
+export default SvgStepForwardOutlined;
