@@ -242,6 +242,8 @@ export { default as MarkOutlined } from './MarkOutlined';
 export { default as MarketMakingSquareOutlined } from './MarketMakingSquareOutlined';
 export { default as MatureCircleFilled } from './MatureCircleFilled';
 export { default as MedalFilled } from './MedalFilled';
+export { default as MenuFoldOutlined } from './MenuFoldOutlined';
+export { default as MenuUnfoldOutlined } from './MenuUnfoldOutlined';
 export { default as MinusCircleFilled } from './MinusCircleFilled';
 export { default as MinusOutlined } from './MinusOutlined';
 export { default as MinusSquareFilled } from './MinusSquareFilled';
