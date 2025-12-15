@@ -25,8 +25,7 @@ jobs:
         run: pwd
       - run: ls
       - run: cat .npmrc
-      - run: echo ${{ secrets.NPM_AUTHTOKEN }}
       - run: npm ci
       - run: npm run publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTHTOKEN }}
+          NPM_AUTHTOKEN: ${{ secrets.NPM_AUTHTOKEN }}
