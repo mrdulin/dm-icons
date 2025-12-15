@@ -18,4 +18,6 @@ jobs:
 
       - name: Publish
         run: npm ci
-      - run: npm publish --//registry.npmjs.org/:_authToken=$NPM_AUTHTOKEN
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTHTOKEN }}
