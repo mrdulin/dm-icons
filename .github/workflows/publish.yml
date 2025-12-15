@@ -22,7 +22,9 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@d-matrix'
       - name: Publish
-        run: npm ci
+        run: pwd
+      - run: ls
+      - run: npm ci
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTHTOKEN }}
