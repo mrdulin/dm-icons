@@ -25,6 +25,6 @@ jobs:
         run: pwd
       - run: ls
       - run: npm ci
-      - run: npm publish
+      - run: npm run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTHTOKEN }}
