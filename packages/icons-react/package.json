@@ -57,7 +57,8 @@
     "prepublishOnly": "npm run generate && npm run build",
     "wait3s": "node -e \"setTimeout(() => process.exit(0), 3000)\"",
     "cnpm:sync": "cnpm sync %npm_package_name%",
-    "postpublish": "echo \"wait for 3 seconds, then sync cnpm\" && npm run wait3s && npm run cnpm:sync"
+    "postpublish": "echo \"wait for 3 seconds, then sync cnpm\" && npm run wait3s && npm run cnpm:sync",
+    "publish": "dotenvx run -- npm publish  --//registry.npmjs.org/:_authToken=$NPM_AUTHTOKEN"
   },
   "keywords": [
     "react",
@@ -73,6 +74,7 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/plugin-transform-object-rest-spread": "^7.25.9",
+    "@dotenvx/dotenvx": "^1.51.2",
     "@eslint/js": "^9.15.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-node-resolve": "^15.3.0",
