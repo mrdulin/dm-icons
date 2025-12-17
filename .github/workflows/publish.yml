@@ -2,8 +2,8 @@ name: 发布npm package
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*'
 
   workflow_dispatch:
 
@@ -21,11 +21,15 @@ jobs:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
           scope: '@d-matrix'
-      - name: Publish
+      - name: Check folders and files
         run: pwd
       - run: ls
       - run: cat .npmrc
-      - run: npm ci
-      - run: npm run publish
+
+      - name: Change directory
+        run: cd packages/icons-react
+
+      - name: Publish
+        run: npm publish
         env:
           NPM_AUTHTOKEN: ${{ secrets.NPM_AUTHTOKEN }}
