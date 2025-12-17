@@ -40,8 +40,6 @@ jobs:
         run: npm ci
       - name: Build icons
         run: npm run build:icons --verbose
-      - name: Reference icons
-        run: npm run ref
       - name: Build site
         run: npm run build:site --verbose
       - name: Setup Pages
