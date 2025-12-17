@@ -10,12 +10,9 @@ jobs:
         with:
           fetch-depth: 0 # 拉取所有提交记录，用于生成发布说明
       - name: 创建 Release
-        uses: softprops/action-gh-release@v2 # 复用社区 Action
+        uses: softprops/action-gh-release@v2
         with:
-          generate_release_notes: true # 自动生成发布说明（解决你之前的“生成说明不生效”问题）
-          files: | # 可选：上传构建产物到 Release
-            dist/*.zip
-            dist/*.tar.gz
+          generate_release_notes: true
           make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 自动生成，无需配置
