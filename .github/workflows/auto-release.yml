@@ -16,5 +16,6 @@ jobs:
           files: | # 可选：上传构建产物到 Release
             dist/*.zip
             dist/*.tar.gz
+          make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 自动生成，无需配置
