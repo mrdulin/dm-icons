@@ -16,6 +16,7 @@
     "build:site": "npm run build --workspace=@d-matrix/icons-site",
     "build:icons": "npm run build --workspace=@d-matrix/icons-react",
     "build": "npm run build --workspaces",
-    "publish": "npm publish --workspace=@d-matrix/icons-react"
+    "publish": "npm publish --workspace=@d-matrix/icons-react",
+    "postversion": "npm run ref"
   }
 }
