@@ -23,13 +23,16 @@ jobs:
           scope: '@d-matrix'
       - name: Check folders and files
         run: pwd
-      - run: ls
+      - run: tree -L 3
       - run: cat .npmrc
 
       - name: Change directory
         run: cd packages/icons-react
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Publish
-        run: npm publish
+        run: npm run publish --workspace-root
         env:
           NPM_AUTHTOKEN: ${{ secrets.NPM_AUTHTOKEN }}
