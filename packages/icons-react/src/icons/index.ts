@@ -3,7 +3,7 @@
       export { default as AccumulateSquareOutlined } from './AccumulateSquareOutlined';
 export { default as AdobeReaderColored } from './AdobeReaderColored';
 export { default as AhfgHkOutlined } from './AhfgHkOutlined';
-export { default as AlertColored } from './AlertColored';
+export { default as AlertFilled } from './AlertFilled';
 export { default as AlignLeftCircleColored } from './AlignLeftCircleColored';
 export { default as AlignLeftOutlined } from './AlignLeftOutlined';
 export { default as AnnouncementFilled } from './AnnouncementFilled';
@@ -362,7 +362,7 @@ export { default as VersusOutlined } from './VersusOutlined';
 export { default as VerticalAlignBottomOutlined } from './VerticalAlignBottomOutlined';
 export { default as VerticalAlignTopFilled } from './VerticalAlignTopFilled';
 export { default as VerticalAlignTopOutlined } from './VerticalAlignTopOutlined';
-export { default as ViewpointColored } from './ViewpointColored';
+export { default as ViewpointFilled } from './ViewpointFilled';
 export { default as WaitCircleOutlined } from './WaitCircleOutlined';
 export { default as WarningCircleFilled } from './WarningCircleFilled';
 export { default as WarningCircleFilled2 } from './WarningCircleFilled2';
