@@ -1,6 +1,6 @@
 {
   "name": "@d-matrix/icons-react",
-  "version": "0.56.3",
+  "version": "0.56.4",
   "type": "module",
   "files": [
     "dist",
