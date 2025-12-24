@@ -8,7 +8,7 @@
   "scripts": {
     "pb": "dotenvx run -f ../../.env -- npm publish --access public",
     "wait3s": "node -e \"setTimeout(() => process.exit(0), 3000)\"",
-    "cnpm:sync": "cnpm sync %npm_package_name%",
+    "cnpm:sync": "cnpm sync @d-matrix/icons-svg",
     "postpublish": "echo \"wait for 3 seconds, then sync cnpm\" && npm run wait3s && npm run cnpm:sync"
   },
   "files": [
@@ -16,7 +16,10 @@
     "types.d.ts"
   ],
   "exports": {
-    "./*": "./public/*"
+    "./*": {
+      "types": "./types.d.ts",
+      "default": "./public/*"
+    }
   },
   "types": "types.d.ts",
   "repository": {
