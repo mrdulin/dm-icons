@@ -2,7 +2,8 @@
   "name": "dm-icons",
   "workspaces": [
     "packages/icons-react",
-    "packages/icons-site"
+    "packages/icons-site",
+    "packages/icons-svg"
   ],
   "engines": {
     "node": ">=18.0.0"

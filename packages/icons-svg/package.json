@@ -1,0 +1,26 @@
+{
+  "name": "@d-matrix/icons-svg",
+  "version": "0.1.0",
+  "description": "Vanilla svg",
+  "devDependencies": {},
+  "scripts": {},
+  "files": [
+    "src/**/*"
+  ],
+  "exports": {
+    "./*": "./src/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdulin/dm-icons.git"
+  },
+  "keywords": [
+    "svg"
+  ],
+  "author": "mrdulin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrdulin/dm-icons/issues"
+  },
+  "homepage": "https://github.com/mrdulin/dm-icons#readme"
+}

@@ -1,4 +1,4 @@
-name: 自动创建 Release
+name: Create GitHub Release
 on:
   push:
     tags: ['v*'] # 推送 Tag 时触发
