@@ -2,13 +2,19 @@
   "name": "@d-matrix/icons-svg",
   "version": "0.1.0",
   "description": "Vanilla svg",
-  "devDependencies": {},
-  "scripts": {},
+  "devDependencies": {
+    "cnpm": "^9.4.0"
+  },
+  "scripts": {
+    "pb": "dotenvx run -f ../../.env -- npm publish --access public",
+    "wait3s": "node -e \"setTimeout(() => process.exit(0), 3000)\"",
+    "postpublish": "echo \"wait for 3 seconds, then sync cnpm\" && npm run wait3s && npm run cnpm:sync"
+  },
   "files": [
-    "src/**/*"
+    "public/**/*"
   ],
   "exports": {
-    "./*": "./src/*"
+    "./*": "./public/*"
   },
   "repository": {
     "type": "git",
