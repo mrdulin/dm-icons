@@ -60,7 +60,8 @@
     "postpublish": "echo \"wait for 3 seconds, then sync cnpm\" && npm run wait3s && npm run cnpm:sync",
     "load": "dotenvx run -f .env -- sh -c 'echo $NPM_AUTHTOKEN'",
     "pb": "dotenvx run -f .env -- npm publish --access public",
-    "postversion": "npm run update:deps --workspace=@d-matrix/icons-site"
+    "postversion": "npm run update:deps --workspace=@d-matrix/icons-site",
+    "update:deps": "node scripts/update-ws-deps.js && npm run ref --workspaces=false --prefix=../../"
   },
   "keywords": [
     "react",
