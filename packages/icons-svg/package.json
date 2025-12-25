@@ -9,7 +9,8 @@
     "pb": "dotenvx run -f ../../.env -- npm publish --access public",
     "wait3s": "node -e \"setTimeout(() => process.exit(0), 3000)\"",
     "cnpm:sync": "cnpm sync @d-matrix/icons-svg",
-    "postpublish": "echo \"wait for 3 seconds, then sync cnpm\" && npm run wait3s && npm run cnpm:sync"
+    "postpublish": "echo \"wait for 3 seconds, then sync cnpm\" && npm run wait3s && npm run cnpm:sync",
+    "postversion": "npm install @d-matrix/icons-svg --workspace=@d-matrix/icons-react -S"
   },
   "files": [
     "public/**/*",
