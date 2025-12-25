@@ -51,7 +51,7 @@
     "lint": "eslint .",
     "pregenerate": "npm run clean",
     "generate:step2": "rimraf ./src/icons && cross-env TS_NODE_PROJECT=scripts/tsconfig.json node --import ./scripts/ts-node.register.mjs scripts/generate.ts",
-    "generate:step1": "svgr --out-dir ./src/components --typescript -- ./src/assets",
+    "generate:step1": "svgr --out-dir ./src/components --typescript -- ../../node_modules/@d-matrix/icons-svg/public/",
     "generate": "npm run generate:step1 && npm run generate:step2",
     "postgenerate": "npm run build",
     "prepublishOnly": "npm run generate && npm run build",
@@ -102,6 +102,7 @@
     "vite-plugin-dts": "^4.3.0"
   },
   "dependencies": {
+    "@d-matrix/icons-svg": "^0.1.5",
     "classnames": "^2.5.1",
     "rc-util": "^5.44.3"
   }
