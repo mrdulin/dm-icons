@@ -12,49 +12,34 @@
 npm install
 ```
 
+## 添加新图标
+
+添加svg文件到`packages/icons-svg/src/public`文件夹中, 更新包版本
+
+```sh
+npm version minor --workspace=@d-matrix/icons-svg
+```
+
 启动dev server
 
 ```sh
 npm run dev
 ```
 
-添加svg文件到`packages/icons-react/src/assets`文件夹中，生成React组件
-
-```sh
-npm run generate
-```
-
-切换到dev server所在terminal session, 按<kbd>r</kbd> + <kbd>enter</kbd>重启服务器
+访问`http://localhost:5173/dm-icons/`服务，预览svg生成的react组件
 
 ## 发布
 
-根目录下执行
+git提交所有变更文件，提交后更新`@d-matrix/icons-react`包的版本, 根目录下执行
 
 ```sh
-# 生成React组件
-npm run generate
+npm version minor --workspace=@d-matrix/icons-react
 ```
 
-```sh
-git add . && git commit -m "提交信息"
-```
+更新完成后，由于`postversion` npm script 会更新`packages/icons-site`包的`@d-matrix/icons-react`依赖版本，及根目录的`package-lock.json`, 需再次提交变更文件，最后推送到远程仓库。
 
-更新`packages/icons-react`的`package.json`中的`version`
+剩下的工作就交给GitHub Actions, GitHub Actions有三个工作流
 
-```sh
-npm version patch --workspace=@d-matrix/icons-react
-```
-
-更新完成后，`postversion` npm script 会更新`packages/icons-site`包的`@d-matrix/icons-react`依赖版本，及根目录的`package-lock.json`
-
-提交并推送到远程仓库即可
-
-```sh
-git add . && git commit -m "提交信息"
-```
-
-Github Actions有三个工作流
-
-1. 发布`@d-matrix/icons-react`包到 npm registry
+1. 发布`@d-matrix/icons-react`包和`@d-matrix/icons-svg`包到npm registry
 2. 发布图标预览页到 Github Pages
-3. 自动创建一个`vX.X.X`的release
+3. 自动创建一个`vX.X.X`的release (`@d-matrix/icons-react`包的版本)
