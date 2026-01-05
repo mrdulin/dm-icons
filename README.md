@@ -4,8 +4,6 @@
 
 ## Packages
 
-## Packages
-
 | Framework | Package name | Latest Version | Download stats | Bundle Size | Package Size |
 | --- | --- | --- | --- | --- | --- |
 | SVG | [@d-matrix/icons-svg](./packages/icons-svg) | ![NPM version](https://img.shields.io/npm/v/@d-matrix/icons-svg.svg?style=flat) | ![NPM downloads](https://img.shields.io/npm/dm/@d-matrix/icons-svg.svg?style=flat) |   | [![install size](https://packagephobia.com/badge?p=@d-matrix/icons-svg)](https://packagephobia.com/result?p=@d-matrix/icons-svg) |
