@@ -6,8 +6,8 @@
 
 | Framework | Package name | Latest Version | Download stats | Bundle Size | Package Size |
 | --- | --- | --- | --- | --- | --- |
-| SVG | [@d-matrix/icons-svg](./packages/icons-svg) | ![NPM version](https://img.shields.io/npm/v/@d-matrix/icons-svg.svg?style=flat) | ![NPM downloads](https://img.shields.io/npm/dm/@d-matrix/icons-svg.svg?style=flat) |   | [![install size](https://packagephobia.com/badge?p=@d-matrix/icons-svg)](https://packagephobia.com/result?p=@d-matrix/icons-svg) |
-| React | [@d-matrix/icons-react](./packages/icons-react) | ![NPM version](https://img.shields.io/npm/v/@d-matrix/icons-react.svg?style=flat) | ![NPM downloads](https://img.shields.io/npm/dm/@d-matrix/icons-react.svg?style=flat) | ![bundlephobia](https://img.shields.io/bundlephobia/minzip/@d-matrix/icons-react@0.58.1) | [![install size](https://packagephobia.com/badge?p=@d-matrix/icons-react)](https://packagephobia.com/result?p=@d-matrix/icons-react) |
+| SVG | [@d-matrix/icons-svg](./packages/icons-svg) | [![NPM version](https://img.shields.io/npm/v/@d-matrix/icons-svg.svg?style=flat)](https://www.npmjs.com/package/@d-matrix/icons-svg) | ![NPM downloads](https://img.shields.io/npm/dm/@d-matrix/icons-svg.svg?style=flat) |   | [![install size](https://packagephobia.com/badge?p=@d-matrix/icons-svg)](https://packagephobia.com/result?p=@d-matrix/icons-svg) |
+| React | [@d-matrix/icons-react](./packages/icons-react) | [![NPM version](https://img.shields.io/npm/v/@d-matrix/icons-react.svg?style=flat)](https://www.npmjs.com/package/@d-matrix/icons-react) | ![NPM downloads](https://img.shields.io/npm/dm/@d-matrix/icons-react.svg?style=flat) | ![bundlephobia](https://img.shields.io/bundlephobia/minzip/@d-matrix/icons-react@0.58.1) | [![install size](https://packagephobia.com/badge?p=@d-matrix/icons-react)](https://packagephobia.com/result?p=@d-matrix/icons-react) |
 
 ## 环境
 
