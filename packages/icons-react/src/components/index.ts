@@ -374,6 +374,7 @@ export { default as WarningFilled } from "./warning-filled";
 export { default as WarningShieldColored } from "./warning-shield-colored";
 export { default as WarningShieldFilled } from "./warning-shield-filled";
 export { default as WaterDropOutlined } from "./water-drop-outlined";
+export { default as WechatOutlined } from "./wechat-outlined";
 export { default as WholeOutlined } from "./whole-outlined";
 export { default as WorkdaySquareOutlined } from "./workday-square-outlined";
 export { default as XlsxSquareFilled } from "./xlsx-square-filled";
