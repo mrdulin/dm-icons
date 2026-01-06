@@ -52,3 +52,9 @@ npm version minor --workspace=@d-matrix/icons-react
 1. 发布`@d-matrix/icons-react`包和`@d-matrix/icons-svg`包到npm registry
 2. 发布图标预览页到 Github Pages
 3. 自动创建一个`vX.X.X`的release (`@d-matrix/icons-react`包的版本)
+
+注意：目前需要手动发布`@d-matrix/icons-svg`包
+
+```bash
+cd packages/icons-svg && npm publish
+```

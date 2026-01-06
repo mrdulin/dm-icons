@@ -107,6 +107,7 @@ export { default as ExtensionSquareOutlined } from './ExtensionSquareOutlined';
 export { default as EyeInvisibleOutlined } from './EyeInvisibleOutlined';
 export { default as EyeOutlined } from './EyeOutlined';
 export { default as EyeOutlined2 } from './EyeOutlined2';
+export { default as FatArrowDownOutlined } from './FatArrowDownOutlined';
 export { default as FileCopyOutlined } from './FileCopyOutlined';
 export { default as FileDoneOutlined } from './FileDoneOutlined';
 export { default as FileDownloadOutlined } from './FileDownloadOutlined';
