@@ -1,17 +1,13 @@
-name: Publish package to NPM
+name: Publish icons-svg package to NPM
 
 on:
-  # push:
-  #   tags:
-  #     - 'v*'
-  #   paths-ignore:
-  #     - 'README.md'
+  push:
+    tags:
+      - 'v*'
+    paths-ignore:
+      - 'README.md'
 
-  # workflow_dispatch:
-
-  workflow_run:
-    workflows: [Publish icons-svg package to NPM]
-    types: [completed]
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -27,18 +23,14 @@ jobs:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
           scope: '@d-matrix'
-      - name: Check folders and files
-        run: pwd
-      - run: tree -L 3
-      - run: cat .npmrc
 
       - name: Change directory
-        run: cd packages/icons-react
+        run: cd packages/icons-svg
 
       - name: Install dependencies
         run: npm install
 
       - name: Publish
-        run: npm run publish --workspace-root
+        run: npm run publish:icons-svg --workspace-root
         env:
           NPM_AUTHTOKEN: ${{ secrets.NPM_AUTHTOKEN }}
