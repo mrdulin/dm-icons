@@ -15,6 +15,7 @@ function App() {
   const [color, setColor] = useState<(typeof Colors)[number]>(Colors[0]);
   const [searchKeyword, setSearchKeyword] = useState<string>();
   const [copiedIconName, setCopiedIconName] = useState<string>();
+  const [iconOpacity, setIconOpacity] = useState(1);
 
   const iconsNamesByKeyword = searchKeyword
     ? iconNames.filter((iconName) => iconName.toLowerCase().includes(searchKeyword.toLowerCase()))
@@ -24,7 +25,7 @@ function App() {
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <div style={{ width: 1024 }}>
         <fieldset>
-          <legend>选择容器CSS color:</legend>
+          <legend>容器CSS color:</legend>
 
           <div style={{ display: 'flex' }}>
             {Colors.map((c) => (
@@ -33,6 +34,14 @@ function App() {
                 <label htmlFor={c}>{c}</label>
               </div>
             ))}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>容器CSS 透明度:</legend>
+
+          <div style={{ display: 'flex' }}>
+            <input type="number" step="0.1" min="0" max="1" value={iconOpacity} onChange={(e) => setIconOpacity(e.target.valueAsNumber)} />
           </div>
         </fieldset>
 
@@ -85,7 +94,7 @@ function App() {
                   });
                 }}
               >
-                <div style={{ color, height: 50, fontSize: 36 }}>
+                <div style={{ color, height: 50, fontSize: 36, opacity: iconOpacity }}>
                   <IconComponent />
                 </div>
                 <div style={{ fontSize: 12 }}>{iconName}</div>
