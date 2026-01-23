@@ -1,6 +1,6 @@
 {
   "name": "@d-matrix/icons-svg",
-  "version": "0.12.1",
+  "version": "0.13.0",
   "description": "Vanilla svg",
   "devDependencies": {
     "cnpm": "^9.4.0"
