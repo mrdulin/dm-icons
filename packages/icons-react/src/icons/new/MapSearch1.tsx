@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const MapSearch1 = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { d: "M384 128c49.024 0 85.312 37.824 85.312 89.152 0 34.56-22.336 70.912-52.352 102.592-11.52 12.224-23.168 22.656-32.96 30.72a370 370 0 0 1-33.024-30.72c-30.016-31.68-52.352-68.032-52.352-102.592 0-51.456 35.84-89.152 85.376-89.152m166.72 51.2c-16-76.928-80.256-136.512-166.72-136.512-87.04 0-150.912 59.712-166.848 136.512H85.312v674.112h384V768H170.624V631.488l83.52-44.544 143.04 90.56 45.696-72.064-185.088-117.184-87.168 46.464V264.512h49.28c13.056 47.232 43.264 86.656 69.12 113.92a459.7 459.7 0 0 0 69.44 59.776l1.408.896.448.32.192.064v.064L384 454.912l23.36-15.36h.128l.128-.128.448-.32 1.408-.896 4.8-3.392a459.7 459.7 0 0 0 64.704-56.448c25.792-27.2 56-66.56 69.12-113.856h305.216V448h85.312V179.2h-387.84zM736 576a117.312 117.312 0 0 1 83.008 200.256l-.32.32A117.312 117.312 0 1 1 736 576m170.304 227.2a202.688 202.688 0 1 0-60.288 60.352l71.232 71.424 60.416-60.224z" })))
+        } />;
+      }
+
+      export default MapSearch1;

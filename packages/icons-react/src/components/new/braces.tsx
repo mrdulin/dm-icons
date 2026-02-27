@@ -1,0 +1,27 @@
+import type { SVGProps } from "react";
+interface SVGRProps {
+  title?: string;
+  titleId?: string;
+}
+const SvgBraces = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    className="icon"
+    viewBox="0 0 1024 1024"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path d="M106.688 750.912A145.09 145.09 0 0 0 251.712 896h46.976v-85.312h-46.976A59.71 59.71 0 0 1 192 750.912v-153.6c0-32.768-12.352-62.72-32.64-85.312 20.288-22.656 32.64-52.544 32.64-85.312v-153.6c0-33.024 26.752-59.776 59.712-59.776h46.976V128h-46.976a145.09 145.09 0 0 0-145.024 145.088v153.6A42.69 42.69 0 0 1 64 469.312H17.088v85.376H64c23.552 0 42.688 19.072 42.688 42.624zM725.312 896h46.912a145.09 145.09 0 0 0 145.088-145.088v-153.6c0-23.552 19.072-42.624 42.624-42.624h46.976v-85.376h-46.976a42.69 42.69 0 0 1-42.624-42.624v-153.6A145.09 145.09 0 0 0 772.224 128h-46.912v85.312h46.912c32.96 0 59.712 26.752 59.712 59.776v153.6c0 32.768 12.352 62.72 32.64 85.312-20.288 22.656-32.64 52.544-32.64 85.312v153.6a59.71 59.71 0 0 1-59.712 59.776h-46.912z" />
+  </svg>
+);
+export default SvgBraces;

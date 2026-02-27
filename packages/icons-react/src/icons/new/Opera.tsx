@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const Opera = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { d: "M277.248 213.312h64c156.224 0 258.816 62.528 323.392 149.76 43.072 58.24 67.968 125.76 82.496 189.056a437.8 437.8 0 0 1 92.48-52.8 530.7 530.7 0 0 1 82.944-27.456c22.528-5.248 45.44-8.96 68.224-13.248l-58.688 352.128-837.44-.064-64-256h54.592c43.584 0 81.024 4.48 110.784 10.112l-39.296-137.6h56.512c55.36 0 108.992 9.856 149.504 19.904a1631 1631 0 0 0-60.8-174.72zm110.464 329.6a686.5 686.5 0 0 0-116.736-26.496l59.776 208.96h90.624a1992 1992 0 0 0-33.728-182.528zm119.744 182.464h174.336a1015 1015 0 0 0-5.312-80.32c-8.96-76.416-30.592-163.84-80.448-231.232-39.552-53.44-98.56-96.896-190.464-110.592 25.216 68.864 44.672 136.064 59.584 196.8a2083 2083 0 0 1 42.304 225.344m259.712 0h92.608l25.472-152.512a426 426 0 0 0-12.16 4.928c-38.144 16.256-79.872 40.64-109.952 75.264 2.176 24.192 3.328 49.6 3.968 70.016zm-525.184 0-19.008-66.368a368 368 0 0 0-21.376-5.76 470 470 0 0 0-60.992-10.368l20.672 82.432h80.64z" })))
+        } />;
+      }
+
+      export default Opera;

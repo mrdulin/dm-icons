@@ -3,9 +3,13 @@ import { useState } from 'react';
 import './styles.css';
 import { getEMSizeProps } from '@d-matrix/icons-react/utils';
 
-const typedIcons: Record<string, React.ComponentType<React.SVGProps<HTMLSpanElement>>> = icons;
+const { new: iconsNew, ...legacyIcons } = icons;
 
-const iconNames = Object.keys(typedIcons);
+const typedLegacyIcons: Record<string, React.ComponentType<React.SVGProps<HTMLSpanElement>>> = legacyIcons;
+const typedNewIcons: Record<string, React.ComponentType<React.SVGProps<HTMLSpanElement>>> = iconsNew;
+
+const typedLegacyIconNames = Object.keys(typedLegacyIcons);
+const typedNewIconNames = Object.keys(typedNewIcons);
 
 const Colors = ['initial', '#b8cae6', '#F0BB0E', '#D93838', '#000000'];
 
@@ -16,10 +20,15 @@ function App() {
   const [searchKeyword, setSearchKeyword] = useState<string>();
   const [copiedIconName, setCopiedIconName] = useState<string>();
   const [iconOpacity, setIconOpacity] = useState(1);
+  const [tab, setTab] = useState<'old' | 'new'>('new');
 
-  const iconsNamesByKeyword = searchKeyword
-    ? iconNames.filter((iconName) => iconName.toLowerCase().includes(searchKeyword.toLowerCase()))
-    : iconNames;
+  const typedLegacyIconsNamesByKeyword = searchKeyword
+    ? typedLegacyIconNames.filter((iconName) => iconName.toLowerCase().includes(searchKeyword.toLowerCase()))
+    : typedLegacyIconNames;
+
+  const typedNewIconsNamesByKeyword = searchKeyword
+    ? typedNewIconNames.filter((iconName) => iconName.toLowerCase().includes(searchKeyword.toLowerCase()))
+    : typedNewIconNames;
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -52,9 +61,16 @@ function App() {
             <span>
               version：<i>{VITE_ICONS_REACT_PACKAGE_VERSION}</i>；
             </span>
-            <span>
-              数量：<i>{iconNames.length}</i>；
-            </span>
+            {tab === 'old' && (
+              <span>
+                数量：<i>{typedLegacyIconNames.length}</i>；
+              </span>
+            )}
+            {tab === 'new' && (
+              <span>
+                数量：<i>{typedNewIconNames.length}</i>；
+              </span>
+            )}
             <span>
               更新时间：
               <i>{new Date(+BUILD_TIMESTAMP).toLocaleString()}</i>
@@ -72,36 +88,85 @@ function App() {
           />
         </div>
 
-        <div style={{ display: 'grid', gridGap: 8, gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))' }}>
-          {iconsNamesByKeyword.map((iconName) => {
-            const IconComponent = typedIcons[iconName];
-            const className = ['icon-box'];
-            if (copiedIconName === iconName) {
-              className.push('copied');
-            }
-            return (
-              <div
-                key={iconName}
-                className={className.join(' ')}
-                onClick={() => {
-                  if (CopyTimer) {
-                    clearTimeout(CopyTimer);
-                    CopyTimer = undefined;
-                  }
-                  navigator.clipboard.writeText(`<icons.${iconName} />`).then(() => {
-                    setCopiedIconName(iconName);
-                    CopyTimer = setTimeout(() => setCopiedIconName(undefined), 2000);
-                  });
-                }}
-              >
-                <div style={{ color, height: 50, fontSize: 36, opacity: iconOpacity }}>
-                  <IconComponent />
-                </div>
-                <div style={{ fontSize: 12 }}>{iconName}</div>
-              </div>
-            );
-          })}
+        <div style={{ padding: 10 }}>
+          <div className="tabs-header">
+            <input type="radio" name="tabs" id="tab1" className="tab-radio" checked={tab === 'new'} onChange={() => setTab('new')} />
+            <label htmlFor="tab1" className="tab-label">
+              新图标
+            </label>
+
+            <input type="radio" name="tabs" id="tab2" className="tab-radio" checked={tab === 'old'} onChange={() => setTab('old')} />
+            <label htmlFor="tab2" className="tab-label">
+              旧图标
+            </label>
+          </div>
         </div>
+
+        {tab === 'old' && (
+          <div style={{ display: 'grid', gridGap: 8, gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))' }}>
+            {typedLegacyIconsNamesByKeyword.map((iconName) => {
+              const IconComponent = typedLegacyIcons[iconName];
+              const className = ['icon-box'];
+              if (copiedIconName === iconName) {
+                className.push('copied');
+              }
+              return (
+                <div
+                  key={iconName}
+                  className={className.join(' ')}
+                  onClick={() => {
+                    if (CopyTimer) {
+                      clearTimeout(CopyTimer);
+                      CopyTimer = undefined;
+                    }
+                    navigator.clipboard.writeText(`<icons.${iconName} />`).then(() => {
+                      setCopiedIconName(iconName);
+                      CopyTimer = setTimeout(() => setCopiedIconName(undefined), 2000);
+                    });
+                  }}
+                >
+                  <div style={{ color, height: 50, fontSize: 36, opacity: iconOpacity }}>
+                    <IconComponent />
+                  </div>
+                  <div style={{ fontSize: 12 }}>{iconName}</div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {tab === 'new' && (
+          <div style={{ display: 'grid', gridGap: 8, gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))' }}>
+            {typedNewIconsNamesByKeyword.map((iconName) => {
+              const IconComponent = typedNewIcons[iconName];
+              const className = ['icon-box'];
+              if (copiedIconName === iconName) {
+                className.push('copied');
+              }
+              return (
+                <div
+                  key={iconName}
+                  className={className.join(' ')}
+                  onClick={() => {
+                    if (CopyTimer) {
+                      clearTimeout(CopyTimer);
+                      CopyTimer = undefined;
+                    }
+                    navigator.clipboard.writeText(`<icons.new.${iconName} />`).then(() => {
+                      setCopiedIconName(iconName);
+                      CopyTimer = setTimeout(() => setCopiedIconName(undefined), 2000);
+                    });
+                  }}
+                >
+                  <div style={{ color, height: 50, fontSize: 36, opacity: iconOpacity }}>
+                    <IconComponent />
+                  </div>
+                  <div style={{ fontSize: 12 }}>{iconName}</div>
+                </div>
+              );
+            })}
+          </div>
+        )}
 
         <h2>图标与文字垂直居中</h2>
         <div>

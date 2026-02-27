@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const StatueOfJesusFilled = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { d: "M426.624 42.688h170.688v170.624H426.624zM85.312 256h853.312v113.472L640 497.472v227.84h33.28l64 256H286.72l64-256H384v-227.84l-298.688-128zM384 404.608v-63.296H236.288L384 404.672zm85.312-63.296v110.336l85.312 85.312V341.312zm170.688 0v63.36l147.648-63.36zm-85.376 316.352-85.312-85.312v152.96h85.312z" })))
+        } />;
+      }
+
+      export default StatueOfJesusFilled;

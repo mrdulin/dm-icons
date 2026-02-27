@@ -1,5 +1,6 @@
 import * as path from 'path';
-import * as iconDefs from '../src/components';
+import * as legacyIconDefs from '../src/components';
+import * as iconDefs from '../src/components/new';
 import * as fs from 'fs';
 import { promisify } from 'util';
 import * as url from 'url';
@@ -14,6 +15,16 @@ type IconDefinitionWithIdentifier = {
   iconDef: React.ComponentType;
 };
 
+function walkLegacy<T>(fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>) {
+  return Promise.all(
+    Object.keys(legacyIconDefs).map((svgIdentifier) => {
+      const legacyIconDef = (legacyIconDefs as { [id: string]: React.ComponentType })[svgIdentifier];
+
+      return fn({ svgIdentifier, iconDef: legacyIconDef });
+    }),
+  );
+}
+
 function walk<T>(fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>) {
   return Promise.all(
     Object.keys(iconDefs).map((svgIdentifier) => {
@@ -25,11 +36,14 @@ function walk<T>(fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>) {
 }
 
 async function generateIcons() {
-  const iconsDir = path.join(__dirname, '../src/icons');
+  const legacyIconsDir = path.join(__dirname, '../src/icons/legacy');
+  const newIconsDir = path.join(__dirname, '../src/icons/new');
   try {
-    await promisify(fs.access)(iconsDir);
+    await promisify(fs.access)(legacyIconsDir);
+    await promisify(fs.access)(newIconsDir);
   } catch {
-    await promisify(fs.mkdir)(iconsDir);
+    await promisify(fs.mkdir)(legacyIconsDir, { recursive: true });
+    await promisify(fs.mkdir)(newIconsDir, { recursive: true });
   }
 
   const render = _.template(
@@ -38,7 +52,7 @@ async function generateIcons() {
     // DON NOT EDIT IT MANUALLY
 
       import React from 'react';
-      import { DMIcon, DMIconProps } from '../dm-icon';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
 
       const <%= svgIdentifier %> = (props: Omit<DMIconProps, 'icon'>) => {
         return <DMIcon {...props} icon={
@@ -51,21 +65,49 @@ async function generateIcons() {
     `.trim(),
   );
 
-  await walk(async (item) => {
-    await writeFile(path.resolve(__dirname, `../src/icons/${item.svgIdentifier}.tsx`), render(item));
+  await walkLegacy(async (item) => {
+    await writeFile(path.resolve(__dirname, `../src/icons/legacy/${item.svgIdentifier}.tsx`), render(item));
   });
 
-  const entryText = Object.keys(iconDefs)
+  await walk(async (item) => {
+    await writeFile(path.resolve(__dirname, `../src/icons/new/${item.svgIdentifier}.tsx`), render(item));
+  });
+
+  const legacyEntryFileContent = Object.keys(legacyIconDefs)
     .sort()
     .map((svgIdentifier) => `export { default as ${svgIdentifier} } from './${svgIdentifier}';`)
     .join('\n');
+
+  const entryFileContent = Object.keys(iconDefs)
+    .sort()
+    .map((svgIdentifier) => `export { default as ${svgIdentifier} } from './${svgIdentifier}';`)
+    .join('\n');
+
+  await promisify(fs.appendFile)(
+    path.resolve(__dirname, '../src/icons/legacy/index.ts'),
+    `
+      // GENERATE BY ./scripts/generate.ts
+      // DON NOT EDIT IT MANUALLY
+      ${legacyEntryFileContent}
+    `.trim(),
+  );
+
+  await promisify(fs.appendFile)(
+    path.resolve(__dirname, '../src/icons/new/index.ts'),
+    `
+      // GENERATE BY ./scripts/generate.ts
+      // DON NOT EDIT IT MANUALLY
+      ${entryFileContent}
+    `.trim(),
+  );
 
   await promisify(fs.appendFile)(
     path.resolve(__dirname, '../src/icons/index.ts'),
     `
       // GENERATE BY ./scripts/generate.ts
       // DON NOT EDIT IT MANUALLY
-      ${entryText}
+      export * from './legacy';
+      export * as new from './new';
     `.trim(),
   );
 }

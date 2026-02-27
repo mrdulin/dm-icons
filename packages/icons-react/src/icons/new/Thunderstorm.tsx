@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const Thunderstorm = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { d: "M473.6 213.312h-2.752c-103.936 1.472-184.96 82.56-184.96 179.2 0 11.2 1.024 22.144 3.072 32.64l7.872 40.832-40.576 8.96c-50.112 11.072-85.632 53.76-85.632 102.464 0 40.384 24.192 76.416 61.12 94.08l38.464 18.368-36.8 76.992-38.528-18.368c-64.192-30.72-109.568-95.296-109.568-171.072 0-78.08 48-144 115.456-173.696a260 260 0 0 1-.256-11.2c0-146.304 121.6-262.464 269.184-264.512h3.84c23.36 0 46.016 2.816 67.712 8.192 91.584 22.656 165.504 90.432 193.408 178.624a238.4 238.4 0 0 1 113.28 45.888 224.9 224.9 0 0 1 90.688 179.712c0 94.336-58.88 174.208-141.312 208.896l-39.36 16.512-33.088-78.656 39.36-16.512c53.248-22.4 89.088-72.896 89.088-130.24 0-44.8-21.76-85.248-56.768-111.616a154.18 154.18 0 0 0-95.04-30.592l-36.48.64-6.272-35.968C646.72 293.76 592.64 236.8 520.768 219.008a196.5 196.5 0 0 0-47.168-5.696M592 455.552l-87.744 141.76h171.392L504.064 869.504 431.872 824l89.088-141.312H350.976l168.512-272.064 72.576 44.928zm-293.44 312.32h85.504v85.568H298.56v-85.504zm341.312 0h85.504v85.568h-85.504v-85.504z" })))
+        } />;
+      }
+
+      export default Thunderstorm;

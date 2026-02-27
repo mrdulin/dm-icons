@@ -1,0 +1,27 @@
+import type { SVGProps } from "react";
+interface SVGRProps {
+  title?: string;
+  titleId?: string;
+}
+const SvgPalace2Filled = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    className="icon"
+    viewBox="0 0 1024 1024"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path d="m554.816 85.44-.064 46.08A256.064 256.064 0 0 1 768 384h85.312V128h85.312v810.688H704V832c0-82.88-41.408-145.152-75.52-182.72a367 367 0 0 0-64.32-55.808l-8.32-5.312L512 561.792l-43.904 26.368-8.32 5.312a367 367 0 0 0-64.32 55.808C361.408 686.848 320 749.12 320 832v106.688H85.376V128h85.312v256H256a256.064 256.064 0 0 1 213.376-252.48l.128-46.272zm-85.568 170.496v85.504h85.504v-85.504zM512 661.312s-106.688 64-106.688 170.688v106.688h213.312V832C618.624 725.312 512 661.312 512 661.312" />
+  </svg>
+);
+export default SvgPalace2Filled;

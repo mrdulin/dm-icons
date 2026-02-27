@@ -1,0 +1,27 @@
+import type { SVGProps } from "react";
+interface SVGRProps {
+  title?: string;
+  titleId?: string;
+}
+const SvgLogoAdobeIllustrate = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    className="icon"
+    viewBox="0 0 1024 1024"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path d="M85.312 85.312h853.312v853.376H85.312V85.376zm85.312 85.376v682.624h682.688v-682.56H170.624zM373.568 256h106.176l153.6 512h-89.216l-50.496-168.32h-134.08L309.12 768h-89.28zm11.584 258.368h82.944l-41.472-138.24zM682.496 384H768v85.504h-85.504zM768 512v256h-85.376V512z" />
+  </svg>
+);
+export default SvgLogoAdobeIllustrate;

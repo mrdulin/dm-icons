@@ -46,7 +46,7 @@
     }
   },
   "scripts": {
-    "clean": "rimraf ./src/components ./dist",
+    "clean": "rimraf ./src/components ./src/icons ./dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "pregenerate": "npm run clean",

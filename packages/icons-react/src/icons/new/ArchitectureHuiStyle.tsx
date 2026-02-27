@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const ArchitectureHuiStyle = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { d: "M546.176 59.712 512 14.272l-34.112 45.44-.128.192-.512.704-2.112 2.752a2291 2291 0 0 1-37.888 48.832 3133 3133 0 0 1-96 115.712c-36.928 42.176-75.52 83.264-109.568 113.536-17.088 15.168-32 26.688-44.16 34.24-10.496 6.4-15.808 7.872-16.896 8.192l-.192-42.688-85.312.32.192 42.624c0 17.28 4.48 38.784 19.52 56.64 16.128 19.2 39.68 28.544 65.92 28.544v384h-85.44v85.376h853.312v-85.376h-85.312v-384c26.24 0 49.728-9.344 65.856-28.544 15.04-17.92 19.456-39.424 19.456-56.768v-42.688h-85.312v42.56c-1.28-.384-6.528-1.92-16.832-8.192a334 334 0 0 1-44.16-34.24c-34.048-30.272-72.704-71.36-109.568-113.536A3136 3136 0 0 1 548.928 63.36l-2.112-2.816-.512-.64-.128-.256zM712.768 384H311.296c31.36-30.08 63.872-65.28 94.144-99.904A3217 3217 0 0 0 512 155.136l7.936 9.984c25.6 32.384 60.672 75.584 98.624 118.976A1619 1619 0 0 0 712.768 384M256 469.312h512v384H640v-128a128 128 0 1 0-256 0v128H256zm298.688 384h-85.312v-128a42.688 42.688 0 1 1 85.312 0z" })))
+        } />;
+      }
+
+      export default ArchitectureHuiStyle;

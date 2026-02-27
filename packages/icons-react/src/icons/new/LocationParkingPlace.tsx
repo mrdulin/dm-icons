@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const LocationParkingPlace = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { d: "M512 128a298.69 298.69 0 0 0-298.688 298.688c0 122.112 76.032 239.872 159.488 331.2A1116.4 1116.4 0 0 0 512 885.632a1115.7 1115.7 0 0 0 139.2-127.744c83.456-91.264 159.488-209.088 159.488-331.2A298.69 298.69 0 0 0 512 128m0 862.464-24.192-16.64-.128-.128-.256-.192-.896-.64a548 548 0 0 1-14.72-10.624 1202 1202 0 0 1-161.984-146.816C222.72 720.064 128 581.824 128 426.688a384 384 0 0 1 768 0c0 155.136-94.656 293.376-181.824 388.736a1201 1201 0 0 1-173.568 155.264l-3.2 2.24-.832.64-.256.128-.064.064L512 990.4zM384 298.56h197.76c19.008 0 43.648 6.848 64.256 24.512 22.144 19.072 36.672 48.256 36.672 86.4 0 38.208-14.528 67.392-36.672 86.464a101.06 101.06 0 0 1-64.192 24.512H469.312V640H384V298.688zm85.312 136.64h112.512a17.3 17.3 0 0 0 8.576-3.84 16.1 16.1 0 0 0 4.224-5.952 38.85 38.85 0 0 0 2.688-15.808 38.85 38.85 0 0 0-2.688-15.808 16.13 16.13 0 0 0-9.728-9.024c-1.664-.64-2.816-.768-3.136-.768H469.312z" })))
+        } />;
+      }
+
+      export default LocationParkingPlace;
