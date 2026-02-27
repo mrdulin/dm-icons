@@ -20,7 +20,7 @@ const SvgPieChartFilled2 = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <g fillOpacity={0.7} clipPath="url(#clip0_13380_12516)">
+    <g clipPath="url(#clip0_13380_12516)">
       <path d="M7.926 7.904h5.917v.65c0 3.673-2.937 6.651-6.558 6.651S.728 12.227.728 8.555s2.936-6.65 6.557-6.65h.641z" />
       <path
         fillRule="evenodd"

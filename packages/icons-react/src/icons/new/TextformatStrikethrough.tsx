@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const TextformatStrikethrough = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { d: "M340.416 131.52C396.8 97.088 463.808 85.44 512.128 85.44c104.704 0 182.912 42.24 258.304 92.16l35.584 23.552-47.168 71.168-35.52-23.552c-71.424-47.36-132.16-78.08-211.2-78.08-37.12 0-87.68 9.536-127.36 33.664-37.504 22.912-64.896 58.24-64.896 115.648 0 19.456 3.328 35.264 8.512 48.32l15.808 39.616-79.296 31.552-15.744-39.616A214.1 214.1 0 0 1 234.56 320c0-92.096 47.36-152.768 105.856-188.48M170.688 469.312h682.688v85.376H726.912c36.416 34.176 62.464 82.432 62.464 149.504 0 92.032-47.36 152.768-105.856 188.416-56.384 34.432-123.392 46.144-171.712 46.144-104.832 0-182.848-42.112-258.176-92.544l-35.456-23.68 47.424-70.976 35.456 23.68c71.04 47.616 131.648 78.208 210.752 78.208 37.12 0 87.68-9.472 127.296-33.664C676.672 796.864 704 761.6 704 704.192c0-55.68-27.2-87.488-66.048-109.44-40.448-22.848-90.304-32.768-129.984-40.064h-337.28z" })))
+        } />;
+      }
+
+      export default TextformatStrikethrough;

@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const Shop5Filled = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { d: "M891.264 85.312s1.792 2.24 4.736 6.272c11.968 16.64 42.624 64.832 42.624 121.728 0 35.776-16.32 68.16-42.624 91.392-25.664 22.592-60.8 36.544-99.584 36.544a152.3 152.3 0 0 1-84.608-25.088c-34.944-23.36-57.6-60.736-57.6-102.848 0 42.112-22.656 79.488-57.6 102.848-23.68 15.744-52.928 25.088-84.608 25.088a152.3 152.3 0 0 1-84.672-25.088c-34.944-23.36-57.6-60.736-57.6-102.848 0 42.112-22.656 79.488-57.6 102.848-23.68 15.744-52.928 25.088-84.608 25.088A150.2 150.2 0 0 1 128 304.704a121.73 121.73 0 0 1-42.688-91.392c0-56.896 30.656-105.024 42.688-121.728 2.88-4.032 4.736-6.272 4.736-6.272zm-94.848 341.312A240.6 240.6 0 0 0 896 404.864v448.32h42.624v85.504H704V597.312H320v341.376H85.312V853.12H128V404.864a240.6 240.6 0 0 0 99.52 21.76 240 240 0 0 0 142.208-46.848A240.06 240.06 0 0 0 512 426.624a240 240 0 0 0 142.208-46.848 240.06 240.06 0 0 0 142.208 46.848M405.312 938.688v-256h213.312v256z" })))
+        } />;
+      }
+
+      export default Shop5Filled;

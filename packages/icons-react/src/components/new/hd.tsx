@@ -1,0 +1,27 @@
+import type { SVGProps } from "react";
+interface SVGRProps {
+  title?: string;
+  titleId?: string;
+}
+const SvgHd = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    className="icon"
+    viewBox="0 0 1024 1024"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path d="M42.688 128h938.688v768H42.688zM128 213.312v597.376h768V213.312zm170.688 128v128H384v-128h85.376v341.376H384v-128h-85.312v128h-85.312V341.312zm256 0h170.688c47.104 0 85.312 38.208 85.312 85.376v170.624c0 47.168-38.208 85.376-85.312 85.376H554.688zM640 426.688v170.624h85.376V426.688z" />
+  </svg>
+);
+export default SvgHd;

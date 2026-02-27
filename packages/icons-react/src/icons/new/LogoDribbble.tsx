@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const LogoDribbble = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { d: "M337.408 169.856a384.77 384.77 0 0 0-199.616 255.616 1147.5 1147.5 0 0 0 336.32-66.048 1455 1455 0 0 0-136.704-189.568M128 511.36v.64c0 91.648 32 175.68 85.568 241.728A684.16 684.16 0 0 1 551.04 504.576c-10.88-23.68-22.4-46.912-34.368-69.824A1233 1233 0 0 1 128 511.296zM275.2 814.4A382.2 382.2 0 0 0 512 896c53.44 0 104.192-10.88 150.272-30.528a1440 1440 0 0 0-77.824-282.112A598.85 598.85 0 0 0 275.2 814.336zm392.832-251.328a1525 1525 0 0 1 72.832 257.344 383.8 383.8 0 0 0 151.168-252.8 600.1 600.1 0 0 0-224-4.544m226.752-81.92a381.9 381.9 0 0 0-80.768-206.336c-67.84 49.536-140.8 92.288-218.176 127.36 13.696 26.24 26.624 53.056 38.784 80.256a685.8 685.8 0 0 1 260.16-1.28m-340.48-153.856c70.336-31.36 136.96-69.632 199.04-113.92a385.15 385.15 0 0 0-330.944-74.88 1540 1540 0 0 1 131.84 188.736zM44.928 465.088A469.7 469.7 0 0 1 332.224 78.336 468 468 0 0 1 512 42.688c133.184 0 253.44 55.488 338.88 144.576a467.9 467.9 0 0 1 129.792 349.824 469.376 469.376 0 1 1-935.68-72z" })))
+        } />;
+      }
+
+      export default LogoDribbble;

@@ -1,0 +1,27 @@
+import type { SVGProps } from "react";
+interface SVGRProps {
+  title?: string;
+  titleId?: string;
+}
+const SvgChatBubbleError = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    className="icon"
+    viewBox="0 0 1024 1024"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path d="M512 128a384 384 0 0 0-278.912 647.936l21.504 22.72-54.08 97.28H512A384 384 0 0 0 512 128M42.688 512A469.312 469.312 0 1 1 512 981.312H55.488l94.72-170.368A467.58 467.58 0 0 1 42.688 512m512-234.688v320h-85.312v-320zm-85.312 384h85.504v85.504h-85.504z" />
+  </svg>
+);
+export default SvgChatBubbleError;

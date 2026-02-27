@@ -1,0 +1,27 @@
+import type { SVGProps } from "react";
+interface SVGRProps {
+  title?: string;
+  titleId?: string;
+}
+const SvgTaskError = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    className="icon"
+    viewBox="0 0 1024 1024"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path d="M298.688 42.688h426.624V128H896v384h-85.312V213.312h-85.376v85.376H298.688v-85.376h-85.376V896H512v85.312H128V128h170.688zM384 213.312h256V128H384zm305.984 416.32 120.704 120.704 120.64-120.704 60.352 60.352-120.64 120.704 120.64 120.64-60.352 60.352-120.64-120.64-120.704 120.64-60.352-60.352 120.704-120.64-120.704-120.704z" />
+  </svg>
+);
+export default SvgTaskError;

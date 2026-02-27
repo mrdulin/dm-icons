@@ -1,0 +1,27 @@
+import type { SVGProps } from "react";
+interface SVGRProps {
+  title?: string;
+  titleId?: string;
+}
+const SvgCastle = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    className="icon"
+    viewBox="0 0 1024 1024"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path d="M298.688 85.312v85.376H384V85.376h85.376v85.312h85.312V85.376H640v85.312h85.376V85.376h85.312v512H896v-42.688h85.376v384H42.688v-384H128v42.688h85.376v-512h85.312zm-85.312 597.376H128v170.688h85.376zm85.312 170.688H384V554.688h256v298.688h85.376V256H298.688zm512 0H896V682.688h-85.312zm-256 0V640h-85.312v213.376z" />
+  </svg>
+);
+export default SvgCastle;

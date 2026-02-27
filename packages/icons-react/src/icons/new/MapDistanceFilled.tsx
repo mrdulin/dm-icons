@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const MapDistanceFilled = (props: Omit<DMIconProps, 'icon'>) => {
+        return <DMIcon {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { d: "M682.688 320a21.312 21.312 0 1 1 42.624 0c0 9.472-6.656 23.296-20.8 38.72l-.512.576-.512-.576c-14.08-15.424-20.8-29.248-20.8-38.72M341.312 448A21.312 21.312 0 1 1 384 448c0 9.472-6.72 23.296-20.8 38.72l-.512.576-.512-.576c-14.144-15.424-20.864-29.248-20.864-38.72M938.624 85.312v853.376H85.312V85.376h853.312zM696 462.336l8 5.504 8-5.44c9.92-6.72 19.84-13.44 29.12-21.12 7.04-5.76 16.64-14.336 26.368-24.96 17.92-19.52 43.2-53.76 43.2-96.256a106.688 106.688 0 0 0-213.376 0c0 42.56 25.344 76.8 43.2 96.32 9.728 10.56 19.264 19.072 26.368 24.96 9.28 7.616 19.2 14.336 29.12 21.12zM354.24 590.08l8.448 5.76 8.448-5.76c6.656-4.48 13.312-8.96 19.776-13.76a260 260 0 0 0 35.2-31.936c17.92-19.584 43.2-53.76 43.2-96.32A106.688 106.688 0 0 0 256 448c0 42.56 25.28 76.8 43.2 96.32a260 260 0 0 0 35.2 31.872c6.4 4.864 13.12 9.344 19.84 13.824zm239.424 83.584 250.56-93.952-29.952-79.872-250.56 93.952zm-341.312 128 250.56-93.952-29.952-79.872-250.56 93.952z" })))
+        } />;
+      }
+
+      export default MapDistanceFilled;
