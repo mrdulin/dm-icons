@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const PixelsColored = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const PixelsColored = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16", width: "1em", height: "1em", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -15,6 +15,6 @@
             React.createElement("path", { fill: "#B8CAE6", d: "M3.667 10.667h.666a1 1 0 0 1 1 1v.666a1 1 0 0 1-1 1h-.666a1 1 0 0 1-1-1v-.666a1 1 0 0 1 1-1m0-4h.666a1 1 0 0 1 1 1v.666a1 1 0 0 1-1 1h-.666a1 1 0 0 1-1-1v-.666a1 1 0 0 1 1-1m4 4h.666a1 1 0 0 1 1 1v.666a1 1 0 0 1-1 1h-.666a1 1 0 0 1-1-1v-.666a1 1 0 0 1 1-1m-4-8h.666a1 1 0 0 1 1 1v.666a1 1 0 0 1-1 1h-.666a1 1 0 0 1-1-1v-.666a1 1 0 0 1 1-1m8 8h.666a1 1 0 0 1 1 1v.666a1 1 0 0 1-1 1h-.666a1 1 0 0 1-1-1v-.666a1 1 0 0 1 1-1" }),
             React.createElement("rect", { id: "Rectangle-187-Copy-4", width: 2.667, height: 2.667, x: 6.667, y: 6.667, fill: "#B8CAE6", opacity: 0.3, rx: 1 })))))
         } />;
-      }
+      })
 
       export default PixelsColored;

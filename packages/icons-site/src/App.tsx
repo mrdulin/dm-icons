@@ -175,7 +175,9 @@ function App() {
           </button>
         </div>
 
-        <h2>覆盖svg元素属性</h2>
+        <h2>
+          覆盖<code>svg</code>元素属性
+        </h2>
         <div>
           <icons.TechnologyInnovationSquareOutlined style={{ fontSize: 28 }} />
           <icons.TaxExemptSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} />
@@ -184,11 +186,32 @@ function App() {
           <icons.MarketMakingSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} svgProps={getEMSizeProps({ width: 27, height: 16 })} />
         </div>
         <pre>
-          <code>{`
-          import { getEMSizeProps } from '@d-matrix/icons-react/utils';
+          <code>
+            {`
+            import { getEMSizeProps } from '@d-matrix/icons-react/utils';
 
-          <icons.MarketMakingSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} svgProps={getEMSizeProps({ width: 27, height: 16 })} />
-          `}</code>
+            function Component() {
+              return <icons.MarketMakingSquareOutlined style={{ fontSize: 28, marginLeft: 2 }} svgProps={getEMSizeProps({ width: 27, height: 16 })} />
+            }
+          `}
+          </code>
+        </pre>
+
+        <h2>
+          使用<code>Ref</code>
+        </h2>
+        <pre>
+          <code>
+            {`
+            import { ComponentRef, useRef } from 'react';
+
+            function Component() {
+              const iconRef = useRef<ComponentRef<typeof icons.TechnologyInnovationSquareOutlined>>(null);
+
+              return <icons.TechnologyInnovationSquareOutlined ref={iconRef} style={{ fontSize: 28 }} />
+            }
+          `}
+          </code>
         </pre>
       </div>
 

@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const SecurityFilled = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const SecurityFilled = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 27 16", width: "1em", height: "1em", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -15,6 +15,6 @@
     React.createElement("path", { fill: "currentColor", d: "M5.64 4.882h1.298v1.012H5.64v2.023c.462-.198.902-.407 1.33-.638v1.034c-.44.21-.88.407-1.33.594v2.894c0 .77-.364 1.154-1.078 1.154H3.517l-.243-1q.48.065.925.066c.286 0 .44-.166.44-.485V9.304c-.462.154-.924.308-1.397.45l-.242-1a19 19 0 0 0 1.639-.463V5.894H3.197V4.882H4.64V2.989h1zM13.108 12.691H6.442v-.978h6.666z" }),
     React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M12.416 10.524H7.411V3.66h5.005zM8.412 9.59h3.014V7.576H8.412zm0-2.938h3.014V4.596H8.412z", clipRule: "evenodd" })))
         } />;
-      }
+      })
 
       export default SecurityFilled;

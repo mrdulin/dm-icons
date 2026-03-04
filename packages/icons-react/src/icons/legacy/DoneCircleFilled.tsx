@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const DoneCircleFilled = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const DoneCircleFilled = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 24 24", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -13,6 +13,6 @@
     React.createElement("circle", { cx: 12, cy: 12, r: 8.5, fill: "currentColor" }),
     React.createElement("path", { fill: "#fff", d: "m15.129 8.466 1.309 1.172-5.275 5.896-3.601-3.204 1.168-1.313 2.29 2.04z" })))
         } />;
-      }
+      })
 
       export default DoneCircleFilled;

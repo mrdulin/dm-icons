@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const EmojiFaceCryColored = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const EmojiFaceCryColored = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 51 50", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -40,6 +40,6 @@
             React.createElement("stop", { offset: 0.557, stopColor: "#E35D12", stopOpacity: 0 }),
             React.createElement("stop", { offset: 1, stopColor: "#FF24F6", stopOpacity: 0.3 })))))
         } />;
-      }
+      })
 
       export default EmojiFaceCryColored;

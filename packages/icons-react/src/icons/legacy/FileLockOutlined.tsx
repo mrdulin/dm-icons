@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const FileLockOutlined = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const FileLockOutlined = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 35 37", width: "1em", height: "1em", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -16,6 +16,6 @@
         React.createElement("circle", { cx: 15.157, cy: 19.72, r: 1 })),
     React.createElement("path", { d: "M11.902 26.158v-2.98c0-2.676-2.235-4.845-4.991-4.845-2.757 0-4.991 2.169-4.991 4.844v2.981c-1.06 0-1.92.834-1.92 1.863v6.335c0 .494.202.968.562 1.317.36.35.848.546 1.358.546h9.982c1.06 0 1.92-.834 1.92-1.863v-6.335c0-1.029-.86-1.863-1.92-1.863M6.91 32.68c-.849 0-1.536-.667-1.536-1.49s.687-1.49 1.536-1.49c.848 0 1.535.667 1.535 1.49s-.687 1.49-1.535 1.49m3.07-6.52H3.84v-2.982c0-1.646 1.375-2.98 3.072-2.98 1.696 0 3.07 1.334 3.07 2.98z" })))
         } />;
-      }
+      })
 
       export default FileLockOutlined;

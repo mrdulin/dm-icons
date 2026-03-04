@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useImperativeHandle, useRef } from 'react';
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
 import classNames from 'classnames';
@@ -23,7 +23,7 @@ const iconStyles = `
   -moz-osx-font-smoothing: grayscale;
 }
   `;
-export const DMIcon = ({ icon: Icon, className, svgProps, ...restProps }: DMIconProps) => {
+export const DMIcon = React.forwardRef<HTMLSpanElement, DMIconProps>(({ icon: Icon, className, svgProps, ...restProps }, ref) => {
   const eleRef = useRef<HTMLSpanElement>(null);
   useEffect(() => {
     const ele = eleRef.current;
@@ -36,6 +36,8 @@ export const DMIcon = ({ icon: Icon, className, svgProps, ...restProps }: DMIcon
     });
   }, []);
 
+  useImperativeHandle(ref, () => eleRef.current as HTMLSpanElement);
+
   const classString = classNames('dmicon', className);
 
   return (
@@ -43,4 +45,4 @@ export const DMIcon = ({ icon: Icon, className, svgProps, ...restProps }: DMIcon
       <Icon {...svgProps} />
     </span>
   );
-};
+});

@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const IssueSquareOutlined = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const IssueSquareOutlined = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", fill: "currentColor", viewBox: "0 0 30 16", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -13,6 +13,6 @@
     React.createElement("path", { fill: "currentColor", d: "M17.64 5.9a9.5 9.5 0 0 1-1.308 1.92v5.88h-.852V8.696c-.48.432-.995.852-1.571 1.248l-.252-.864c1.463-1.032 2.53-2.208 3.203-3.54zM24.468 7.364h-1.944v5.244c0 .696-.396 1.044-1.164 1.044h-1.764l-.18-.852c.576.036 1.116.06 1.644.06.384 0 .588-.156.588-.468V7.364h-3.78v-.852h6.6zM27.085 11.072a.695.695 0 0 1 .73.708.7.7 0 0 1-.203.516.76.76 0 0 1-.527.204.69.69 0 0 1-.504-.204.7.7 0 0 1-.216-.516q0-.306.216-.504a.64.64 0 0 1 .503-.204M27.468 10.196h-.744l-.191-6.264h1.115zM17.077 3.164q-1.009 1.998-3.24 3.528l-.252-.864c1.247-.888 2.147-1.896 2.711-3.024zM9.168 2.708c.864.66 1.572 1.32 2.148 1.98l-.611.612c-.504-.636-1.213-1.308-2.113-2.028zM23.94 4.316h-5.748v-.852h5.748z" }),
     React.createElement("path", { fill: "currentColor", fillOpacity: 0.5, d: "M28 15v1H2v-1zm1-1V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1v1l-.204-.01A2 2 0 0 1 0 14V2a2 2 0 0 1 2-2h26a2 2 0 0 1 2 2v12a2 2 0 0 1-1.796 1.99L28 16v-1a1 1 0 0 0 1-1" })))
         } />;
-      }
+      })
 
       export default IssueSquareOutlined;

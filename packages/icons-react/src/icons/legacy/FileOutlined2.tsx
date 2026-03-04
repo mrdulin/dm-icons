@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const FileOutlined2 = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const FileOutlined2 = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 168 112", width: "1em", height: "1em", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -22,6 +22,6 @@
     React.createElement("path", { d: "M116.361 99.755H51.798C49.7 99.755 48 98.086 48 96.027V17.728C48 15.668 49.7 14 51.798 14h45.574l22.787 22.37v59.657c0 2.06-1.7 3.728-3.798 3.728" }),
     React.createElement("path", { d: "M97.372 14v18.642c0 2.06 1.7 3.729 3.798 3.729h18.989z" })))
         } />;
-      }
+      })
 
       export default FileOutlined2;

@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const StockSquareOutlined = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const StockSquareOutlined = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 30 16", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -16,6 +16,6 @@
     React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M23.028 5.852h-7.836V2.888h7.836zm-6.995-.516h6.155v-.708h-6.155zm0-1.224h6.155v-.696h-6.155z", clipRule: "evenodd" }),
     React.createElement("path", { fill: "currentColor", fillOpacity: 0.5, d: "M28 15v1H2v-1zm1-1V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1v1l-.204-.01A2 2 0 0 1 0 14V2a2 2 0 0 1 2-2h26a2 2 0 0 1 2 2v12a2 2 0 0 1-1.796 1.99L28 16v-1a1 1 0 0 0 1-1" })))
         } />;
-      }
+      })
 
       export default StockSquareOutlined;

@@ -54,12 +54,12 @@ async function generateIcons() {
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const <%= svgIdentifier %> = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const <%= svgIdentifier %> = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           <%= iconDef %>
         } />;
-      }
+      })
 
       export default <%= svgIdentifier %>;
     `.trim(),
