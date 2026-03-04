@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const PerpetualSquareOutlined = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const PerpetualSquareOutlined = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 16 16", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -13,6 +13,6 @@
     React.createElement("path", { fill: "currentColor", d: "M6.92 7.892c-.66 2.052-1.968 3.612-3.912 4.668l-.516-.684c1.704-.9 2.892-2.184 3.552-3.84H2.78V7.22h4.14zM6.8 2.468c1.128.288 2.196.72 3.216 1.283l-.312.78a15 15 0 0 0-3.252-1.367z" }),
     React.createElement("path", { fill: "currentColor", fillOpacity: 0.5, d: "M14 15v1H2v-1zm1-1V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1v1a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1" })))
         } />;
-      }
+      })
 
       export default PerpetualSquareOutlined;

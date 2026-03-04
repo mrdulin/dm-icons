@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const TechnologyInnovationSquareOutlined = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const TechnologyInnovationSquareOutlined = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 16 16", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -13,6 +13,6 @@
     React.createElement("path", { fill: "currentColor", d: "M8.384 5.924c.876.648 1.62 1.284 2.22 1.931l-.612.613c-.54-.612-1.285-1.26-2.22-1.956zM8.744 3.164c.864.612 1.584 1.224 2.172 1.848l-.588.6C9.8 5.024 9.068 4.4 8.132 3.752z" }),
     React.createElement("path", { fill: "currentColor", fillOpacity: 0.5, d: "M14 15v1H2v-1zm1-1V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1v1a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1" })))
         } />;
-      }
+      })
 
       export default TechnologyInnovationSquareOutlined;

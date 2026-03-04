@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const DotsSpinnerOutlined = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const DotsSpinnerOutlined = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16", width: "1em", height: "1em", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -17,6 +17,6 @@
         React.createElement("path", { d: "M3.473 10.755c-.952 0-1.724.76-1.724 1.695 0 .936.772 1.695 1.724 1.695s1.724-.759 1.724-1.695-.772-1.695-1.724-1.695", opacity: 0.4 }),
         React.createElement("path", { d: "M1.655 6.508C.741 6.508 0 7.237 0 8.136s.741 1.627 1.655 1.627S3.31 9.034 3.31 8.136c0-.899-.74-1.628-1.655-1.628", opacity: 0.25 }))))
         } />;
-      }
+      })
 
       export default DotsSpinnerOutlined;

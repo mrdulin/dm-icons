@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const ContainsRightsSquareOutlined = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const ContainsRightsSquareOutlined = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 16 16", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -13,6 +13,6 @@
     React.createElement("path", { fill: "currentColor", d: "M5.432 4.862h1.584v.828H5.432v.684c.6.575 1.212 1.236 1.824 1.956l-.492.732a30 30 0 0 0-1.332-1.8v6.204h-.864V7.238a13 13 0 0 1-1.752 3.432l-.384-.972A10.65 10.65 0 0 0 4.544 5.69h-1.86v-.828h1.884v-2.34h.864z" }),
     React.createElement("path", { fill: "currentColor", fillOpacity: 0.5, d: "M14 15v1H2v-1zm1-1V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1v1a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1" })))
         } />;
-      }
+      })
 
       export default ContainsRightsSquareOutlined;

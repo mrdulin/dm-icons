@@ -4,13 +4,13 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const Horizontal = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const Horizontal = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", className: "icon", viewBox: "0 0 1024 1024", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
     React.createElement("path", { d: "M85.312 85.312h853.312v256H85.312zm85.312 85.376V256h682.688v-85.312zm-85.312 256h853.312v512H85.312zM170.624 512v341.376h682.688V512z" })))
         } />;
-      }
+      })
 
       export default Horizontal;

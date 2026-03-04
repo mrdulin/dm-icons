@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const FileLockOutlined2 = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const FileLockOutlined2 = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 168 113", width: "1em", height: "1em", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -25,6 +25,6 @@
         React.createElement("ellipse", { cx: 41.055, cy: 54.654, rx: 2.621, ry: 2.603 })),
     React.createElement("path", { d: "M68.08 84.605v-8.23C68.08 68.987 62.058 63 54.628 63s-13.453 5.988-13.453 13.374v8.23c-2.857 0-5.174 2.304-5.174 5.145v17.49c0 1.364.545 2.672 1.516 3.637a5.2 5.2 0 0 0 3.658 1.507h26.907c2.857 0 5.174-2.303 5.174-5.144v-17.49c0-2.841-2.317-5.144-5.174-5.144m-13.453 18.004c-2.286 0-4.139-1.842-4.139-4.115s1.853-4.115 4.14-4.115 4.139 1.842 4.139 4.115-1.853 4.115-4.14 4.115m8.28-18.004H46.348v-8.23c0-4.546 3.706-8.231 8.278-8.231s8.28 3.685 8.28 8.23z" })))
         } />;
-      }
+      })
 
       export default FileLockOutlined2;

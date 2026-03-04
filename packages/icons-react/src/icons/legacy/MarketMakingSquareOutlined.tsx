@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const MarketMakingSquareOutlined = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const MarketMakingSquareOutlined = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "currentColor", viewBox: "0 0 27 16", width: "1em", height: "1em", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -15,6 +15,6 @@
     React.createElement("path", { fill: "currentColor", fillRule: "evenodd", d: "M7.697 5.2h1.408v.737H7.697v2.157h1.188v3.805H6.52v.715h-.749v-4.52H6.95V5.938H5.52V5.2h1.43V3.242h.748zm-1.176 6.006h1.616v-2.41H6.52z", clipRule: "evenodd" }),
     React.createElement("path", { fill: "currentColor", fillOpacity: 0.5, d: "M25 15v1H2v-1zm1-1V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1v1a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h23l.204.01A2 2 0 0 1 27 2v12a2 2 0 0 1-1.796 1.99L25 16v-1a1 1 0 0 0 1-1" })))
         } />;
-      }
+      })
 
       export default MarketMakingSquareOutlined;

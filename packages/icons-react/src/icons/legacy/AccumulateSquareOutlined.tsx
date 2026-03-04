@@ -4,8 +4,8 @@
       import React from 'react';
       import { DMIcon, DMIconProps } from '../../dm-icon';
 
-      const AccumulateSquareOutlined = (props: Omit<DMIconProps, 'icon'>) => {
-        return <DMIcon {...props} icon={
+      const AccumulateSquareOutlined = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
           // @ts-expect-error TODO improve TS type
           ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", fill: "currentColor", viewBox: "0 0 16 16", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
     title ? React.createElement("title", { id: titleId }, title) : null,
@@ -13,6 +13,6 @@
     React.createElement("path", { fill: "currentColor", d: "M9.843 11.324a20 20 0 0 1 3.42 1.452l-.456.732a17 17 0 0 0-3.385-1.536zM6.614 11.924c-.912.624-2.064 1.14-3.444 1.56l-.384-.78q2.016-.54 3.313-1.368z" }),
     React.createElement("path", { fill: "currentColor", fillOpacity: 0.5, d: "M14 15v1H2v-1zm1-1V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1v1a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1" })))
         } />;
-      }
+      })
 
       export default AccumulateSquareOutlined;
