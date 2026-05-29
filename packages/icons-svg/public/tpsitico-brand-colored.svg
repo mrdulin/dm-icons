@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>国利brand</title>
+  <defs>
+    <linearGradient x1="100.723767%" y1="50.0223333%" x2="-0.539461883%" y2="50.0223333%" id="linearGradient-1">
+      <stop stop-color="#BA1B2C" offset="0%"></stop>
+      <stop stop-color="#B81B2B" offset="33.91%"></stop>
+      <stop stop-color="#B11B2A" offset="54.3%"></stop>
+      <stop stop-color="#A41B27" offset="71.11%"></stop>
+      <stop stop-color="#911A22" offset="85.89%"></stop>
+      <stop stop-color="#7A171C" offset="99.35%"></stop>
+      <stop stop-color="#79171C" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient x1="-0.131390135%" y1="50.0223333%" x2="99.832287%" y2="50.0223333%" id="linearGradient-2">
+      <stop stop-color="#56B5B8" offset="0%"></stop>
+      <stop stop-color="#56B4B8" offset="24.92%"></stop>
+      <stop stop-color="#55AFB7" offset="39.91%"></stop>
+      <stop stop-color="#53A7B5" offset="52.28%"></stop>
+      <stop stop-color="#519BB2" offset="63.21%"></stop>
+      <stop stop-color="#4F8BAD" offset="73.2%"></stop>
+      <stop stop-color="#4E77A5" offset="82.51%"></stop>
+      <stop stop-color="#4B5F9B" offset="91.25%"></stop>
+      <stop stop-color="#494390" offset="99.4%"></stop>
+      <stop stop-color="#49418F" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient x1="49.9856667%" y1="0.032815534%" x2="49.9856667%" y2="100.003981%" id="linearGradient-3">
+      <stop stop-color="#AC1F26" offset="0%"></stop>
+      <stop stop-color="#A81F26" offset="47.2%"></stop>
+      <stop stop-color="#9B1E24" offset="96.02%"></stop>
+      <stop stop-color="#9A1E23" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient x1="50.096%" y1="-0.204182879%" x2="50.096%" y2="100.154767%" id="linearGradient-4">
+      <stop stop-color="#57B5B7" offset="0%"></stop>
+      <stop stop-color="#56B3B6" offset="14.04%"></stop>
+      <stop stop-color="#54ACB5" offset="28.6%"></stop>
+      <stop stop-color="#52A0B2" offset="43.4%"></stop>
+      <stop stop-color="#508FAD" offset="58.36%"></stop>
+      <stop stop-color="#4E78A5" offset="73.46%"></stop>
+      <stop stop-color="#4B5B99" offset="88.44%"></stop>
+      <stop stop-color="#49418F" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient x1="100.723767%" y1="50.1063333%" x2="-0.539461883%" y2="50.1063333%" id="linearGradient-5">
+      <stop stop-color="#BA1B2C" offset="0%"></stop>
+      <stop stop-color="#B81B2B" offset="33.91%"></stop>
+      <stop stop-color="#B11B2A" offset="54.3%"></stop>
+      <stop stop-color="#A41B27" offset="71.11%"></stop>
+      <stop stop-color="#911A22" offset="85.89%"></stop>
+      <stop stop-color="#7A171C" offset="99.35%"></stop>
+      <stop stop-color="#79171C" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient x1="-0.131390135%" y1="50.1063333%" x2="99.832287%" y2="50.1063333%" id="linearGradient-6">
+      <stop stop-color="#56B5B8" offset="0%"></stop>
+      <stop stop-color="#56B4B8" offset="24.92%"></stop>
+      <stop stop-color="#55AFB7" offset="39.91%"></stop>
+      <stop stop-color="#53A7B5" offset="52.28%"></stop>
+      <stop stop-color="#519BB2" offset="63.21%"></stop>
+      <stop stop-color="#4F8BAD" offset="73.2%"></stop>
+      <stop stop-color="#4E77A5" offset="82.51%"></stop>
+      <stop stop-color="#4B5F9B" offset="91.25%"></stop>
+      <stop stop-color="#494390" offset="99.4%"></stop>
+      <stop stop-color="#49418F" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-374, -55)" fill-rule="nonzero">
+      <g transform="translate(4, 51)">
+        <g transform="translate(370, 4)">
+          <path
+            d="M6.34536585,24 L6.34536585,17.6854369 C6.34536585,17.6854369 8.87414634,17.1262136 11.5668293,17.0097087 L11.5668293,17.6854369 L11.5668293,24 L6.34536585,24 Z"
+            fill="url(#linearGradient-1)"></path>
+          <path
+            d="M12.4565854,24 L12.4565854,17.6854369 L12.4565854,17.6854369 L12.4565854,17.0097087 C15.1258537,17.1262136 17.6780488,17.6854369 17.6780488,17.6854369 L17.6780488,24 L12.4565854,24 Z"
+            fill="url(#linearGradient-2)"></path>
+          <path
+            d="M7.02439024,11.976699 C7.02439024,9.39029126 6.43902439,6.73398058 6.34536585,6.36116505 L6.34536585,0 L0,6.45436893 L0,17.5456311 L6.34536585,24 L6.34536585,17.638835 C6.43902439,17.2660194 7.02439024,14.6330097 7.02439024,11.976699 Z"
+            fill="url(#linearGradient-3)"></path>
+          <path
+            d="M17.6546341,0 L17.6546341,6.31456311 C17.6546341,6.31456311 16.9756098,9.15728155 16.9756098,12 C16.9756098,14.7728155 17.6546341,17.638835 17.6546341,17.638835 L17.6546341,23.9533981 L24,17.4990291 L24,6.40776699 L17.6546341,0 Z"
+            fill="url(#linearGradient-4)"></path>
+          <path
+            d="M6.34536585,0 L6.34536585,6.31456311 C6.34536585,6.31456311 8.87414634,6.87378641 11.5668293,6.99029126 L11.5668293,6.31456311 L11.5668293,0 L6.34536585,0 Z"
+            fill="url(#linearGradient-5)"></path>
+          <path
+            d="M12.4565854,0 L12.4565854,6.31456311 L12.4565854,6.31456311 L12.4565854,6.99029126 C15.1258537,6.87378641 17.6780488,6.31456311 17.6780488,6.31456311 L17.6780488,0 L12.4565854,0 Z"
+            fill="url(#linearGradient-6)"></path>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
