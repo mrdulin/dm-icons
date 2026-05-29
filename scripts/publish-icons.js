@@ -2,12 +2,15 @@
 
 const fs = require('fs');
 const path = require('path');
+const readline = require('readline');
 const { spawnSync } = require('child_process');
 
 const repoRoot = path.resolve(__dirname, '..');
+const supportedBumpTypes = new Set(['major', 'minor', 'patch']);
 
 function parseArgs(argv) {
   const options = {
+    bumpType: null,
     dryRun: false,
     push: true,
     remote: null,
@@ -22,6 +25,10 @@ function parseArgs(argv) {
     switch (arg) {
       case '--dry-run':
         options.dryRun = true;
+        break;
+      case '--bump-type':
+        options.bumpType = argv[i + 1];
+        i += 1;
         break;
       case '--no-push':
         options.push = false;
@@ -59,12 +66,14 @@ function printHelp() {
   console.log(`Usage: npm run release:icons -- [options]
 
 Options:
+  --bump-type <type>            Use major, minor, or patch without prompting
   --dry-run                     Print the commands without executing them
   --no-push                     Skip the final git push
   --remote <name>               Push to a specific remote (default: branch remote or origin)
   --initial-commit <message>    Override the first commit message
   --svg-commit <message>        Override the svg version bump commit message
   --react-commit <message>      Override the react version bump commit message
+  When --bump-type is omitted, the script prompts for major, minor, or patch
   -h, --help                    Show this help message
 `);
 }
@@ -126,14 +135,36 @@ function readJson(relativePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
-function getNextMinorVersion(version) {
-  const [major, minor] = version.split('.').map((value) => Number.parseInt(value, 10));
+function normalizeBumpType(value) {
+  if (!value) {
+    return null;
+  }
 
-  if (Number.isNaN(major) || Number.isNaN(minor)) {
+  const normalizedValue = String(value).toLowerCase();
+  if (!supportedBumpTypes.has(normalizedValue)) {
+    throw new Error(`Invalid bump type: ${value}. Use one of: major, minor, patch.`);
+  }
+
+  return normalizedValue;
+}
+
+function getNextVersion(version, bumpType) {
+  const [major, minor, patch] = version.split('.').map((value) => Number.parseInt(value, 10));
+
+  if (Number.isNaN(major) || Number.isNaN(minor) || Number.isNaN(patch)) {
     throw new Error(`Unsupported version format: ${version}`);
   }
 
-  return `${major}.${minor + 1}.0`;
+  switch (bumpType) {
+    case 'major':
+      return `${major + 1}.0.0`;
+    case 'minor':
+      return `${major}.${minor + 1}.0`;
+    case 'patch':
+      return `${major}.${minor}.${patch + 1}`;
+    default:
+      throw new Error(`Unsupported bump type: ${bumpType}`);
+  }
 }
 
 function getStatus() {
@@ -200,32 +231,70 @@ function ensureTagDoesNotExist(tagName) {
   }
 }
 
-function bumpWorkspaceVersion(workspace) {
-  run('npm', ['version', 'minor', `--workspace=${workspace}`, '--no-git-tag-version']);
+function bumpWorkspaceVersion(workspace, bumpType) {
+  run('npm', ['version', bumpType, `--workspace=${workspace}`, '--no-git-tag-version']);
+}
+
+function prompt(question) {
+  return new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    rl.question(question, (answer) => {
+      rl.close();
+      resolve(answer);
+    });
+  });
+}
+
+async function resolveBumpType(initialBumpType) {
+  const normalizedBumpType = normalizeBumpType(initialBumpType);
+  if (normalizedBumpType) {
+    return normalizedBumpType;
+  }
+
+  if (!process.stdin.isTTY || !process.stdout.isTTY) {
+    throw new Error('Interactive bump type selection requires a TTY. Re-run with --bump-type major|minor|patch.');
+  }
+
+  while (true) {
+    const answer = await prompt('Select bump type (major/minor/patch): ');
+
+    try {
+      return normalizeBumpType(answer.trim());
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 }
 
 const state = parseArgs(process.argv.slice(2));
 
-function main() {
+async function main() {
   ensureGitRepo();
   ensurePendingChanges();
 
+  const bumpType = await resolveBumpType(state.bumpType);
   const branch = getCurrentBranch();
   const remote = getPushRemote(branch, state.remote);
+
+  console.log(`Using bump type: ${bumpType}`);
 
   console.log('Step 1/5: commit changes');
   commitAll(state.initialCommit, 'commit changes');
 
   console.log('Step 2/5: bump @d-matrix/icons-svg');
-  bumpWorkspaceVersion('@d-matrix/icons-svg');
+  bumpWorkspaceVersion('@d-matrix/icons-svg', bumpType);
   commitAll(state.svgCommit, '@d-matrix/icons-svg version bump');
 
   console.log('Step 3/5: bump @d-matrix/icons-react');
-  bumpWorkspaceVersion('@d-matrix/icons-react');
+  bumpWorkspaceVersion('@d-matrix/icons-react', bumpType);
   commitAll(state.reactCommit, '@d-matrix/icons-react version bump');
 
   const reactPkg = readJson(path.join('packages', 'icons-react', 'package.json'));
-  const releaseVersion = state.dryRun ? getNextMinorVersion(reactPkg.version) : reactPkg.version;
+  const releaseVersion = state.dryRun ? getNextVersion(reactPkg.version, bumpType) : reactPkg.version;
   const tagName = `v${releaseVersion}`;
 
   console.log('Step 4/5: create release tag');
@@ -240,9 +309,7 @@ function main() {
   console.log(`Done. Created tag ${tagName}${state.push ? ` and pushed ${branch} to ${remote}.` : '.'}`);
 }
 
-try {
-  main();
-} catch (error) {
+main().catch((error) => {
   console.error(`\n[release:icons] ${error.message}`);
   process.exit(1);
-}
+});

@@ -23,11 +23,13 @@ npm install
 
 ## 添加新图标
 
-添加svg文件到`packages/icons-svg/src/public`文件夹中, 更新包版本
+添加svg文件到`packages/icons-svg/src/public`文件夹中，发布时执行根目录命令：
 
 ```sh
-npm version minor --workspace=@d-matrix/icons-svg
+npm run release:icons
 ```
+
+执行过程中会提示选择版本类型：`major`、`minor` 或 `patch`，同一次发布会同时作用于 `@d-matrix/icons-svg` 和 `@d-matrix/icons-react`。
 
 启动dev server
 
@@ -39,19 +41,33 @@ npm run dev
 
 ## 发布
 
-如果要手动发布`@d-matrix/icons-svg`包
-
-```bash
-cd packages/icons-svg && npm run pb
-```
-
-git提交所有变更文件，提交后更新`@d-matrix/icons-react`包的版本, 根目录下执行
+如果只想预演发布步骤而不提交、不打 tag、不推送，可以执行：
 
 ```sh
-npm version minor --workspace=@d-matrix/icons-react
+npm run release:icons -- --bump-type patch --dry-run --no-push
 ```
 
-更新完成后，由于`postversion` npm script 会更新`packages/icons-site`包的`@d-matrix/icons-react`依赖版本，及根目录的`package-lock.json`, 需再次提交变更文件，最后推送到远程仓库。
+正常发布时，在根目录执行：
+
+```sh
+npm run release:icons
+```
+
+脚本会串行执行以下步骤：
+
+1. 提交当前图标变更
+2. 根据选择的版本类型更新 `@d-matrix/icons-svg`
+3. 提交 svg 版本变更
+4. 根据选择的版本类型更新 `@d-matrix/icons-react`
+5. 提交 react 版本变更
+6. 创建 `vX.Y.Z` tag
+7. 推送当前分支和 tag
+
+如需跳过交互，可直接指定版本类型：
+
+```sh
+npm run release:icons -- --bump-type minor
+```
 
 剩下的工作就交给GitHub Actions, GitHub Actions有三个工作流
 
