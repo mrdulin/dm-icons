@@ -86,28 +86,76 @@ function resolveCommand(command) {
   return command;
 }
 
+function needsCmdShim(command) {
+  return process.platform === 'win32' && /\.(cmd|bat)$/i.test(command);
+}
+
+function escapeCmdArg(value) {
+  const stringValue = String(value);
+  if (stringValue.length === 0) {
+    return '""';
+  }
+
+  if (!/[\s"]/u.test(stringValue)) {
+    return stringValue;
+  }
+
+  return `"${stringValue.replace(/"/g, '""')}"`;
+}
+
 function formatCommand(command, args) {
   return [command, ...args].map((value) => (/\s/.test(value) ? `"${value}"` : value)).join(' ');
 }
 
+function getSpawnOptions(capture) {
+  return {
+    cwd: repoRoot,
+    encoding: 'utf8',
+    stdio: capture ? ['ignore', 'pipe', 'pipe'] : 'inherit',
+  };
+}
+
+function spawnCommand(command, args, capture) {
+  const resolvedCommand = resolveCommand(command);
+  const spawnOptions = getSpawnOptions(capture);
+
+  if (needsCmdShim(resolvedCommand)) {
+    const cmdLine = [resolvedCommand, ...args].map(escapeCmdArg).join(' ');
+    return spawnSync(process.env.ComSpec || 'cmd.exe', ['/d', '/s', '/c', cmdLine], spawnOptions);
+  }
+
+  return spawnSync(resolvedCommand, args, spawnOptions);
+}
+
+function getProcessFailureMessage(command, result) {
+  if (result.error) {
+    return result.error.message;
+  }
+
+  const stderr = result.stderr ? result.stderr.trim() : '';
+  if (stderr) {
+    return stderr;
+  }
+
+  if (result.signal) {
+    return `${command} terminated by signal ${result.signal}`;
+  }
+
+  return `${command} exited with code ${result.status}`;
+}
+
 function run(command, args, options = {}) {
   const { capture = false, allowInDryRun = false } = options;
-  const resolvedCommand = resolveCommand(command);
 
   if (state.dryRun && !allowInDryRun) {
     console.log(`[dry-run] ${formatCommand(command, args)}`);
     return '';
   }
 
-  const result = spawnSync(resolvedCommand, args, {
-    cwd: repoRoot,
-    encoding: 'utf8',
-    stdio: capture ? ['ignore', 'pipe', 'pipe'] : 'inherit',
-  });
+  const result = spawnCommand(command, args, capture);
 
-  if (result.status !== 0) {
-    const stderr = result.stderr ? result.stderr.trim() : '';
-    throw new Error(stderr || `${command} exited with code ${result.status}`);
+  if (result.error || result.status !== 0) {
+    throw new Error(getProcessFailureMessage(command, result));
   }
 
   return capture ? result.stdout.trim() : '';
@@ -115,15 +163,9 @@ function run(command, args, options = {}) {
 
 function runOptional(command, args, options = {}) {
   const { capture = false } = options;
-  const resolvedCommand = resolveCommand(command);
+  const result = spawnCommand(command, args, capture);
 
-  const result = spawnSync(resolvedCommand, args, {
-    cwd: repoRoot,
-    encoding: 'utf8',
-    stdio: capture ? ['ignore', 'pipe', 'pipe'] : 'inherit',
-  });
-
-  if (result.status !== 0) {
+  if (result.error || result.status !== 0) {
     return null;
   }
 
