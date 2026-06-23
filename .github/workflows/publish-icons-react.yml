@@ -1,14 +1,6 @@
 name: Publish icons-react package to NPM
 
 on:
-  # push:
-  #   tags:
-  #     - 'v*'
-  #   paths-ignore:
-  #     - 'README.md'
-
-  # workflow_dispatch:
-
   workflow_run:
     workflows: [Publish icons-svg package to NPM]
     types: [completed]
