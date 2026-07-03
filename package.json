@@ -20,5 +20,6 @@
     "release:icons": "node scripts/publish-icons.js",
     "publish": "npm publish --workspace=@d-matrix/icons-react",
     "publish:icons-svg": "npm publish --workspace=@d-matrix/icons-svg"
-  }
+  },
+  "version": "0.1.0"
 }
