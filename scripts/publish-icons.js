@@ -16,7 +16,7 @@ function parseArgs(argv) {
     remote: null,
     initialCommit: 'chore(icons): update icons',
     svgCommit: 'chore(release): bump @d-matrix/icons-svg',
-    reactCommit: 'chore(release): bump @d-matrix/icons-react',
+    reactCommit: 'chore(release): bump @d-matrix/icons-react to %s',
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -72,7 +72,7 @@ Options:
   --remote <name>               Push to a specific remote (default: branch remote or origin)
   --initial-commit <message>    Override the first commit message
   --svg-commit <message>        Override the svg version bump commit message
-  --react-commit <message>      Override the react version bump commit message
+  --react-commit <message>      Override the react version bump commit and tag message
   When --bump-type is omitted, the script prompts for major, minor, or patch
   -h, --help                    Show this help message
 `);
@@ -177,6 +177,56 @@ function readJson(relativePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
+function parseVersion(version) {
+  const match = String(version).match(/^v?(\d+)\.(\d+)\.(\d+)/u);
+
+  if (!match) {
+    throw new Error(`Unsupported version format: ${version}`);
+  }
+
+  return match.slice(1).map((value) => Number.parseInt(value, 10));
+}
+
+function compareVersions(leftVersion, rightVersion) {
+  const left = parseVersion(leftVersion);
+  const right = parseVersion(rightVersion);
+
+  for (let i = 0; i < left.length; i += 1) {
+    if (left[i] > right[i]) {
+      return 1;
+    }
+
+    if (left[i] < right[i]) {
+      return -1;
+    }
+  }
+
+  return 0;
+}
+
+function satisfiesNodeEngine(nodeVersion, engineRange) {
+  const match = String(engineRange).trim().match(/^>=\s*(\d+\.\d+\.\d+)$/u);
+
+  if (!match) {
+    throw new Error(`Unsupported package.json engines.node range: ${engineRange}`);
+  }
+
+  return compareVersions(nodeVersion, match[1]) >= 0;
+}
+
+function ensureNodeVersion() {
+  const packageJson = readJson('package.json');
+  const nodeEngine = packageJson.engines && packageJson.engines.node;
+
+  if (!nodeEngine) {
+    return;
+  }
+
+  if (!satisfiesNodeEngine(process.version, nodeEngine)) {
+    throw new Error(`Node.js ${process.version} does not satisfy package.json engines.node "${nodeEngine}".`);
+  }
+}
+
 function normalizeBumpType(value) {
   if (!value) {
     return null;
@@ -213,14 +263,44 @@ function getStatus() {
   return run('git', ['status', '--short'], { capture: true, allowInDryRun: true });
 }
 
-function ensurePendingChanges() {
+function getLatestReleaseTag() {
+  return runOptional('git', ['describe', '--tags', '--abbrev=0', '--match', 'v[0-9]*'], {
+    capture: true,
+  });
+}
+
+function getCommitCountSinceTag(tagName) {
+  const count = run('git', ['rev-list', '--count', `${tagName}..HEAD`], {
+    capture: true,
+    allowInDryRun: true,
+  });
+  return Number.parseInt(count, 10);
+}
+
+function getReleaseChanges() {
+  const status = getStatus();
+  const latestReleaseTag = getLatestReleaseTag();
+  const committedChangeCount = latestReleaseTag ? getCommitCountSinceTag(latestReleaseTag) : 0;
+
+  return {
+    hasPendingChanges: Boolean(status),
+    latestReleaseTag,
+    committedChangeCount,
+  };
+}
+
+function ensureReleaseChanges(changes) {
   if (state.dryRun) {
     return;
   }
 
-  if (!getStatus()) {
-    throw new Error('No pending changes found. Add or modify icons before running this script.');
+  if (changes.hasPendingChanges || changes.committedChangeCount > 0) {
+    return;
   }
+
+  throw new Error(
+    'No pending or committed changes found since the latest release tag. Add, modify, or commit icons before running this script.',
+  );
 }
 
 function ensureCommitReady(stageDescription) {
@@ -273,8 +353,23 @@ function ensureTagDoesNotExist(tagName) {
   }
 }
 
-function bumpWorkspaceVersion(workspace, bumpType) {
-  run('npm', ['version', bumpType, `--workspace=${workspace}`, '--no-git-tag-version']);
+function bumpWorkspaceVersion(workspace, bumpType, options = {}) {
+  const args = ['version', bumpType, `--workspace=${workspace}`];
+
+  if (options.gitTagVersion === false) {
+    args.push('--git-tag-version=false');
+  }
+
+  if (options.message) {
+    args.push('--message', options.message);
+  }
+
+  run('npm', args);
+}
+
+function getNextWorkspaceVersion(workspace, bumpType) {
+  const workspacePackage = readJson(path.join('packages', workspace, 'package.json'));
+  return getNextVersion(workspacePackage.version, bumpType);
 }
 
 function prompt(question) {
@@ -315,8 +410,10 @@ async function resolveBumpType(initialBumpType) {
 const state = parseArgs(process.argv.slice(2));
 
 async function main() {
+  ensureNodeVersion();
   ensureGitRepo();
-  ensurePendingChanges();
+  const releaseChanges = getReleaseChanges();
+  ensureReleaseChanges(releaseChanges);
 
   const bumpType = await resolveBumpType(state.bumpType);
   const branch = getCurrentBranch();
@@ -324,27 +421,28 @@ async function main() {
 
   console.log(`Using bump type: ${bumpType}`);
 
-  console.log('Step 1/5: commit changes');
-  commitAll(state.initialCommit, 'commit changes');
+  console.log('Step 1/4: commit changes');
+  if (releaseChanges.hasPendingChanges) {
+    commitAll(state.initialCommit, 'commit changes');
+  } else {
+    console.log(
+      `No uncommitted changes found. Using ${releaseChanges.committedChangeCount} committed change(s) since ${releaseChanges.latestReleaseTag}.`,
+    );
+  }
 
-  console.log('Step 2/5: bump @d-matrix/icons-svg');
-  bumpWorkspaceVersion('@d-matrix/icons-svg', bumpType);
+  console.log('Step 2/4: bump @d-matrix/icons-svg');
+  bumpWorkspaceVersion('@d-matrix/icons-svg', bumpType, { gitTagVersion: false });
   commitAll(state.svgCommit, '@d-matrix/icons-svg version bump');
 
-  console.log('Step 3/5: bump @d-matrix/icons-react');
-  bumpWorkspaceVersion('@d-matrix/icons-react', bumpType);
-  commitAll(state.reactCommit, '@d-matrix/icons-react version bump');
-
-  const reactPkg = readJson(path.join('packages', 'icons-react', 'package.json'));
-  const releaseVersion = state.dryRun ? getNextVersion(reactPkg.version, bumpType) : reactPkg.version;
+  const releaseVersion = getNextWorkspaceVersion('icons-react', bumpType);
   const tagName = `v${releaseVersion}`;
 
-  console.log('Step 4/5: create release tag');
+  console.log('Step 3/4: bump @d-matrix/icons-react and create release tag');
   ensureTagDoesNotExist(tagName);
-  run('git', ['tag', '-a', tagName, '-m', `release: ${tagName}`]);
+  bumpWorkspaceVersion('@d-matrix/icons-react', bumpType, { message: state.reactCommit });
 
   if (state.push) {
-    console.log('Step 5/5: push branch and tag');
+    console.log('Step 4/4: push branch and tag');
     run('git', ['push', '--follow-tags', remote, branch]);
   }
 

@@ -53,15 +53,15 @@ npm run release:icons -- --bump-type patch --dry-run --no-push
 npm run release:icons
 ```
 
+脚本支持两种发布入口：可以保留未提交的图标变更交给脚本提交，也可以先手动提交图标变更，再执行发布。手动提交后，脚本会检测最新 release tag 之后的提交并跳过首个自动提交步骤。
+
 脚本会串行执行以下步骤：
 
 1. 提交当前图标变更
 2. 根据选择的版本类型更新 `@d-matrix/icons-svg`
 3. 提交 svg 版本变更
-4. 根据选择的版本类型更新 `@d-matrix/icons-react`
-5. 提交 react 版本变更
-6. 创建 `vX.Y.Z` tag
-7. 推送当前分支和 tag
+4. 根据选择的版本类型更新 `@d-matrix/icons-react`，并由 `npm version` 创建 react 版本提交和 `vX.Y.Z` tag
+5. 推送当前分支和 tag
 
 如需跳过交互，可直接指定版本类型：
 

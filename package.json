@@ -8,7 +8,6 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "engineStrict": true,
   "scripts": {
     "generate": "npm run generate --workspace=@d-matrix/icons-react",
     "predev": "npm run generate && npm run ref",
