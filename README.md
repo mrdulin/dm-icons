@@ -60,8 +60,10 @@ npm run release:icons
 1. 提交当前图标变更
 2. 根据选择的版本类型更新 `@d-matrix/icons-svg`
 3. 提交 svg 版本变更
-4. 根据选择的版本类型更新 `@d-matrix/icons-react`，并由 `npm version` 创建 react 版本提交和 `vX.Y.Z` tag
-5. 推送当前分支和 tag
+4. 根据选择的版本类型更新 `@d-matrix/icons-react`
+5. 提交 react 版本变更
+6. 创建 `vX.Y.Z` tag
+7. 推送当前分支和 tag
 
 如需跳过交互，可直接指定版本类型：
 

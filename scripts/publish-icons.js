@@ -16,6 +16,7 @@ function parseArgs(argv) {
     remote: null,
     initialCommit: 'chore(icons): update icons',
     svgCommit: 'chore(release): bump @d-matrix/icons-svg',
+    reactCommit: 'chore(release): bump @d-matrix/icons-react',
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -44,6 +45,10 @@ function parseArgs(argv) {
         options.svgCommit = argv[i + 1];
         i += 1;
         break;
+      case '--react-commit':
+        options.reactCommit = argv[i + 1];
+        i += 1;
+        break;
       case '--help':
       case '-h':
         printHelp();
@@ -67,6 +72,7 @@ Options:
   --remote <name>               Push to a specific remote (default: branch remote or origin)
   --initial-commit <message>    Override the first commit message
   --svg-commit <message>        Override the svg version bump commit message
+  --react-commit <message>      Override the react version bump commit message
   When --bump-type is omitted, the script prompts for major, minor, or patch
   -h, --help                    Show this help message
 `);
@@ -352,10 +358,6 @@ function ensureTagDoesNotExist(tagName) {
   }
 }
 
-function tagExists(tagName) {
-  return run('git', ['tag', '--list', tagName], { capture: true, allowInDryRun: true }) === tagName;
-}
-
 function bumpWorkspaceVersion(workspace, bumpType, options = {}) {
   const args = ['version', bumpType, `--workspace=${workspace}`];
 
@@ -460,7 +462,7 @@ async function main() {
 
   console.log(`Using bump type: ${bumpType}`);
 
-  console.log('Step 1/4: commit changes');
+  console.log('Step 1/5: commit changes');
   if (releaseChanges.hasPendingChanges) {
     commitAll(state.initialCommit, 'commit changes');
   } else {
@@ -469,7 +471,7 @@ async function main() {
     );
   }
 
-  console.log('Step 2/4: bump @d-matrix/icons-svg');
+  console.log('Step 2/5: bump @d-matrix/icons-svg');
   ensureWorkspaceVersionIsResumable('icons-svg', expectedSvgVersion, baseRef);
   if (isWorkspaceAlreadyBumped('icons-svg', expectedSvgVersion)) {
     console.log(`@d-matrix/icons-svg is already bumped to ${expectedSvgVersion}.`);
@@ -478,17 +480,21 @@ async function main() {
     commitAll(state.svgCommit, '@d-matrix/icons-svg version bump');
   }
 
-  console.log('Step 3/4: bump @d-matrix/icons-react and create release tag');
+  console.log('Step 3/5: bump @d-matrix/icons-react');
   ensureWorkspaceVersionIsResumable('icons-react', releaseVersion, baseRef);
-  if (isWorkspaceAlreadyBumped('icons-react', releaseVersion) && tagExists(tagName)) {
-    console.log(`@d-matrix/icons-react is already bumped to ${releaseVersion}, and tag ${tagName} already exists.`);
+  if (isWorkspaceAlreadyBumped('icons-react', releaseVersion)) {
+    console.log(`@d-matrix/icons-react is already bumped to ${releaseVersion}.`);
   } else {
-    ensureTagDoesNotExist(tagName);
-    bumpWorkspaceVersion('@d-matrix/icons-react', bumpType);
+    bumpWorkspaceVersion('@d-matrix/icons-react', bumpType, { gitTagVersion: false });
+    commitAll(state.reactCommit, '@d-matrix/icons-react version bump');
   }
 
+  console.log('Step 4/5: create release tag');
+  ensureTagDoesNotExist(tagName);
+  run('git', ['tag', '-a', tagName, '-m', `release: ${tagName}`]);
+
   if (state.push) {
-    console.log('Step 4/4: push branch and tag');
+    console.log('Step 5/5: push branch and tag');
     run('git', ['push', '--follow-tags', remote, branch]);
   }
 
