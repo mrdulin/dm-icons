@@ -16,7 +16,6 @@ function parseArgs(argv) {
     remote: null,
     initialCommit: 'chore(icons): update icons',
     svgCommit: 'chore(release): bump @d-matrix/icons-svg',
-    reactCommit: 'chore(release): bump @d-matrix/icons-react to %s',
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -45,10 +44,6 @@ function parseArgs(argv) {
         options.svgCommit = argv[i + 1];
         i += 1;
         break;
-      case '--react-commit':
-        options.reactCommit = argv[i + 1];
-        i += 1;
-        break;
       case '--help':
       case '-h':
         printHelp();
@@ -72,7 +67,6 @@ Options:
   --remote <name>               Push to a specific remote (default: branch remote or origin)
   --initial-commit <message>    Override the first commit message
   --svg-commit <message>        Override the svg version bump commit message
-  --react-commit <message>      Override the react version bump commit and tag message
   When --bump-type is omitted, the script prompts for major, minor, or patch
   -h, --help                    Show this help message
 `);
@@ -175,6 +169,11 @@ function runOptional(command, args, options = {}) {
 function readJson(relativePath) {
   const filePath = path.join(repoRoot, relativePath);
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
+
+function readJsonAtRef(ref, relativePath) {
+  const content = run('git', ['show', `${ref}:${relativePath}`], { capture: true, allowInDryRun: true });
+  return JSON.parse(content);
 }
 
 function parseVersion(version) {
@@ -353,6 +352,10 @@ function ensureTagDoesNotExist(tagName) {
   }
 }
 
+function tagExists(tagName) {
+  return run('git', ['tag', '--list', tagName], { capture: true, allowInDryRun: true }) === tagName;
+}
+
 function bumpWorkspaceVersion(workspace, bumpType, options = {}) {
   const args = ['version', bumpType, `--workspace=${workspace}`];
 
@@ -360,16 +363,43 @@ function bumpWorkspaceVersion(workspace, bumpType, options = {}) {
     args.push('--git-tag-version=false');
   }
 
-  if (options.message) {
-    args.push('--message', options.message);
-  }
-
   run('npm', args);
 }
 
-function getNextWorkspaceVersion(workspace, bumpType) {
-  const workspacePackage = readJson(path.join('packages', workspace, 'package.json'));
-  return getNextVersion(workspacePackage.version, bumpType);
+function getWorkspacePackagePath(workspaceDirectory) {
+  return `packages/${workspaceDirectory}/package.json`;
+}
+
+function getWorkspaceVersion(workspaceDirectory) {
+  const workspacePackage = readJson(getWorkspacePackagePath(workspaceDirectory));
+  return workspacePackage.version;
+}
+
+function getWorkspaceVersionAtRef(ref, workspaceDirectory) {
+  const workspacePackage = readJsonAtRef(ref, getWorkspacePackagePath(workspaceDirectory));
+  return workspacePackage.version;
+}
+
+function getExpectedWorkspaceVersion(workspaceDirectory, bumpType, baseRef) {
+  const baseVersion = getWorkspaceVersionAtRef(baseRef, workspaceDirectory);
+  return getNextVersion(baseVersion, bumpType);
+}
+
+function isWorkspaceAlreadyBumped(workspaceDirectory, expectedVersion) {
+  return getWorkspaceVersion(workspaceDirectory) === expectedVersion;
+}
+
+function ensureWorkspaceVersionIsResumable(workspaceDirectory, expectedVersion, baseRef) {
+  const currentVersion = getWorkspaceVersion(workspaceDirectory);
+  const baseVersion = getWorkspaceVersionAtRef(baseRef, workspaceDirectory);
+
+  if (currentVersion === baseVersion || currentVersion === expectedVersion) {
+    return;
+  }
+
+  throw new Error(
+    `${workspaceDirectory} version ${currentVersion} is neither ${baseVersion} from ${baseRef} nor expected ${expectedVersion}.`,
+  );
 }
 
 function prompt(question) {
@@ -418,6 +448,15 @@ async function main() {
   const bumpType = await resolveBumpType(state.bumpType);
   const branch = getCurrentBranch();
   const remote = getPushRemote(branch, state.remote);
+  const baseRef = releaseChanges.latestReleaseTag;
+
+  if (!baseRef) {
+    throw new Error('No release tag found. Create an initial vX.Y.Z tag before running this script.');
+  }
+
+  const expectedSvgVersion = getExpectedWorkspaceVersion('icons-svg', bumpType, baseRef);
+  const releaseVersion = getExpectedWorkspaceVersion('icons-react', bumpType, baseRef);
+  const tagName = `v${releaseVersion}`;
 
   console.log(`Using bump type: ${bumpType}`);
 
@@ -431,15 +470,22 @@ async function main() {
   }
 
   console.log('Step 2/4: bump @d-matrix/icons-svg');
-  bumpWorkspaceVersion('@d-matrix/icons-svg', bumpType, { gitTagVersion: false });
-  commitAll(state.svgCommit, '@d-matrix/icons-svg version bump');
-
-  const releaseVersion = getNextWorkspaceVersion('icons-react', bumpType);
-  const tagName = `v${releaseVersion}`;
+  ensureWorkspaceVersionIsResumable('icons-svg', expectedSvgVersion, baseRef);
+  if (isWorkspaceAlreadyBumped('icons-svg', expectedSvgVersion)) {
+    console.log(`@d-matrix/icons-svg is already bumped to ${expectedSvgVersion}.`);
+  } else {
+    bumpWorkspaceVersion('@d-matrix/icons-svg', bumpType, { gitTagVersion: false });
+    commitAll(state.svgCommit, '@d-matrix/icons-svg version bump');
+  }
 
   console.log('Step 3/4: bump @d-matrix/icons-react and create release tag');
-  ensureTagDoesNotExist(tagName);
-  bumpWorkspaceVersion('@d-matrix/icons-react', bumpType, { message: state.reactCommit });
+  ensureWorkspaceVersionIsResumable('icons-react', releaseVersion, baseRef);
+  if (isWorkspaceAlreadyBumped('icons-react', releaseVersion) && tagExists(tagName)) {
+    console.log(`@d-matrix/icons-react is already bumped to ${releaseVersion}, and tag ${tagName} already exists.`);
+  } else {
+    ensureTagDoesNotExist(tagName);
+    bumpWorkspaceVersion('@d-matrix/icons-react', bumpType);
+  }
 
   if (state.push) {
     console.log('Step 4/4: push branch and tag');
