@@ -1,0 +1,30 @@
+<svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g clip-path="url(#clip0_21280_28712)">
+    <path
+      d="M2.12683 2.625C2.12683 1.17525 3.30208 0 4.75183 0H17.9719L25.8732 6.99316V25.375C25.8732 26.8247 24.6979 28 23.2482 28H4.75183C3.30208 28 2.12683 26.8247 2.12683 25.375V2.625Z"
+      fill="#72A9FE" />
+    <path
+      d="M10.9191 12.5205C11.2826 12.5205 11.6144 12.7216 11.7833 13.043L14.2472 17.7607L15.9689 15.4785C16.1507 15.2352 16.4392 15.0919 16.7443 15.0918C17.0495 15.0918 17.3356 15.235 17.5206 15.4785L21.9366 21.3262H5.72766L10.0558 13.043C10.2246 12.7218 10.5557 12.5207 10.9191 12.5205ZM18.4025 9.74316C19.5153 9.74316 20.4151 10.643 20.4152 11.7559C20.4152 12.8688 19.5154 13.7686 18.4025 13.7686C17.2896 13.7685 16.3898 12.8687 16.3898 11.7559C16.3898 10.643 17.2896 9.74319 18.4025 9.74316Z"
+      fill="white" />
+    <path
+      d="M19.6132 1.45215V2.13086L17.9716 0.678711H4.75183C3.30217 0.678711 2.12698 1.85409 2.12683 3.30371V2.625C2.12683 1.17525 3.30208 1.03257e-07 4.75183 0H17.9716L19.6132 1.45215Z"
+      fill="#D6E3F7" fill-opacity="0.7" />
+    <path d="M17.9982 0L25.8732 6.99981H17.9982V0Z" fill="#AAC9ED" />
+    <rect x="4.37585" y="27.7666" width="19.25" height="1.75" fill="url(#pattern0_21280_28712)" />
+    <rect x="4.37585" y="27.7666" width="19.25" height="1.75" fill="url(#pattern1_21280_28712)" />
+  </g>
+  <defs>
+    <pattern id="pattern0_21280_28712" patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use xlink:href="#image0_21280_28712" transform="scale(0.0454545 0.5)" />
+    </pattern>
+    <pattern id="pattern1_21280_28712" patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use xlink:href="#image0_21280_28712" transform="scale(0.0454545 0.5)" />
+    </pattern>
+    <clipPath id="clip0_21280_28712">
+      <rect width="28" height="28" fill="white" />
+    </clipPath>
+    <image id="image0_21280_28712" width="22" height="2" preserveAspectRatio="none"
+      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAACCAYAAABc8yy2AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAArSURBVHgBtccxCgAgDEPRfPT+JxaiDoUu7dbAIwm2kbSSXez4fk4H+D2TC08SDQKdl7oIAAAAAElFTkSuQmCC" />
+  </defs>
+</svg>
