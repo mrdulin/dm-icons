@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const LetterTEditOutlined = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 16 16", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { fill: "currentColor", stroke: "currentColor", strokeWidth: 0.097, d: "M13.398.796c.137 0 .248.112.248.249v5.082c0 .137-.111.248-.248.248h-.833a.25.25 0 0 1-.25-.248v-3.85a.15.15 0 0 0-.15-.151H2.082a.15.15 0 0 0-.151.151v11.315c0 .083.068.15.151.151h4.219c.137 0 .249.111.249.248v.833a.25.25 0 0 1-.25.25H.852a.25.25 0 0 1-.25-.25V1.044a.25.25 0 0 1 .25-.248zm-.978 6.46a.234.234 0 0 1 .33 0l2.013 2.014a.234.234 0 0 1 0 .33l-4.595 4.594a.23.23 0 0 1-.15.068l-2.147.134a.234.234 0 0 1-.248-.247l.134-2.146a.23.23 0 0 1 .068-.15zm.262 1.586a.137.137 0 0 0-.194 0l-3.55 3.55a.14.14 0 0 0-.039.088l-.033.53a.136.136 0 0 0 .144.144l.531-.033a.14.14 0 0 0 .087-.04l3.55-3.55a.136.136 0 0 0 0-.193zm-2.433-3.785-.01.102a.52.52 0 0 1-.15.269.624.624 0 0 1-.8.046.52.52 0 0 1-.207-.349l-.001-.003-.004-.061v-.442H7.368l.013.047v.003l.005.061v4.65h.13l.11.009c.108.018.21.063.292.132.11.093.178.222.187.36a.5.5 0 0 1-.136.378.6.6 0 0 1-.38.186h-.003l-.067.003H6.084a.62.62 0 0 1-.398-.142.52.52 0 0 1-.186-.358.5.5 0 0 1 .135-.376.6.6 0 0 1 .376-.187l.003-.001.067-.004h.134V4.733q.002-.057.015-.113H4.522v.438a.5.5 0 0 1-.147.354.6.6 0 0 1-.365.176h-.003l-.068.004h-.002a.62.62 0 0 1-.385-.132.52.52 0 0 1-.196-.335v-.003l-.004-.061v-.975a.5.5 0 0 1 .147-.356.6.6 0 0 1 .365-.174h.002l.068-.004h5.73a.62.62 0 0 1 .385.132c.08.064.14.147.172.239l.023.095v.003l.004.061.001.004z" })))
+        } />;
+      })
+
+      export default LetterTEditOutlined;

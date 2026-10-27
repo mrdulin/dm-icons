@@ -46,7 +46,7 @@
             React.createElement("stop", { stopColor: "#E25C54" }),
             React.createElement("stop", { offset: 0.384, stopColor: "#D92D23" }),
             React.createElement("stop", { offset: 1, stopColor: "#D43E3A" })),
-        React.createElement("linearGradient", { id: "paint1_linear_4120_1410", x1: "nan", x2: "nan", y1: "nan", y2: "nan", gradientUnits: "userSpaceOnUse" },
+        React.createElement("linearGradient", { id: "paint1_linear_4120_1410", x1: 3.201, x2: 13.511, y1: 15.431, y2: 15.431, gradientUnits: "userSpaceOnUse" },
             React.createElement("stop", { stopColor: "#fff", stopOpacity: 0 }),
             React.createElement("stop", { offset: 0.567, stopColor: "#fff" }),
             React.createElement("stop", { offset: 1, stopColor: "#fff", stopOpacity: 0.05 })),

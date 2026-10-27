@@ -1,0 +1,75 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const TpsiticoBrandColored = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("defs", null,
+        React.createElement("linearGradient", { id: "linearGradient-1", x1: "100.724%", x2: "-.539%", y1: "50.022%", y2: "50.022%" },
+            React.createElement("stop", { offset: "0%", stopColor: "#BA1B2C" }),
+            React.createElement("stop", { offset: "33.91%", stopColor: "#B81B2B" }),
+            React.createElement("stop", { offset: "54.3%", stopColor: "#B11B2A" }),
+            React.createElement("stop", { offset: "71.11%", stopColor: "#A41B27" }),
+            React.createElement("stop", { offset: "85.89%", stopColor: "#911A22" }),
+            React.createElement("stop", { offset: "99.35%", stopColor: "#7A171C" }),
+            React.createElement("stop", { offset: "100%", stopColor: "#79171C" })),
+        React.createElement("linearGradient", { id: "linearGradient-2", x1: "-.131%", x2: "99.832%", y1: "50.022%", y2: "50.022%" },
+            React.createElement("stop", { offset: "0%", stopColor: "#56B5B8" }),
+            React.createElement("stop", { offset: "24.92%", stopColor: "#56B4B8" }),
+            React.createElement("stop", { offset: "39.91%", stopColor: "#55AFB7" }),
+            React.createElement("stop", { offset: "52.28%", stopColor: "#53A7B5" }),
+            React.createElement("stop", { offset: "63.21%", stopColor: "#519BB2" }),
+            React.createElement("stop", { offset: "73.2%", stopColor: "#4F8BAD" }),
+            React.createElement("stop", { offset: "82.51%", stopColor: "#4E77A5" }),
+            React.createElement("stop", { offset: "91.25%", stopColor: "#4B5F9B" }),
+            React.createElement("stop", { offset: "99.4%", stopColor: "#494390" }),
+            React.createElement("stop", { offset: "100%", stopColor: "#49418F" })),
+        React.createElement("linearGradient", { id: "linearGradient-3", x1: "49.986%", x2: "49.986%", y1: ".033%", y2: "100.004%" },
+            React.createElement("stop", { offset: "0%", stopColor: "#AC1F26" }),
+            React.createElement("stop", { offset: "47.2%", stopColor: "#A81F26" }),
+            React.createElement("stop", { offset: "96.02%", stopColor: "#9B1E24" }),
+            React.createElement("stop", { offset: "100%", stopColor: "#9A1E23" })),
+        React.createElement("linearGradient", { id: "linearGradient-4", x1: "50.096%", x2: "50.096%", y1: "-.204%", y2: "100.155%" },
+            React.createElement("stop", { offset: "0%", stopColor: "#57B5B7" }),
+            React.createElement("stop", { offset: "14.04%", stopColor: "#56B3B6" }),
+            React.createElement("stop", { offset: "28.6%", stopColor: "#54ACB5" }),
+            React.createElement("stop", { offset: "43.4%", stopColor: "#52A0B2" }),
+            React.createElement("stop", { offset: "58.36%", stopColor: "#508FAD" }),
+            React.createElement("stop", { offset: "73.46%", stopColor: "#4E78A5" }),
+            React.createElement("stop", { offset: "88.44%", stopColor: "#4B5B99" }),
+            React.createElement("stop", { offset: "100%", stopColor: "#49418F" })),
+        React.createElement("linearGradient", { id: "linearGradient-5", x1: "100.724%", x2: "-.539%", y1: "50.106%", y2: "50.106%" },
+            React.createElement("stop", { offset: "0%", stopColor: "#BA1B2C" }),
+            React.createElement("stop", { offset: "33.91%", stopColor: "#B81B2B" }),
+            React.createElement("stop", { offset: "54.3%", stopColor: "#B11B2A" }),
+            React.createElement("stop", { offset: "71.11%", stopColor: "#A41B27" }),
+            React.createElement("stop", { offset: "85.89%", stopColor: "#911A22" }),
+            React.createElement("stop", { offset: "99.35%", stopColor: "#7A171C" }),
+            React.createElement("stop", { offset: "100%", stopColor: "#79171C" })),
+        React.createElement("linearGradient", { id: "linearGradient-6", x1: "-.131%", x2: "99.832%", y1: "50.106%", y2: "50.106%" },
+            React.createElement("stop", { offset: "0%", stopColor: "#56B5B8" }),
+            React.createElement("stop", { offset: "24.92%", stopColor: "#56B4B8" }),
+            React.createElement("stop", { offset: "39.91%", stopColor: "#55AFB7" }),
+            React.createElement("stop", { offset: "52.28%", stopColor: "#53A7B5" }),
+            React.createElement("stop", { offset: "63.21%", stopColor: "#519BB2" }),
+            React.createElement("stop", { offset: "73.2%", stopColor: "#4F8BAD" }),
+            React.createElement("stop", { offset: "82.51%", stopColor: "#4E77A5" }),
+            React.createElement("stop", { offset: "91.25%", stopColor: "#4B5F9B" }),
+            React.createElement("stop", { offset: "99.4%", stopColor: "#494390" }),
+            React.createElement("stop", { offset: "100%", stopColor: "#49418F" }))),
+    React.createElement("g", { fill: "none", fillRule: "nonzero" },
+        React.createElement("path", { fill: "url(#linearGradient-1)", d: "M6.345 24v-6.315s2.53-.559 5.222-.675V24z" }),
+        React.createElement("path", { fill: "url(#linearGradient-2)", d: "M12.457 24v-6.99c2.669.116 5.221.675 5.221.675V24z" }),
+        React.createElement("path", { fill: "url(#linearGradient-3)", d: "M7.024 11.977c0-2.587-.585-5.243-.679-5.616V0L0 6.454v11.092L6.345 24v-6.361c.094-.373.68-3.006.68-5.662" }),
+        React.createElement("path", { fill: "url(#linearGradient-4)", d: "M17.655 0v6.315s-.68 2.842-.68 5.685c0 2.773.68 5.639.68 5.639v6.314L24 17.5V6.408z" }),
+        React.createElement("path", { fill: "url(#linearGradient-5)", d: "M6.345 0v6.315s2.53.559 5.222.675V0z" }),
+        React.createElement("path", { fill: "url(#linearGradient-6)", d: "M12.457 0v6.99c2.669-.116 5.221-.675 5.221-.675V0z" }))))
+        } />;
+      })
+
+      export default TpsiticoBrandColored;

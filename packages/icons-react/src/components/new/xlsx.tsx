@@ -136,10 +136,10 @@ const SvgXlsx = ({
       </linearGradient>
       <linearGradient
         id="paint1_linear_4120_1400"
-        x1="nan"
-        x2="nan"
-        y1="nan"
-        y2="nan"
+        x1={3.201}
+        x2={13.511}
+        y1={15.431}
+        y2={15.431}
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#fff" stopOpacity={0} />

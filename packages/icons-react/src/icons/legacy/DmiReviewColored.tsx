@@ -1,0 +1,23 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const DmiReviewColored = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 71 16", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("circle", { cx: 8, cy: 8, r: 8, fill: "url(#paint0_linear_4928_28406)" }),
+    React.createElement("path", { fill: "#532D00", d: "M4.78 12.18a5.3 5.3 0 0 0 3.288 1.14 5.3 5.3 0 0 0 3.29-1.14h2.123a6.83 6.83 0 0 1-5.413 2.66 6.83 6.83 0 0 1-5.412-2.66zM3.52 5.709q.773 0 1.336.3.566.3.873.863.308.56.308 1.345t-.306 1.347a2.1 2.1 0 0 1-.867.863q-.561.299-1.325.299H1.61V5.709zm5.984 2.842h.059l1.165-2.842h1.696v5.017h-1.332v-2.9h-.04l-1.116 2.86h-.804l-1.117-2.88h-.04v2.92H6.644V5.709h1.695zm4.888 2.175h-1.363V5.709h1.363zM2.97 9.569h.52q.37 0 .633-.12a.8.8 0 0 0 .402-.414q.14-.294.14-.818t-.143-.818a.81.81 0 0 0-.41-.414q-.27-.12-.663-.12h-.48zM8.068 1.16a6.83 6.83 0 0 1 5.688 3.04H11.79a5.3 5.3 0 0 0-3.722-1.52c-1.449 0-2.762.58-3.721 1.52H2.38a6.83 6.83 0 0 1 5.687-3.04" }),
+    React.createElement("path", { fill: "currentColor", d: "M42.024 2.743h1.652l-1.288 10.514h-1.652zM31.335 2.743l2.31 8.596h.056l4.438-8.596h1.82L38.67 13.257h-1.512l.91-7.42-3.626 6.986q-.225.434-.7.434h-.574q-.49 0-.588-.434l-1.932-6.986-.91 7.42h-1.512l1.288-10.514zM23.628 2.743q1.848.014 2.716.812.868.784.868 2.478 0 .435-.07 1.064l-.21 1.806q-.308 2.281-1.4 3.318-1.092 1.022-3.206 1.036H18l1.288-10.514zm-1.092 8.974q1.275 0 1.904-.644.63-.645.812-2.086l.252-1.974q.056-.56.056-.784 0-1.022-.49-1.484-.476-.462-1.582-.462h-2.73l-.924 7.434z" }),
+    React.createElement("path", { fill: "#F0C390", d: "m60.048 2.17 2.716 1.245-.196 1.358-2.702-1.246zm6.706 11.857h-1.372l.546-4.508H62.54l.154-1.302h3.402l.532-4.382H63.45l.154-1.274h7.35L70.8 3.835h-2.814l-.532 4.382h3.528l-.14 1.302H67.3zm-3.15-9.422h1.218l.504 2.926h-1.274zm6.006 2.94h-1.288l.952-2.926h1.274zm-8.274 3.836a.3.3 0 0 0-.014.098q0 .084.056.084a.23.23 0 0 0 .14-.056 11 11 0 0 0 1.442-.938l.028 1.456q-.126.085-.798.49l-.406.224-.336.196q-.392.225-.742.224a.75.75 0 0 1-.406-.098q-.434-.266-.35-1.064l.616-5.096h-1.61l.154-1.288h1.918q.435 0 .658.252.238.239.238.672 0 .154-.014.238zM56.702 3.177l-.154 1.218h-4.83l-.168 1.386h3.122q.504 0 .77.252t.266.728q0 .154-.014.238l-.378 3.122h-9.128l.42-3.43q.07-.434.336-.672.28-.238.728-.238h2.478l.462-3.808h1.4l-.154 1.204zm-2.464 3.836h-6.286l-.224 1.876h6.286zm-9.562 6.916 1.288-3.024h1.386l-1.162 3.024zm9.31-3.024h1.344l1.064 3.024h-1.386zm-5.628.028h1.33l.252 2.996h-1.344zm2.786 0h1.358l.616 2.996H51.76z" }),
+    React.createElement("defs", null,
+        React.createElement("linearGradient", { id: "paint0_linear_4928_28406", x1: 0, x2: 16, y1: 8, y2: 8, gradientUnits: "userSpaceOnUse" },
+            React.createElement("stop", { stopColor: "#FFE0B9" }),
+            React.createElement("stop", { offset: 1, stopColor: "#FFCA7B" })))))
+        } />;
+      })
+
+      export default DmiReviewColored;

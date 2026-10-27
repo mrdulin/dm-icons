@@ -83,7 +83,10 @@ async function generateIcons() {
     .map((svgIdentifier) => `export { default as ${svgIdentifier} } from './${svgIdentifier}';`)
     .join('\n');
 
-  await promisify(fs.appendFile)(
+  // writeFile (not appendFile): the entry content is fully determined by this
+  // run. appendFile made re-runs append duplicates whenever `clean` partially
+  // failed (e.g. file locks), breaking tsc with TS2300 duplicate identifiers.
+  await promisify(fs.writeFile)(
     path.resolve(__dirname, '../src/icons/legacy/index.ts'),
     `
       // GENERATE BY ./scripts/generate.ts
@@ -92,7 +95,7 @@ async function generateIcons() {
     `.trim(),
   );
 
-  await promisify(fs.appendFile)(
+  await promisify(fs.writeFile)(
     path.resolve(__dirname, '../src/icons/new/index.ts'),
     `
       // GENERATE BY ./scripts/generate.ts
@@ -101,7 +104,7 @@ async function generateIcons() {
     `.trim(),
   );
 
-  await promisify(fs.appendFile)(
+  await promisify(fs.writeFile)(
     path.resolve(__dirname, '../src/icons/index.ts'),
     `
       // GENERATE BY ./scripts/generate.ts

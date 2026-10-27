@@ -1,0 +1,16 @@
+// GENERATE BY ./scripts/generate.ts
+    // DON NOT EDIT IT MANUALLY
+
+      import React from 'react';
+      import { DMIcon, DMIconProps } from '../../dm-icon';
+
+      const NumberEight = React.forwardRef<HTMLSpanElement, Omit<DMIconProps, 'icon'>>((props, ref) => {
+        return <DMIcon ref={ref} {...props} icon={
+          // @ts-expect-error TODO improve TS type
+          ({ title, titleId, ...props }) => (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 16 16", fill: "currentColor", "aria-hidden": "true", focusable: "false", "aria-labelledby": titleId, ...props },
+    title ? React.createElement("title", { id: titleId }, title) : null,
+    React.createElement("path", { fillRule: "evenodd", d: "M9.102 2q.99 0 1.733.302.757.3 1.137.903.38.602.25 1.52a3 3 0 0 1-.425 1.205 3.4 3.4 0 0 1-.797.887 5.5 5.5 0 0 1-1.054.665q.5.317.936.745.454.412.694.982.258.555.15 1.316a3.35 3.35 0 0 1-.676 1.631q-.546.698-1.464 1.078-.9.38-2.133.38-1.279 0-2.093-.364-.796-.364-1.133-1.046-.32-.681-.189-1.617.11-.776.445-1.346.353-.57.875-.982a5.5 5.5 0 0 1 1.123-.713 5 5 0 0 1-.763-.714 2.7 2.7 0 0 1-.479-.918q-.15-.523-.054-1.204.127-.903.675-1.505a3.5 3.5 0 0 1 1.407-.903A5.5 5.5 0 0 1 9.102 2m-.998 6.529a5 5 0 0 0-.792.506q-.345.285-.584.634-.223.332-.286.776-.087.618.226 1.015.312.396 1 .395.511 0 .856-.174.36-.174.565-.491t.263-.73q.06-.427-.101-.76a2 2 0 0 0-.43-.585 3.8 3.8 0 0 0-.543-.46zm.736-4.785q-.448 0-.81.3-.362.302-.44.856a1.5 1.5 0 0 0 .048.681q.12.285.329.507.226.206.488.396.296-.173.566-.38a2.1 2.1 0 0 0 .485-.491q.201-.3.26-.713.077-.555-.2-.856-.262-.3-.726-.3", clipRule: "evenodd" })))
+        } />;
+      })
+
+      export default NumberEight;

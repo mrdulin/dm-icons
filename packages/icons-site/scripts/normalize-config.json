@@ -1,0 +1,6 @@
+{
+  "rasterSize": 512,
+  "hashInputSize": 64,
+  "hashSize": 16,
+  "trimThreshold": 64
+}
